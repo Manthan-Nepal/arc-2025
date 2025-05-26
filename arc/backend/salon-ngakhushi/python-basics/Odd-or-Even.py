@@ -1,8 +1,8 @@
 def OddorEven(a):
     if a%2!=0:
-        print(str(a)+" is odd.")
+        print("{a} is odd.")
     else:
-        print(str(a)+" is even.")
+        print("{a} is even.")
     again= int(input("\nWould you like to Enter another number?\n1. Yes\n2. No\nAnswer: "))
     if again== 1:
         user_input()
