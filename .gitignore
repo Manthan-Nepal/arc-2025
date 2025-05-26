@@ -1,0 +1,13 @@
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# VS Code settings
+.vscode/
+
+# Environment variables
+.env
+*.env
+
