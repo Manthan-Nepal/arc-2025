@@ -1,0 +1,17 @@
+# Ignore Python virtual environment
+.venv/
+.env
+
+# Ignore all Jupyter notebooks
+*.ipynb
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# vscode settings
+.vscode/
