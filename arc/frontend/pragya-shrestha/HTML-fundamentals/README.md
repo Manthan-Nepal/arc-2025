@@ -1,6 +1,6 @@
 # HTML Fundamentals – Day 1
 
-Welcome to **Day 1** of your Web Development journey! This folder covers foundational HTML concepts, a professional dev environment setup, and two mini-projects built using only HTML5 with proper semantic structure and accessibility in mind.
+Welcome to **Day 1** of my Web Development journey! This folder covers foundational HTML concepts, a professional dev environment setup, and two mini-projects built using only HTML5 with proper semantic structure and accessibility in mind.
 
 ---
 
@@ -23,7 +23,7 @@ To complete the exercises in this folder, you should have the following installe
   - HTML CSS Support
 - **Git** and a **GitHub** account
 - Browser **DevTools** for inspecting elements and debugging
-- Basic command line usage
+- Basic git command line usage
 
 ---
 
