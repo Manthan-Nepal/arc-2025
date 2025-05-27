@@ -17,6 +17,6 @@
 
 ## Mentoring Session Takeaways
 1. Use terminal more and memorize commands. (Like: python -m venv virt-env-name) [-m here stands for module].
-2. print(""+str(a)+"") is a bad practice, use print(f "{a}") instead.
+2. print(f "{a}") is a better coding practice than print(""+str(a)+"").
 3. Brief Git overview and showcase of Git and GitHub.
 4. Take a look at Git and Python commands, get comfortable with using them.

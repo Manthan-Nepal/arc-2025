@@ -14,9 +14,11 @@
 - Create data models for tasks and users.
 
 ## Tasks for review
-- [] Build a contact book using dictionaries (name, phone, email).
+- [x] Build a contact book using dictionaries (name, phone, email).
 - [] Create a CSV parser converting data to list of dicts.
-- [] FIlter even numbers from a list using compreshension.
+- [x] FIlter even numbers from a list using compreshension.
 
 ## Mentoring Session Takeaways
-- 
+- Some Interactions with terminal, data structure types and operations.
+- Learn about CSV parser.
+- Look at slicing of data structures.
