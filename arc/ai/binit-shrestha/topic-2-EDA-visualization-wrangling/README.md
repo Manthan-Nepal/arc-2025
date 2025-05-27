@@ -11,3 +11,13 @@
 - Checked missing values, duplicates explored methods to handle them (**impute**, **drop**)
 - Feature types and how to handle them respectively
 - **Encoding** categorical values for **uniformity** across dataset
+
+### Data Visualization
+- Familiarized with various types of plots (Line, Scatter, Hist, Bar)
+- Learned about directly plotting DataFrames
+
+### Exploratory Data Analysis
+- Inspecting the actual distribution of specific data features
+- Understanding the **feature relationships** in the dataset
+- Performing operations like transformations, removals, capping to ensure reliability and completeness
+- Numerous ways to **explore** and **analyze** data
