@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins',
         sans-serif;
@@ -9,20 +15,28 @@ body {
 }
 
 main {
-    background-color: rgb(157, 187, 177);
+    background-color: whitesmoke;
     padding: 1rem;
-    color: white;
+    color: black;
 }
 
 main #contacts {
     margin: 0;
     padding: 1rem;
-    background-color: black;
+
 
 }
 
 main #contacts h2 {
     text-align: center;
+}
+
+main #contacts>div {
+    margin-bottom: 1rem;
+}
+
+main #contacts .contact-information>div {
+    margin-bottom: 1rem;
 }
 
 main #contacts .message-1 {
@@ -35,6 +49,7 @@ main #contacts .message {
 }
 
 main .contact-information ul {
+    margin-top: 1rem;
     list-style: none;
 }
 
@@ -46,6 +61,7 @@ main .contact-information ul li img {
 
 main .contact-information ul li {
     display: flex;
+    margin-bottom: 1rem;
 }
 
 main .contact-information ul li .content {
@@ -59,18 +75,19 @@ main .contact-information ul li .content span {
 
 
 main .contact-information .social-media a img {
+    margin: 1rem 4px;
     height: 30px;
     width: 30px;
     border-radius: 50%;
 }
 
 main .contact-information .social-media a img:hover {
-    opacity: 0.5;
+    opacity: 0.8;
     transform: scale(1.2);
 }
 
 main .contact-form {
-    border: 1px solid white;
+    border: 1px solid black;
     max-width: max-content;
     padding: 1rem 3rem;
     margin-top: 1rem;
@@ -113,7 +130,8 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    /* font-size: small; */
+    margin: 0;
+    width: 100%;
 }
 
 footer .top-footer {
@@ -121,19 +139,41 @@ footer .top-footer {
 
 }
 
+footer .top-footer>div {
+    margin-bottom: 1rem;
+}
+
+footer .top-footer .info h3 {
+    margin-bottom: 4px;
+}
+
 footer .top-footer .quick-links div ul {
     list-style: none;
     padding: 0;
+    margin-top: 8px;
+}
+
+footer .top-footer .quick-links div ul li {
+    margin-top: 4px;
 }
 
 footer .top-footer .quick-links div ul li a {
     text-decoration: none;
     color: white;
+    font-weight: 200;
 }
 
 footer .top-footer .quick-links div ul li a:hover {
     opacity: 0.5;
     transition: transform 0.3s ease;
+}
+
+footer .top-footer .contact-info h3 {
+    margin-bottom: 4px;
+}
+
+footer .top-footer .contact-info div p {
+    margin-bottom: 4px;
 }
 
 footer .top-footer .social-media a img {
@@ -144,6 +184,7 @@ footer .top-footer .social-media a img {
     border: 2px solid white;
     transition: transform 0.3s ease, opacity 0.3s ease;
     box-sizing: border-box;
+    margin-top: 4px;
 
 }
 
@@ -162,7 +203,7 @@ footer .bottom-footer {
     }
 
     body {
-        font-size: larger;
+        font-size: large;
     }
 
     footer .top-footer .social-media a img {
@@ -175,7 +216,7 @@ footer .bottom-footer {
 @media screen and (min-width:769px) {
 
     body {
-        font-size: x-large;
+        font-size: larger;
     }
 
     footer .top-footer {
@@ -191,7 +232,7 @@ footer .bottom-footer {
 
 @media screen and (min-width:1025px) {
     body {
-        font-size: xx-large;
+        font-size: x-large;
     }
 
     main #contacts .message-1 {
@@ -212,10 +253,7 @@ footer .bottom-footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin-right: 4rem;
     }
 
-    footer .top-footer .social-media a img {
-        width: 60px;
-        height: 60px;
-    }
 }
