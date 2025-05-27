@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../public/logo-A.jpg">
+    <link rel="stylesheet" href="./index.css">
     <title>
         Abhishek Hyangol - Portfolio
     </title>
@@ -12,20 +13,22 @@
 
 <body>
 
-    <header role="banner">
-        <h1>Abhishek Hyangol</h1>
-        <p>Frontend Developer</p>
-    </header>
+    <div class="head">
+        <header role="banner">
+            <h1>Abhishek Hyangol</h1>
+            <p>Frontend Developer</p>
+        </header>
 
-    <nav role="navigation" aria-label="navigation">
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#academic">Academic</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contacts">Contacts</a></li>
-        </ul>
-    </nav>
+        <nav role="navigation" aria-label="navigation">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#academic">Academic</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <main role="main">
         <section id="about" role="region" aria-labelledby="about-heading">
@@ -200,53 +203,84 @@
         </section>
 
         <section id="contacts" role="region" aria-labelledby="contacts-heading">
-            <h2 id="contacts-heading">Contacts</h2>
+            <div class="contacts-top">
+                <h2 id="contacts-heading">Get In Touch</h2>
+                <p>Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
+            </div>
 
-            <form action="" aria-label="contact-form to send message to Abhishek">
-                <div class="">
-                    <label for="name">Enter your Name:</label>
-                    <input type="text" name="name" id="name" required aria-describedby="nameHelp">
-                    <small id="nameHelp" style="display: none;">Please enter your Fullname as shown in official
-                        documents.</small>
-                </div>
-                <div class="">
-                    <label for="email">Enter your Email:</label>
-                    <input type="email" name="email" id="email" required aria-describedby="emailHelp">
-                    <small id="emailHelp" style="display: none;">Don't worry email will be confidential and won't be
-                        shared. </small>
-                </div>
-                <div class="">
-                    <label for="message">Enter your message:</label>
-                    <textarea id="message" name="message" rows="5" required aria-describedby="messageHelp"></textarea>
-                    <small id="messageHelp" style="display: none;">Write suggestions or message that you want to send to
-                        Abhishek.</small>
-                </div>
-                <button>
-                    Submit
-                </button>
-            </form>
+            <div class="contacts-bottom">
+
+                <form action="" aria-label="contact-form to send message to Abhishek">
+                    <div class="">
+                        <label for="name">Enter your Name:</label>
+                        <input type="text" name="name" id="name" required aria-describedby="nameHelp">
+                        <small id="nameHelp" style="display: none;">Please enter your Fullname as shown in official
+                            documents.</small>
+                    </div>
+                    <div class="">
+                        <label for="email">Enter your Email:</label>
+                        <input type="email" name="email" id="email" required aria-describedby="emailHelp">
+                        <small id="emailHelp" style="display: none;">Don't worry email will be confidential and won't be
+                            shared. </small>
+                    </div>
+                    <div class="">
+                        <label for="message">Enter your message:</label>
+                        <textarea id="message" name="message" rows="5" required
+                            aria-describedby="messageHelp"></textarea>
+                        <small id="messageHelp" style="display: none;">Write suggestions or message that you want to
+                            send to
+                            Abhishek.</small>
+                    </div>
+                    <button>
+                        Submit
+                    </button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="">
-            <p>Email: sthaavi48@gmail.com</p>
-            <p>Phone: +977 123456789</p>
-        </div>
-        <div class="">
-            <a href="#Facebook"><img src="../public/images/facebook.png" alt="facebook-icon in footer" target="_blank"
-                    rel="noopener noreferrer" height="30px"></a>
-            <a href="#Github"><img src="../public/images/github-icon.png" alt="github-icon in footer" target="_blank"
-                    rel="noopener noreferrer" height="30px"></a>
-            <a href="#Linked In"><img src="../public/images/linkedIn.png" alt="linkedin-icon in footer" target="_blank"
-                    rel="noopener noreferrer" height="30px"></a>
-            <a href="#Twitter"><img src="../public/images/twitter.png" alt="twitter-icon in footer" target="_blank"
-                    rel="noopener noreferrer" height="30px"></a>
-            <a href="#Blog"><img src="../public/images/blog.png" alt="blog-icon in footer" target="_blank"
-                    rel="noopener noreferrer" height="30px"></a>
+        <div class="top-footer">
 
+            <div class="info">
+                <h3>Abhishek Hyangol</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, hic.</p>
+
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <div class="">
+                    <ul>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#academic">Academic</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Info</h3>
+                <p>Changunarayan-08, Bhaktapur</p>
+                <p>Nepal</p>
+                <p>sthaavi48@gmail.com</p>
+                <p>+977 123456789</p>
+                <div class="social-media">
+                    <a href="#Facebook"><img src="../public/images/facebook.png" alt="facebook-icon in footer"
+                            target="_blank" rel="noopener noreferrer" height="30px"></a>
+                    <a href="#Github"><img src="../public/images/github-icon.png" alt="github-icon in footer"
+                            target="_blank" rel="noopener noreferrer" height="30px"></a>
+                    <a href="#Linked In"><img src="../public/images/linkedIn.png" alt="linkedin-icon in footer"
+                            target="_blank" rel="noopener noreferrer" height="30px"></a>
+                    <a href="#Twitter"><img src="../public/images/twitter.png" alt="twitter-icon in footer"
+                            target="_blank" rel="noopener noreferrer" height="30px"></a>
+                    <a href="#Blog"><img src="../public/images/blog.png" alt="blog-icon in footer" target="_blank"
+                            rel="noopener noreferrer" height="30px"></a>
+
+                </div>
+            </div>
         </div>
-        <div class="">
+        <div class="bottom-footer">
             <p>Copyright(C) Abhishek Hyangol</p>
         </div>
     </footer>

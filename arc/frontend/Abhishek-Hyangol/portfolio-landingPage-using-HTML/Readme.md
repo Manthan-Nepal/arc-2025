@@ -8,3 +8,8 @@
         -HTML5 interactive elements are accessible by screen readers but non-interactive elements like <div>, <span> aren't so it helps for non-reactive elements to be accessible.
         -So in form handling ARIA can be best use for customizable error addressing and commanding.
         -Form submission as well as error information can be efficiently conveyed.
+
+
+## CSS
+
+# CSS Selectors
