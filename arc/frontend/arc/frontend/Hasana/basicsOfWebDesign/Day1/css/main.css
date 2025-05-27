@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+    /* padding: 20px; */
+    /* border: 2px red solid; */
+}
+#all {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    flex-direction: column;
+    width: 75%;
+}
+
+/* Navigation */
+header {
+    background-color: #222;
+    padding: 15px 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    /* z-index: -1; */
+}
+
+nav {
+    /* border: 2px red solid; */
+    width: 50%;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section layout */
+section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-left: 5px solid #005f73;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h2 {
+    color: #005f73;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin: 10px 0;
+    color: #0a9396;
+}
+
+/* Paragraphs and lists */
+p,
+li {
+    margin-bottom: 10px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #ee9b00;
+    color: white;
+}
+
+/* Buttons */
+button {
+    background-color: #0a9396;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #005f73;
+}
+
+/* Form */
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    height: 10px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer a {
+    color: #0b4e77;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
