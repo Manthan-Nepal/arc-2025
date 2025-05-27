@@ -1,0 +1,31 @@
+1) Cloning forked repository
+git clone [https://www.github.com/user_name/repository]
+
+2)Open directory
+cd repository
+
+3)Add original repo as upstream 
+git remote add upstream [url_original]
+
+4)Verifying remote repo
+git remote -v
+
+5)Branch Creation
+git checkout -b [Branch_name]
+
+6)Create personal workspace
+mkdir -p [folder-name/your-name]
+
+7)Document learning in README.md
+echo "#Git Fundamentals Learning"> README.md
+echo "## Commands Practiced">> README.md
+
+//git push
+
+
+7)Add changes
+add .
+8) Add commit message
+git commit -m "[message]"
+9)Push to Branch
+git push origin frontend/name/internship-progess
