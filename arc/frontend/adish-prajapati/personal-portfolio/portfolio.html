@@ -1,29 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>My Portfolio</title>
   </head>
-  <body>
-    <header>
-      <img src="./Images/pp.jpg" alt="picture of adish prajapati" width="12%" />
-      <h1>Adish Prajapati</h1>
-      <h3>Full Stack Developer</h3>
+  <body class="bg-gray-900 text-white font-sans leading-relaxed">
+    <header class="text-center py-10 bg-gray-800 shadow-md">
+      <img
+        src="./Images/pp.jpg"
+        alt="Adish Prajapati"
+        class="rounded-full h-[250px] w-[250px] mx-auto mb-4 border-4 border-teal-500"
+      />
+      <h1 class="text-4xl font-bold mb-1">Adish Prajapati</h1>
+      <h3 class="text-xl text-teal-400 mb-4">
+        <strong>Full Stack Developer</strong>
+      </h3>
       <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="flex justify-center gap-6 text-lg text-teal-300">
+          <li><a href="#about" class="hover:text-white">About</a></li>
+          <li><a href="#projects" class="hover:text-white">Projects</a></li>
+          <li><a href="#skills" class="hover:text-white">Skills</a></li>
+          <li><a href="#contact" class="hover:text-white">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
+    <main class="max-w-5xl mx-auto px-6">
+      <section id="about" class="py-12">
+        <h2 class="text-3xl font-bold text-teal-400 mb-4">About Me</h2>
+        <p class="text-gray-300 text-lg">
           I am a passionate Full Stack Web Developer with a strong interest in
           building modern, user-friendly web applications. I enjoy working
           across both frontend and backend technologies to create seamless
@@ -35,104 +42,114 @@
         </p>
       </section>
 
-      <section id="projects">
-        <h2><strong>My Projects</strong></h2>
-        <article>
-          <h3>Social Media App</h3>
-          <table>
-            <tr>
-              <td width="960">
-                Developed the frontend of a social media application using
-                React, implementing features like user authentication, post
-                creation, likes, and comments. Utilized React Hooks and Context
-                API for efficient state management, ensuring a responsive and
-                dynamic user experience
-              </td>
+      <section id="projects" class="py-12">
+        <h2 class="text-3xl font-bold text-teal-400 mb-6">My Projects</h2>
 
-              <td>
-                <a href="https://github.com/aadish-praz/socialmedia">
-                  github.com/aadish-praz/socialmedia
-                </a>
-              </td>
-            </tr>
-          </table>
+        <article
+          class="mb-8 p-6 border border-gray-700 rounded-lg bg-gray-800 shadow-sm"
+        >
+          <h3 class="text-2xl font-semibold mb-2">Social Media App</h3>
+          <p class="text-gray-300">
+            Developed the frontend of a social media application using React,
+            implementing features like user authentication, post creation,
+            likes, and comments. Utilized React Hooks and Context API for
+            efficient state management, ensuring a responsive and dynamic user
+            experience.
+          </p>
+          <a
+            href="https://github.com/aadish-praz/socialmedia"
+            target="_blank"
+            class="text-teal-400 hover:underline mt-2 inline-block"
+            >View on GitHub</a
+          >
         </article>
 
-        <article>
-          <h3>Hand Gesture Recoginition</h3>
-
-          <table>
-            <tr>
-              <td width="960">
-                Developed a real-time hand gesture recognition system using
-                OpenCV, MediaPipe, and LSTM. Utilized sequential modeling to
-                accurately classify dynamic hand gestures from video streams.
-              </td>
-              <td>
-                <a href="https://github.com/nimesh69/Hand-Gesture-Recognition">
-                  github.com/aadish-praz/Hand-gesture-recogniton
-                </a>
-              </td>
-            </tr>
-          </table>
+        <article
+          class="mb-8 p-6 border border-gray-700 rounded-lg bg-gray-800 shadow-sm"
+        >
+          <h3 class="text-2xl font-semibold mb-2">Hand Gesture Recognition</h3>
+          <p class="text-gray-300">
+            Developed a real-time hand gesture recognition system using OpenCV,
+            MediaPipe, and LSTM. Utilized sequential modeling to accurately
+            classify dynamic hand gestures from video streams.
+          </p>
+          <a
+            href="https://github.com/nimesh69/Hand-Gesture-Recognition"
+            target="_blank"
+            class="text-teal-400 hover:underline mt-2 inline-block"
+            >View on GitHub</a
+          >
         </article>
 
-        <article>
-          <h3>Face Restoration</h3>
-          <table>
-            <tr>
-              <td width="960">
-                Developed a facial image recovery system using Generative
-                Adversarial Networks (GANs). Leveraged StyleGAN to reconstruct
-                high-quality facial images from low-resolution or corrupted
-                inputs, enhancing image clarity and realism.
-              </td>
-              <td>
-                <a href="https://shorturl.at/DDRt9"
-                  >github.com/aadish-praz/facerestoration</a
-                >
-              </td>
-            </tr>
-          </table>
+        <article
+          class="mb-8 p-6 border border-gray-700 rounded-lg bg-gray-800 shadow-sm"
+        >
+          <h3 class="text-2xl font-semibold mb-2">Face Restoration</h3>
+          <p class="text-gray-300">
+            Developed a facial image recovery system using Generative
+            Adversarial Networks (GANs). Leveraged StyleGAN to reconstruct
+            high-quality facial images from low-resolution or corrupted inputs,
+            enhancing image clarity and realism.
+          </p>
+          <a
+            href="https://shorturl.at/DDRt9"
+            target="_blank"
+            class="text-teal-400 hover:underline mt-2 inline-block"
+            >View on GitHub</a
+          >
         </article>
       </section>
 
-      <section id="skills">
-        <h2>Skills</h2>
-        <table>
-          <tr>
-            <td>HTML5 & CSS3</td>
-            <td>★ ★ ★</td>
-          </tr>
-          <tr>
-            <td>JavaScript</td>
-            <td>★ ★ ★ ★</td>
-          </tr>
-          <tr>
-            <td>React</td>
-            <td>★ ★ ★</td>
-          </tr>
-          <tr>
-            <td>Node.js</td>
-            <td>★ ★ ★</td>
-          </tr>
-          <tr>
-            <td>Python</td>
-            <td>★ ★ ★ ★</td>
-          </tr>
-          <tr>
-            <td>Django</td>
-            <td>★ ★ ★</td>
-          </tr>
+      <section id="skills" class="py-12">
+        <h2 class="text-3xl font-bold text-teal-400 mb-6">Skills</h2>
+        <table class="w-full text-left border border-gray-700 text-gray-300">
+          <thead class="bg-gray-800">
+            <tr>
+              <th class="p-3 border-b border-gray-700">Skill</th>
+              <th class="p-3 border-b border-gray-700">Proficiency</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3 border-b border-gray-700">HTML5 & CSS3</td>
+              <td class="p-3 border-b border-gray-700 text-[yellow]">★ ★ ★</td>
+            </tr>
+            <tr>
+              <td class="p-3 border-b border-gray-700">JavaScript</td>
+              <td class="p-3 border-b border-gray-700 text-[yellow]">
+                ★ ★ ★ ★
+              </td>
+            </tr>
+            <tr>
+              <td class="p-3 border-b border-gray-700">React</td>
+              <td class="p-3 border-b border-gray-700 text-[yellow]">★ ★ ★</td>
+            </tr>
+            <tr>
+              <td class="p-3 border-b border-gray-700">Node.js</td>
+              <td class="p-3 border-b border-gray-700 text-[yellow]">★ ★ ★</td>
+            </tr>
+            <tr>
+              <td class="p-3 border-b border-gray-700">Python</td>
+              <td class="p-3 border-b border-gray-700 text-[yellow]">
+                ★ ★ ★ ★
+              </td>
+            </tr>
+            <tr>
+              <td class="p-3">Django</td>
+              <td class="p-3 text-[yellow]">★ ★ ★</td>
+            </tr>
+          </tbody>
         </table>
       </section>
 
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <address>
+      <section id="contact" class="py-12">
+        <h2 class="text-3xl font-bold text-teal-400 mb-4">Contact Me</h2>
+        <address class="text-gray-300 space-y-2 text-lg">
           <p>
             Email:
-            <a href="mailto:przapatiadish12@gmail.com" target="_blank"
+            <a
+              href="mailto:przapatiadish12@gmail.com"
+              class="text-teal-400 hover:underline"
               >przapatiadish12@gmail.com</a
             >
           </p>
@@ -140,13 +157,17 @@
             LinkedIn:
             <a
               href="https://www.linkedin.com/in/adish-prajapati-b29a25257/"
+              class="text-teal-400 hover:underline"
               target="_blank"
               >linkedin.com/in/adishprajapati</a
             >
           </p>
           <p>
             GitHub:
-            <a href="https://github.com/aadish-praz" target="_blank"
+            <a
+              href="https://github.com/aadish-praz"
+              class="text-teal-400 hover:underline"
+              target="_blank"
               >github.com/aadish-praz</a
             >
           </p>
@@ -154,8 +175,10 @@
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Adish Prajapati. All rights reserved.</p>
+    <footer class="text-center py-6 mt-10 bg-gray-800 border-t border-gray-700">
+      <p class="text-gray-400">
+        &copy; 2025 Adish Prajapati. All rights reserved.
+      </p>
     </footer>
   </body>
 </html>
