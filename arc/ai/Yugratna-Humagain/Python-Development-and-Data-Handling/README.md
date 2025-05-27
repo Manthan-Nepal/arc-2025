@@ -1,4 +1,5 @@
-# Python Development and Data Handling## Overview
+# Python Development and Data Handling
+## Overview
 
 This repository documents my journey through intermediate Python programming, focusing on object-oriented programming (OOP), scripting, and data processing using NumPy and Pandas. The content is inspired by tutorials and assignments from the [arc-2025](https://github.com/Tech-Manthan-Nepal/arc-2025) repository.
 
