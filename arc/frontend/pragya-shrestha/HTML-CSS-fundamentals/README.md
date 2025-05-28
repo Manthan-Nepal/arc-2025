@@ -23,7 +23,7 @@ To complete the exercises in this folder, you should have the following installe
   - HTML CSS Support
 - **Git** and a **GitHub** account
 - Browser **DevTools** for inspecting elements and debugging
-- Basic command line usage
+- Basic git command line usage
 
 ---
 
