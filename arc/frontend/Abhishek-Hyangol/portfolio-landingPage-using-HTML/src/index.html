@@ -6,28 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../public/logo-A.jpg">
     <link rel="stylesheet" href="./index.css">
+
     <title>
         Abhishek Hyangol - Portfolio
     </title>
 </head>
 
 <body>
+    <div class="overlay" id="overlay">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#academic">Work Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+
+        <img src="../public/images/cross-icon.png" alt="" id="cross-icon">
+    </div>
 
     <div class="head">
         <header role="banner">
-            <h1>Abhishek Hyangol</h1>
+            <h2>Abhishek Hyangol</h2>
             <p>Frontend Developer</p>
         </header>
-
-        <nav role="navigation" aria-label="navigation">
+        <div class="ham-icon" id="hamburger">
+            <img src="../public/images/ham-icon.png" alt="">
+        </div>
+        <nav role="navigation" id="menu" aria-label="navigation">
             <ul>
                 <li><a href="#about">About Me</a></li>
-                <li><a href="#academic">Academic</a></li>
+                <li><a href="#academic">Work Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contacts">Contacts</a></li>
             </ul>
         </nav>
+
     </div>
     <div class="hero">
         <img src="../public/images/profile.jpg" alt="profile Photo of Abhishek ">
@@ -43,8 +58,8 @@
     <main role="main">
         <section id="about" role="region" aria-labelledby="about-heading">
             <h2 id="about-heading">About Me</h2>
-            <div class="">
-                <div class="">
+            <div class="about-me">
+                <div class="about-description">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis rerum alias velit dolorem quas
                         fugit! Unde id, perferendis minima saepe voluptates quos tempore facilis nam amet quibusdam
                         aliquid nostrum consectetur. Harum impedit illo reprehenderit ipsa vel. Recusandae nostrum ipsam
@@ -65,159 +80,301 @@
                     </a>
                 </div>
 
+                <div class="about-details">
+                    <div class="">
+                        <span>
+                            <img src="../public/images/facebook.png" alt="">
+                            <h3>Professional Background</h3>
+                        </span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perspiciatis.</p>
+                    </div>
+                    <div class="">
+                        <span>
+                            <img src="../public/images/facebook.png" alt="">
+                            <h3>Current Focus</h3>
+                        </span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perspiciatis.</p>
+                    </div>
+                    <div class="">
+                        <span>
+                            <img src="../public/images/facebook.png" alt="">
+                            <h3>Achievements</h3>
+                        </span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perspiciatis.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <h2 id="academic-heading">Work Experience</h2>
+        <section id="academic" role="region" aria-labelledby="academic-heading">
+            <div class="">
+                <div class="">
+                    <h3>Senior Software Developer</h3>
+                    <p class="firstp">Tech Innovations Inc.</p>
+                    <p>Jan 2022 - Present</p>
+                </div>
+
+                <span>Kathmandu, Nepal</span>
+                <div class="">
+                    <ul>
+                        <li>
+                            Lead a team of 5 developers in building and maintaining enterprise-level web applications
+                        </li>
+                        <li>
+                            Implemented microservices architecture using Node.js and Express, resulting in 40%
+                            improvement in system performance
+                        </li>
+                        <li>
+                            Developed and maintained CI/CD pipelines using GitHub Actions
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="">
+                <div class="">
+                    <h3>Senior Software Developer</h3>
+                    <p class="firstp">Tech Innovations Inc.</p>
+                    <p>Jan 2022 - Present</p>
+                </div>
+
+                <span>Kathmandu, Nepal</span>
+                <div class="">
+                    <ul>
+                        <li>
+                            Lead a team of 5 developers in building and maintaining enterprise-level web applications
+                        </li>
+                        <li>
+                            Implemented microservices architecture using Node.js and Express, resulting in 40%
+                            improvement in system performance
+                        </li>
+                        <li>
+                            Developed and maintained CI/CD pipelines using GitHub Actions
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="">
+                <div class="">
+                    <h3>Senior Software Developer</h3>
+                    <p class="firstp">Tech Innovations Inc.</p>
+                    <p>Jan 2022 - Present</p>
+                </div>
+
+                <span>Kathmandu, Nepal</span>
+                <div class="">
+                    <ul>
+                        <li>
+                            Lead a team of 5 developers in building and maintaining enterprise-level web applications
+                        </li>
+                        <li>
+                            Implemented microservices architecture using Node.js and Express, resulting in 40%
+                            improvement in system performance
+                        </li>
+                        <li>
+                            Developed and maintained CI/CD pipelines using GitHub Actions
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="skills" role="region" aria-labelledby="skill-heading">
+            <h2 id="skill-heading">Skills & Technologies</h2>
+            <p class="message-1">
+                A comprehensive overview of my technical skills and the technologies I work with.
+            </p>
+            <div class="card-container">
+                <div class="card">
+                    <span>
+                        <img src="../public/images/frontend-icon.png" alt="">
+                        <h3>Frontend Development</h3>
+                    </span>
+                    <div class="">
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <span>
+                        <img src="../public/images/backend-icon.jpg" alt="">
+                        <h3>Backend Development</h3>
+                    </span>
+                    <div class="">
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <span>
+                        <img src="../public/images/database-icon.png" alt="">
+                        <h3>Database Technologies</h3>
+                    </span>
+                    <div class="">
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <span>
+                        <img src="../public/images/programming-icon.png" alt="">
+                        <h3>Programming Languages</h3>
+                    </span>
+                    <div class="">
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <span>
+                        <img src="../public/images/other-tools.png" alt="">
+                        <h3>Other Tools</h3>
+                    </span>
+                    <div class="">
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                        <p class="card-name">React</p>
+                    </div>
+                </div>
 
             </div>
         </section>
 
-        <section id="academic" role="region" aria-labelledby="academic-heading">
-            <h2 id="academic-heading">Academic & Certifications</h2>
-            <table>
-                <caption>
-                    Academic Reports
-                </caption>
-                <thead>
-                    <tr>
-                        <th scope="col">
-                            Grade
-                        </th>
-                        <th scope="col">
-                            School/College
-                        </th>
-                        <th scope="col">
-                            Board/University
-                        </th>
-                        <th scope="col">
-                            Percentage/GPA
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>10</th>
-                        <td>Lorem, ipsum.</td>
-                        <td>HSEB</td>
-                        <td>3.8</td>
-                    </tr>
-                    <tr>
-                        <th>12</th>
-                        <td>Lorem, ipsum.</td>
-                        <td>NEB</td>
-                        <td>3.7</td>
-                    </tr>
-                    <tr>
-                        <th>Bachelor</th>
-                        <td>Lorem, ipsum.</td>
-                        <td>TU</td>
-                        <td>3.7</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3>Certificates</h3>
-            <article>
-                <h4>Certification name(Certificate Issued From)</h4>
-                <ul>
-
-                    <li>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, officiis.
-                    </li>
-                    <li>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, officiis.
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <h4>Certification name(Certificate Issued From)</h4>
-                <ul>
-
-                    <li>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, officiis.
-                    </li>
-                    <li>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, officiis.
-                    </li>
-                </ul>
-            </article>
-        </section>
-
-        <section id="skills" role="region" aria-labelledby="skill-heading">
-            <h2 id="skill-heading">Skills</h2>
-            <table>
-                <caption>
-                    Skills Acquired
-                </caption>
-                <thead>
-                    <tr>
-                        <th scope="col">
-                            Tech Field
-                        </th>
-                        <th scope="col">
-                            Language/Frameworks
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Frontend</td>
-                        <td>HTML, CSS, JS, TS, React</td>
-                    </tr>
-                    <tr>
-                        <td>Backend</td>
-                        <td>Node.Js, Django</td>
-                    </tr>
-                    <tr>
-                        <td>API</td>
-                        <td>RestApi</td>
-                    </tr>
-                    <tr>
-                        <td>Cloud Computing</td>
-                        <td>AWS, Azure</td>
-                    </tr>
-                    <tr>
-                        <td>Machine Learning</td>
-                        <td>TensorFlow, Pytorch</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
+        <h2 id="project-heading">Projects</h2>
         <section id="projects" role="region" aria-labelledby="project-heading">
-            <h2 id="project-heading">Projects</h2>
-            <article>
-                <h3>Project One</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, natus.</p>
-                <i>
-                    <a href="#github">
-                        <img src="../public/images/github-icon.png" alt="github icon of Project1" height="30px">
-                        View on GitHub
-                    </a>
-                </i>
-                <i>
-                    <a href="#demo">
-                        <img src="../public/images/link.png" alt="demo icon of Project 1" height="20px">
-                        Demo
-                    </a>
-                </i>
-            </article>
-            <article>
-                <h3>Project Two</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, natus.</p>
+
+            <div class="">
                 <div class="">
+                    <div class="">
+                        <h3>Virtual Tour Guide </h3>
+                        <p>Jan 2022 - Present</p>
+                    </div>
 
-                    <a href="#github">
-                        <img src="../public/images/github-icon.png" alt="github icon of project2" height="30px">
-                        View on GitHub
-                    </a>
+                    <div class="">
+                        <ul>
+                            <li>
+                                Lead a team of 5 developers in building and maintaining enterprise-level web
+                                applications
+                            </li>
+                            <li>
+                                Implemented microservices architecture using Node.js and Express, resulting in 40%
+                                improvement in system performance
+                            </li>
+                            <li>
+                                Developed and maintained CI/CD pipelines using GitHub Actions
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h3>Tech Stack used</h3>
+                        <div class="">
+                            <p>React</p>
+                            <p>RestAPI</p>
+                            <p>Node.js</p>
+                            <p>MongoDB</p>
+                            <p>github</p>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="">
+                    <div class="">
+                        <h3>Virtual Tour Guide </h3>
+                        <p>Jan 2022 - Present</p>
+                    </div>
 
-                    <a href="#demo">
-                        <img src="../public/images/link.png" alt="demo icon of project2" height="20px">
-                        Demo
-                    </a>
+                    <div class="">
+                        <ul>
+                            <li>
+                                Lead a team of 5 developers in building and maintaining enterprise-level web
+                                applications
+                            </li>
+                            <li>
+                                Implemented microservices architecture using Node.js and Express, resulting in 40%
+                                improvement in system performance
+                            </li>
+                            <li>
+                                Developed and maintained CI/CD pipelines using GitHub Actions
+                            </li>
+                        </ul>
+                    </div>
 
+                    <div class="tech-stack">
+                        <h3>Tech Stack used</h3>
+                        <div class="">
+                            <p>React</p>
+                            <p>RestAPI</p>
+                            <p>Node.js</p>
+                            <p>MongoDB</p>
+                            <p>github</p>
+                        </div>
+                    </div>
                 </div>
-            </article>
+
+                <div class="">
+                    <div class="">
+                        <h3>Virtual Tour Guide </h3>
+                        <p>Jan 2022 - Present</p>
+                    </div>
+
+                    <div class="">
+                        <ul>
+                            <li>
+                                Lead a team of 5 developers in building and maintaining enterprise-level web
+                                applications
+                            </li>
+                            <li>
+                                Implemented microservices architecture using Node.js and Express, resulting in 40%
+                                improvement in system performance
+                            </li>
+                            <li>
+                                Developed and maintained CI/CD pipelines using GitHub Actions
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h3>Tech Stack used</h3>
+                        <div class="">
+                            <p>React</p>
+                            <p>RestAPI</p>
+                            <p>Node.js</p>
+                            <p>MongoDB</p>
+                            <p>github</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
         </section>
 
         <section id="contacts" role="region" aria-labelledby="contacts-heading">
@@ -239,21 +396,21 @@
                             vision.</p>
                         <ul>
                             <li>
-                                <img src="../public/images/facebook.png" alt="">
+                                <img src="../public/images/email-icon.png" alt="">
                                 <div class="content">
                                     <span>Email</span>
                                     <p>example@example.com</p>
                                 </div>
                             </li>
                             <li>
-                                <img src="../public/images/facebook.png" alt="">
+                                <img src="../public/images/phone-icon.png" alt="">
                                 <div class="content">
                                     <span>Phone</span>
                                     <p>+123 456 7890</p>
                                 </div>
                             </li>
                             <li>
-                                <img src=" ../public/images/facebook.png" alt="">
+                                <img src=" ../public/images/address-icon.jpg" alt="">
                                 <div class="content">
                                     <span>Address</span>
                                     <p>123 Your Street, City, Country</p>
@@ -363,6 +520,21 @@
             <p>Copyright(C) Abhishek Hyangol</p>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const overlay = document.getElementById("overlay");
+        const cross = document.getElementById("cross-icon");
+
+
+        hamburger.addEventListener("click", () => {
+            overlay.style.display = "flex";
+        });
+
+        cross.addEventListener("click", () => {
+            overlay.style.display = "none";
+        });
+    </script>
 </body>
 
 </html>
