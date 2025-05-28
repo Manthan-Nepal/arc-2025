@@ -1,6 +1,6 @@
 # HTML Fundamentals – Day 1
 
-Welcome to **Day 1** of your Web Development journey! This folder covers foundational HTML concepts, a professional dev environment setup, and two mini-projects built using only HTML5 with proper semantic structure and accessibility in mind.
+Welcome to **Day 1** of my Web Development journey! This folder covers foundational HTML concepts, and two mini-projects built using only HTML5 with proper semantic structure and accessibility in mind.
 
 ---
 
