@@ -17,7 +17,7 @@ body{
     }
 }
 header{
-    padding: 61px 0px 135px 62.5px;
+    padding: 61px 0px 80px 62.5px;
     margin: 0px 187.5px;
     /* padding: 61px 187.5px 120px 250px; */
     align-items: center;
@@ -35,12 +35,18 @@ header{
     text-decoration: none;
     color: #FFFFFF;
 }
+.main-nav li a:hover {
+  color: #FD6F00; 
+  transition: color 0.3s ease;
+  text-decoration: underline;
+}
 .main-nav ul{
     display:flex;
     list-style: none;
     gap:50px;
     font-size: 21px;
 }
+
 
 .download-btn{
     padding: 17px;
@@ -51,17 +57,29 @@ header{
     text-decoration: none;
 }
 
+.download-btn:hover{
+    color: #FFFFFF;
+    text-decoration: underline;
+    background-color: #FF8C00;
+    transition: background-color 0.3s ease;
+}
+
+
 /* styling hero section */
 .hero-section{
     display: flex;
     margin: 0px 187.5px;
     align-items: center;
     gap:110px;
+    border: #2f2e2e solid 2px;
+    border-radius: 5px;
+    padding: 0px 17.5px;
 }
 
 .hero-content{
     width: 65%;
-    padding: 97px 0px;
+    padding-top: 70px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -94,7 +112,7 @@ header{
 #description{
     font-size: 21px;
     margin-top: 28px;
-    margin-bottom: 22px;
+    margin-bottom: 28px;
 }
 
 .hero-content a{
@@ -107,9 +125,64 @@ header{
     width: fit-content;
 }
 
+.hero-content a:hover{
+    color: #FFFFFF;
+    text-decoration: underline;
+    background-color: #FF8C00;
+    transition: background-color 0.3s ease;
+}
+.hero-right{
+        width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 18px;
+    gap: 5px;
+   
+   
+}
 .hero-image{
-    width: 35%;
+    
     display: flex;
     justify-content: center;
-    height: 350px;
+    align-items: center;
+    
+    
+}
+
+.hero-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  
+}
+
+.hero-social{
+    display:flex;
+    align-items: center;
+    
+    
+
+}
+
+.social-icon{
+    text-decoration: none;
+    color: #FFFFFF;
+    
+}
+
+.social-icon:hover{
+    color: #FD6F00;
+    transition: color 0.3s ease;
+}
+.social-icon i{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    
 }
