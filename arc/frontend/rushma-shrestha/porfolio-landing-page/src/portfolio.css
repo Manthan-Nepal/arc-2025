@@ -1,0 +1,103 @@
+* {
+    margin: 0px;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(2, 3, 2);
+    color: rgb(237, 242, 246);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 10%;
+    top: 0;
+    position: static;
+    align-items: center;
+    box-shadow: 0px 2px 8px rgb(136, 136, 136);
+}
+
+header h1 {
+    font-family: "Dancing Script", cursive;
+}
+
+header nav a {
+    margin: 10px;
+    text-decoration: none;
+    border-top: 1px solid rgb(255, 254, 254);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(237, 242, 246);
+}
+
+nav a:hover {
+    background-color: rgb(25, 105, 79);
+    border: none;
+    transition: .25s ease;
+}
+
+#hero {
+    display: flex;
+}
+/* hero left style */
+.hero-left {
+    width: 60%;
+    padding: 100px;
+}
+
+.hero-left h1 {
+    font-size: 60px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 100px;
+    font-style: normal;
+    margin-bottom: 50px;
+}
+
+
+.hero-btn1 , .hero-btn2{
+    font-size: 17px;
+    height: 40px;
+    width: 90px;
+    border: none;
+    margin: 20px 20px 20px 0px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgb(202, 180, 180);
+    transition: .3s all ease-in;
+}
+.hero-btn2{
+    background: rgb(255, 165, 0);
+    box-shadow:4px 4px 8px rgb(156, 106, 106);
+}
+
+.hero-btn1:hover{
+    cursor: pointer;
+    background-color: rgba(204, 22, 162, 0.763);
+    color: white;
+    box-shadow: 3px 3px 8px rgb(225, 11, 172);
+    transform: translateY(-5px);
+    
+}
+.hero-btn2:hover{
+    cursor: pointer;
+    background-color: rgba(12, 247, 110, 0.277);
+    color: white;
+    box-shadow: 3px 3px 8px  rgba(12, 247, 110, 0.521);
+    transform: translateY(-5px);
+}
+/* hero left style */
+
+/* hero right style */
+.hero-right {
+    width: 40%;
+}
+
+.hero-right img {
+    margin-top: 15px;
+    height: 600px;
+    border-radius: 20%  0 20% 0;
+    background: rgba(194, 184, 184, 0.19);
+}
