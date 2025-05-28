@@ -186,3 +186,59 @@ header{
     object-fit: cover;
     
 }
+
+/* styling footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-top: #2f2e2e solid 2px;
+    padding: 30px 0px;
+   
+}
+
+
+
+footer p{
+    font-size: 21px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+}
+footer p:nth-of-type(2) {
+ 
+    color: #FD6F00;
+   
+}
+.footer-social{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.footer-social a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+footer a img:hover{
+    transform: scale(1.1);
+    filter: brightness(0.6);
+    transition: color 0.3s ease;
+}
+.footer-social img{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+#github{
+    width: 50px;
+    height: 50px;
+    padding-bottom: 5px;
+}
