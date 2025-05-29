@@ -97,8 +97,8 @@
       </div>
     </section>
     <!-- about section -->
-    <section>
-      <h2>About Me</h2>
+    <section class="about-section">
+      <h2 class="primary-heading">About Me</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
         laudantium magnam voluptate reprehenderit unde fugiat dolore doloremque
@@ -106,50 +106,53 @@
         nemo tempore adipisci molestiae!
       </p>
       <ul>
-        <li>HTML5,CSS3</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
         <li>JavaScript</li>
         <li>ReactJS</li>
         <li>NodeJS</li>
         <li>MongoDB</li>
         <li>Python</li>
-        <li>AI</li>
+        <li>Machine Learning</li>
         <li>Git and GitHub</li>
       </ul>
     </section>
     <!-- projects section -->
-    <section>
-      <h2>My Projects</h2>
-      <ul>
-        <li>
-          <strong>Project 1</strong>
+    <section class="projects-section">
+      <h2 class="primary-heading">My Projects</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <img src="assets/project.png" alt="Project 1" />
+          <h3>Project Title 1</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            suscipit iusto odio, temporibus culpa ab, eveniet accusamus velit
-            magni natus excepturi! Ipsa et soluta corporis. Nobis inventore
-            tenetur adipisci id!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            quibusdam voluptatum veniam accusamus
           </p>
-        </li>
-        <li>
-          <strong>project-2</strong>
+          <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project-card">
+          <img src="assets/project.png" alt="Project 1" />
+          <h3>Project Title 1</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus,
-            velit?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            quibusdam voluptatum veniam accusamus
           </p>
-        </li>
-        <li>
-          <strong>project-3</strong>
+          <a href="#" class="project-link">View Project</a>
+        </div>
+        <div class="project-card">
+          <img src="assets/project.png" alt="Project 1" />
+          <h3>Project Title 1</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A odit eius
-            sapiente autem ipsa, voluptates officiis assumenda deserunt quas
-            reprehenderit. Perferendis magnam quidem accusantium, maiores
-            obcaecati maxime officiis molestias quod.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            quibusdam voluptatum veniam accusamus
           </p>
-        </li>
-      </ul>
+          <a href="#" class="project-link">View Project</a>
+        </div>
+      </div>
     </section>
 
     <!-- experience section -->
-    <section>
+    <!-- <section class="primary-heading">
       <h2>My Experience</h2>
       <ul>
         <li>
@@ -169,26 +172,36 @@
           </p>
         </li>
       </ul>
-    </section>
+    </section> -->
     <!-- contact section -->
-    <section>
-      <h2>Contact Me</h2>
-      <p>
-        Feel free to reach out via the form below or connect with me on social
-        media.
-      </p>
+    <section class="contact-section">
+      <div class="contact-title">
+        <h2>Contact Me</h2>
+        <p>
+          If you have any questions or want to get in touch, feel free to reach
+          out!
+        </p>
+      </div>
       <form>
-        <label for="name">Your Name:</label><br />
-        <input type="text" id="name" name="name" required /><br /><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          class="form-input"
+          required
+        />
 
-        <label for="email">Your Email:</label><br />
-        <input type="email" id="email" name="email" required /><br /><br />
+        <textarea
+          id="message"
+          name="message"
+          rows="3"
+          placeholder="Any Messages"
+          class="form-input"
+          required
+        ></textarea>
 
-        <label for="message">Your Message:</label><br />
-        <textarea id="message" name="message" rows="5" required></textarea
-        ><br /><br />
-
-        <button type="submit">Send Message</button>
+        <button type="submit" class="submit-btn">Submit</button>
       </form>
     </section>
     <!-- footer  -->
