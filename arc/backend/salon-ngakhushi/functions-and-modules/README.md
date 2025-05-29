@@ -14,6 +14,9 @@
 ## Review Tasks
 - [x] Convert Day 2's contact book into a module.
 - [x] Build a math_operations.py module with add/subtract functions.
-- [] Create a CLI menu system using functions.
+- [x] Create a CLI menu system using functions.
 
 ## Mentoring Session Takeaways
+- Use more inbuilt functions.
+- Get more familiar with args and kwargs.
+- Remember some useful modules like datetime, os, math, random, and json.
