@@ -17,6 +17,7 @@
   * Revisited the uses of CSS class, ID, and elements.
   * Used these selectors to initially, style the dummy portfolio made before. The fieldset were removed and actual css were applied. 
   * Different display properties was revisited. 
-  * In the assignment, dummy online store web page was made, in which display properties, position properties and box model was applied. The pseudo-class, specifically, hover, was utilized in the mini project. A drop down menu for the navigation Bar links were also implemented.
+  * In the assignment, dummy online store web page was made, in which display properties, position properties and box model was applied. The pseudo-class, specifically, hover, was utilized in the mini project.
+  * A drop down menu for the navigation Bar links were also implemented, specifically, for an online store portal, "shop" and "Account" sections.
 
 * ### Resources visited: W3Schools.com
