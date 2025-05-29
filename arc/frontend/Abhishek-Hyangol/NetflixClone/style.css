@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+body {
+    font-family: Netflix Sans,
+        Helvetica Neue,
+        Segoe UI,
+        Roboto,
+        Ubuntu,
+        sans-serif;
+    ;
+    background-color: #000000;
+    color: white;
+}
+
+
+body a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration-color: rgba(255, 255, 255, 0.7);
+}
+
+body h1 {
+    font-size: 18px;
+    text-align: center;
+}
+
+body .lower-body {
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+}
+
+nav {
+    z-index: 5;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 2rem;
+}
+
+nav .vacant-div {
+    padding: 2rem;
+}
+
+
+
+nav .img-div {
+    position: absolute;
+    left: 3.5rem;
+    top: -1rem;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90vw;
+}
+
+nav img {
+    margin: 16px;
+    height: auto;
+    max-width: 190px;
+    object-fit: contain;
+    flex: 1 1 30px;
+
+}
+
+nav .button-div {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 5rem;
+    top: 1.5rem;
+
+}
+
+nav button {
+    color: white;
+    background-color: rgb(229, 9, 20);
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+
+
+}
+
+nav button:hover {
+    opacity: 0.8;
+}
+
+/* HEro section */
+
+body .body-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body .body-background::before {
+    content: " ";
+    position: absolute;
+    inset: 0;
+    background-image: url("./img/background.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(30%);
+    z-index: 1;
+}
+
+body .container {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+}
+
+body .hero {
+    display: flex;
+    justify-content: center;
+    place-content: center;
+}
+
+body .hero .hero-head {
+    padding: 4rem;
+}
+
+body .hero h4 {
+    font-size: 38px;
+    max-width: 400px;
+    text-align: center;
+}
+
+body .hero .hero-div {
+    margin-top: -32px;
+    padding: 32px 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    row-gap: 1rem;
+
+}
+
+body .hero .hero-div .email-section p {
+    text-align: center;
+    font-size: medium;
+}
+
+body .hero .hero-div .p-tag {
+    margin-bottom: 0.5rem;
+}
+
+/* MOre Reasons Section */
+
+body .cards-section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+body .cards-section .cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* background-color: rgb(146, 196, 179); */
+}
+
+body .cards-section .cards-list div {
+    flex: 1 0 280px;
+}
+
+body .card {
+    position: relative;
+    padding: 24px 24px 80px;
+    width: 100%;
+    height: 270px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 1rem;
+
+    background: linear-gradient(to right, #0a032db0, #1e214d);
+    color: white
+}
+
+body .card h2 {
+    font-size: 20px;
+}
+
+.card img {
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.card svg {
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+    height: 80px;
+    width: 100px;
+    object-fit: cover;
+}
+
+/* FAQ Section*/
+
+body .FAQ {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+
+body .FAQ .faq-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+body .FAQ .faq-list div {
+    background-color: rgb(193, 183, 171);
+
+}
+
+body .FAQ .faq-list div button {
+    display: inline-flex;
+    column-gap: 18px;
+    justify-content: space-between;
+    text-align: left;
+    width: 100%;
+    padding: 24px;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(49, 46, 46);
+    cursor: pointer;
+}
+
+body .FAQ .faq-list div button img {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+
+body .FAQ .faq-list div p {
+    display: none;
+    background-color: rgb(62, 57, 57);
+    padding: 1.5rem;
+    font-size: 18px;
+}
+
+/* Body Email Section */
+body .email-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+
+}
+
+
+body .email-section div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+
+}
+
+body .email-section div input {
+    flex: 2 1 300px;
+    min-width: 280px;
+    padding: 1.5rem;
+    background-color: #000000;
+    border: solid rgba(255, 255, 255, 0.7) 1px;
+    color: white;
+}
+
+body .email-section div input:focus {
+    border: solid rgba(255, 255, 255, 0.7) 3px;
+}
+
+body .email-section div button {
+    flex: 1 1 150px;
+    min-width: 150px;
+    padding: 8px;
+    font-weight: bold;
+    font-size: medium;
+    background-color: rgb(229, 9, 20);
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: opacity 0.3s ease;
+}
+
+body .email-section div button:hover {
+    opacity: 0.8;
+}
+
+body .email-section div button img {
+    height: 16px;
+    width: 16px;
+}
+
+/* Footer Section */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    margin-bottom: 4rem;
+}
+
+footer button {
+    width: fit-content;
+    padding: 8px 12px;
+    background-color: #000000;
+    color: white;
+    font: bold;
+    border: solid rgba(255, 255, 255, 0.7) 2px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 6px;
+
+}
+
+footer button:focus {
+    outline: 2px solid white;
+    outline-offset: 0px;
+}
+
+footer button img {
+    height: 12px;
+    width: 12px;
+    margin-left: 4px;
+}
+
+footer>p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer>p>a {
+    color: rgb(68, 142, 244);
+}
+
+footer .footer-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+    row-gap: 1rem;
+    list-style: none;
+
+}
+
+footer .footer-list ul li {
+    flex: 1 0 250px;
+    box-sizing: border-box;
+}
+
+footer .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+footer .dropdown-content {
+    display: none;
+    position: absolute;
+    border: solid white 1px;
+    padding: 8px 12px;
+    background-color: rgb(34, 118, 236);
+
+}
+
+
+footer .dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: white;
+
+}
+
+@media screen and (max-width:768px) {
+    nav .img-div {
+        left: 1rem;
+
+    }
+
+    nav .button-div {
+        right: 1rem;
+
+    }
+}

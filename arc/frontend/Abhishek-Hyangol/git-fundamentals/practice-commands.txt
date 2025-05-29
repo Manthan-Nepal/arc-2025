@@ -1,0 +1,38 @@
+# Git Practice Commands 
+
+# For Cloning Repository
+git clone Url
+
+#Adding new remote repository to local git repository
+git remote add new-remote-name url-of-remote-repository
+
+#to list all remote repositories
+git remote -v
+
+
+#checking repository status
+git status
+
+#to add files in staging area
+git add filename.txt
+
+#to commit change with messages 
+git commit -m "message"
+
+#to push to remote repository
+git push origin main 
+
+#to fetch updates from upstream
+git fetch upstream
+
+#to create new branch
+git branch new-feature
+
+#switch to a branch
+git checkout branch-name
+
+#list branches
+git branch
+
+#delete a branch
+git branch -d old-branch
