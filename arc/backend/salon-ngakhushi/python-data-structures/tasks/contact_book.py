@@ -1,4 +1,3 @@
-
 ContactBook1= {}
 ContactBook1["Name"]= ["Hiro", "Siro", "Yuro", "Jiro"]
 ContactBook1["Phone"]= [385079483, 83645282, 9367384, 2363938]
