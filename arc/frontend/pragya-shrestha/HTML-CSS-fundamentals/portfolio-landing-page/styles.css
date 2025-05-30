@@ -345,6 +345,7 @@ header {
   align-items: center;
   gap: 50px;
   padding: 50px 42.5px;
+   border-top: 1px solid #2f2e2e;
   @media screemn and (min-width:1024px){
     padding: 50px 187.5px;
   }
@@ -387,6 +388,7 @@ header {
     margin-top: 10px;
   }
 }
+
 .project-card p {
   font-size: 14px;
   color: #ffffff;
@@ -415,6 +417,53 @@ header {
   background-color: #ff8c00;
   transition: background-color 0.3s ease;
 }
+
+/* styling experience card */
+.experience-container {
+     display: grid;
+   
+    grid-template-rows: repeat(2,1fr);
+    /* grid-template-columns: repeat(3,1fr); */
+     grid-template-columns: repeat(auto-fill,minmax(285px,1fr));
+    gap: 2rem;
+ 
+}
+.experience-card {
+  /* width: 300px; */
+  background-color: #2f2e2e;
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (min-width:1024px){
+      padding: 20px;
+  }
+}
+
+.experience-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fd6f00;
+  text-align: center;
+ 
+  @media screen and (min-width: 1024px) {
+    font-size: 23px;
+
+  }
+}
+
+.experience-card p {
+  font-size: 14px;
+  color: #ffffff;
+  text-align: left;
+  margin-top: 5px;
+  @media screen and (min-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
 
 /* styling contact section */
 .contact-section {
