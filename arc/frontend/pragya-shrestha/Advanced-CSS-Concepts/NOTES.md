@@ -1,6 +1,6 @@
 # 📏 CSS Units Overview
 
-CSS units are used to specify **lengths** like width, height, padding, margin, font-size, etc. They fall into **two categories**:
+CSS units are used to specify **lengths** like width, height, padding, margin, font-size, etc. They fall into **two categories**:-
 
 ## Absolute Units
 
