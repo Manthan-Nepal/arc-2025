@@ -45,20 +45,3 @@ Step	Action
  Cross-Validation	Use CV to estimate real-world performance.
 
 
- ### Note: Reason for the Difference Between Custom and Sklearn Linear Regression Models
-The small difference in the predictions and regression lines between the custom gradient descent-based linear regression model and scikit-learn’s LinearRegression model is primarily due to the difference in how the model parameters (θ) are optimized:
-
-### Reason:
-#### Optimization Method:
-
-- Your custom model uses Gradient Descent, an iterative optimization method that gradually adjusts the model parameters to minimize the loss.
-
-- sklearn.LinearRegression uses a closed-form solution (Normal Equation), which directly computes the optimal parameters without iteration.
-
-#### Iteration Limitation:
-
-- Since gradient descent depends on the number of iterations and learning rate, it might stop before reaching the exact global minimum, especially if:
-
-- Learning rate is too low or too high
-
-- Number of iterations is too small
