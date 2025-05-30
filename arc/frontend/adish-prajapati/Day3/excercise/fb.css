@@ -1,0 +1,126 @@
+body {
+    background-color: #f0f2f5;
+    margin: 0;
+    font-family: Arial, Helvetica, "Segoe UI", sans-serif;
+    min-height: 100vh;
+}
+
+.flex-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.fbintro {
+    margin-right: clamp(1rem, 5vw, 60px);
+    max-width: 500px;
+}
+
+.logo {
+    font-size: 56px;
+    color: #1877f2;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    letter-spacing: -2px;
+    text-align: left;
+}
+
+.motto {
+    font-size: 28px;
+    color: #1c1e21;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+    line-height: 32px;
+    text-align: left;
+}
+
+.login-box {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px 16px 28px 16px;
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input.email, input.password {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+
+.login {
+    width: 100%;
+    padding: 14px 0;
+    background: #1877f2;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.login:hover {
+    background: #166fe5;
+}
+
+.forgetpassword {
+    color: #1877f2;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+.line {
+    border-top: 1px solid #dadde1;
+    margin: 16px 0;
+    width: 100%;
+}
+
+.account {
+    width: 60%;
+    padding: 14px 0;
+    background: #42b72a;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: background 0.2s;
+    display: block;
+}
+
+.account:hover {
+    background: #36a420;
+}
+
+.create-page {
+    text-align: center;
+    margin-top: 28px;
+    font-size: 14px;
+    color: #1c1e21;
+}
+.create-page b {
+    color: #000;
+}
