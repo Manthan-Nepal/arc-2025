@@ -1,0 +1,230 @@
+:root{
+    --primary-color: white;
+    --secondary-color:rgb(42, 28, 47);
+    --third-color: black;
+}
+body{
+    background-color: var(--primary-color);
+}
+header{
+    margin-top: 4%;
+    font-size: 200%;
+    height: 3%;
+    text-align: center;
+    margin-left: 30%;
+    border:  var(--secondary-color) solid 4px;
+    width: 40%;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.buttons{
+    display: flex;
+    gap: 1%;
+    justify-content: flex-end;
+    padding-top: 1%;
+    margin-right: 3%;
+}
+
+.navbar{
+    border: var(--third-color) solid 2px;
+    border-radius: 10px;
+    height: 50px;
+    margin-bottom: 4%;
+    width: 40%;
+    margin-left: 55%;
+    margin-top: 5%;
+    background-color: var(--primary-color);
+    
+}
+.navbar__list{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    flex-wrap: wrap;
+}
+a{
+    display: inline;
+    color: var(--third-color);
+    text-decoration: none;
+    font-size: 20px;
+}
+section{
+    height: 500px;
+    width: 500px;
+    background-image: url("photos/food2.jpeg");
+    background-size: cover;
+    border: var(--secondary-color) solid 1px;
+    
+
+}
+ .intro__head{
+    align-items: center;
+    position: relative;
+    top: 2%;
+    left: 2%;
+    font-size: 180%;
+    color: white;
+}
+.intro__para{
+    position: absolute;
+    color: var(--primary-color);
+    top: 68%;
+    right: 70%;
+
+}
+.intro{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    
+    
+}
+article{
+    width: 300px;
+    margin-right: 10%;
+}
+.intro__head2{
+    font-family: cursive;
+    font-size: 200%;
+    margin-bottom: 15%;
+    color: var(--third-color);
+}
+.intro__para2{
+    font-family: cursive;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    color: var(--third-color);
+}
+.intro__button{
+    width: 40%;
+    height: 10%;
+    margin-left: 35%;
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    border: var(--third-color) solid 1px;
+    cursor: pointer;
+}
+.intro__spinner{
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--primary-color);
+  border-top: 4px solid var(--third-color);
+  border-radius: 50%;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-delay: 0s;
+  /* animation: spin 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite; */
+  margin: 20px auto;
+  display: none;
+}
+.intro__button:active + .intro__spinner {
+  display: block;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.food{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    margin-top: 5%;
+    gap: 20px;
+    justify-content: space-evenly;
+
+}
+.food__img {
+    height: 60%;
+    width: 150%;
+    border: var(--third-color) 1px;
+    margin-top: 5%;
+    
+}
+.food__para {
+    font-size: 100%;
+    display: inline-block;
+    color: var(--third-color);
+    /* border: black solid 1px; */
+}
+.video{
+    margin-left: 10%;
+}
+.video__para{
+    font-size: 200%;
+    color: var(--third-color);
+}
+.video__iframe{
+    width: 800px;
+    height: 450px;
+}
+.divider{
+    height: 3px;
+    border: var(--third-color) solid 1px;
+}
+footer{
+   
+    width: 900px;
+    margin-left: 800px;
+    font-size: 150%;
+    color: var(--third-color);
+}
+.end ul{
+    display: flex;
+    flex-direction: column;
+   list-style-type: circle;
+   color: var(--third-color);
+}
+
+@media screen and (max-width:600px){
+    header{
+        height: 1%;
+        font-size: 130%;
+        width: 60%;
+        margin-left: 20%;
+        margin-bottom: 9%;
+    }
+    body{
+        font-size: small;
+    }
+    .navbar{
+   width: 100%;
+    margin-left: 0%; 
+
+}
+.food{
+    grid-template-columns: 200px ;
+    justify-content: center;
+}
+.food__img{
+    
+    width: 110%;
+    margin-left: auto;
+   
+}
+.food__para{
+    width: 100%;
+}
+.video__iframe{
+    width: 100%;
+    
+}
+footer {
+   
+    width: 250px;
+    margin-left: 200px;
+    font-size: 20px;
+}
+.intro__para{
+    position: static;
+    top: 50%;
+    right: 55%;
+    color: var(--primary-color);
+
+}
+
+}

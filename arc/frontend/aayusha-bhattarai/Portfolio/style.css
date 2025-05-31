@@ -1,0 +1,113 @@
+/* body{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+} */
+.navbar{
+    background-color: rgb(198, 194, 215);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: space-between;
+    padding: 10px 40px;
+    align-items: center;
+    margin: 0;
+    
+}
+.navbar h1{
+   margin: 0;
+   font-size: 150%;
+    
+}
+.nav-links{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-self: end;
+    list-style: none;
+}
+.nav-links a{
+    transition: all 3s ease;
+    font-size: 120%;
+    color: black;
+    margin-right: 50px;
+}
+.nav-links a:hover {
+  color: #09bd51;
+  text-decoration: underline;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: rgb(198, 194, 215);
+}
+.dropdown-content a{
+    font-size: 15px;
+   
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.hero{
+   align-items: center;
+   display: flex;
+   gap: 15%;
+   
+   
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  flex-wrap: wrap
+}
+.hero-text h1{
+    font-size: 500%;
+    margin-left: 50px;
+    
+}
+.hero-text p{
+    font-size: 150%;
+    margin-left: 50px;
+    margin-top: 0px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.hero-text button {
+    background-color:  rgb(198, 194, 215);
+    color: rgb(202, 15, 15);
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 300px;
+}
+.hero-text button:hover {
+  background-color: rgb(60, 51, 96);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.hero-text button a{
+    background-color:  rgb(198, 194, 215);
+    color: rgb(4, 4, 4);
+    text-decoration: none;
+    
+}
+/* .hero-image{
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+} 
+.image{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    right: 40px;
+    gap: 10px;
+    justify-content: center;
+    
+    
+} */
+
