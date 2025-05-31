@@ -52,6 +52,14 @@ Choose Precision when...
 
 - Search engines: Retrieve as many relevant results as possible.
 
+## when to chose metrices
+| Metric        | Use When...                                                      | Example                                   |
+| ------------- | ---------------------------------------------------------------- | ----------------------------------------- |
+| **Precision** | **False positives are costly.** You want correct positives.      | Spam detection (minimize false alarms).   |
+| **Recall**    | **False negatives are costly.** You want to catch all positives. | Cancer detection (minimize missed cases). |
+| **F1 Score**  | Balance precision and recall.                                    | General classification with trade-offs.   |
+
+
 ## Summary Table
 Metric	    When to Choose               Example Scenarios
 Precision	Minimize false positives	 Spam detection, Email marketing
