@@ -1,6 +1,6 @@
 # Univariate and Multivariate Linear Regression
 
-This repository documents a hands-on journey through the foundational stages of data science, focusing on data wrangling, exploratory data analysis (EDA), and visualization using Python. The content is structured as a series of Jupyter Notebooks, inspired by the [arc-2025](https://github.com/Tech-Manthan-Nepal/arc-2025) curriculum and related resources.
+This repository documents a hands-on journey through the foundational stages of data science, focusing on linear regression using Python. The content is structured as a series of Jupyter Notebooks, inspired by the [arc-2025](https://github.com/Tech-Manthan-Nepal/arc-2025) curriculum and related resources.
 
 ---
 
