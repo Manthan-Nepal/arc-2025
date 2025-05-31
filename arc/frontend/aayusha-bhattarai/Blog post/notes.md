@@ -25,3 +25,16 @@
 ## Challenges Faced
 - Difficulty in learning Grid
 - Aligning section text and images in a responsive way
+
+## UPDATED 
+
+## CSS Custom Properties (Variables)
+- Defined and used CSS variables in :root for managing colors and themes
+
+- Enabled easy switching between light and dark modes by updating these variables dynamically with JavaScript
+
+## CSS Animation and Transitions
+- Created a spinner animation using @keyframes to provide visual feedback on button clicks
+
+- Learned to control animation visibility with CSS and JavaScript interactions
+

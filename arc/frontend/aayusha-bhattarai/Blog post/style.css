@@ -1,6 +1,10 @@
-.body{
-    display: grid;
-    grid-template-columns: repeat(auto-fill);
+:root{
+    --primary-color: white;
+    --secondary-color:rgb(42, 28, 47);
+    --third-color: black;
+}
+body{
+    background-color: var(--primary-color);
 }
 header{
     margin-top: 4%;
@@ -8,25 +12,33 @@ header{
     height: 3%;
     text-align: center;
     margin-left: 30%;
-    border: rgb(42, 28, 47) solid 4px;
+    border:  var(--secondary-color) solid 4px;
     width: 40%;
     border-radius: 10px;
-    display: inline block;
-    background-color: rgb(42, 28, 47);
-    color: white;
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.buttons{
+    display: flex;
+    gap: 1%;
+    justify-content: flex-end;
+    padding-top: 1%;
+    margin-right: 3%;
 }
 
 .navbar{
-    border: black solid 2px;
+    border: var(--third-color) solid 2px;
     border-radius: 10px;
     height: 50px;
     margin-bottom: 4%;
     width: 40%;
     margin-left: 55%;
     margin-top: 5%;
+    background-color: var(--primary-color);
     
 }
-ul{
+.navbar__list{
     display: flex;
     justify-content: space-evenly;
     list-style: none;
@@ -34,7 +46,7 @@ ul{
 }
 a{
     display: inline;
-    color: black;
+    color: var(--third-color);
     text-decoration: none;
     font-size: 20px;
 }
@@ -43,11 +55,11 @@ section{
     width: 500px;
     background-image: url("photos/food2.jpeg");
     background-size: cover;
-    border: black solid 1px;
+    border: var(--secondary-color) solid 1px;
     
 
 }
- section h1{
+ .intro__head{
     align-items: center;
     position: relative;
     top: 2%;
@@ -55,9 +67,9 @@ section{
     font-size: 180%;
     color: white;
 }
-section p{
+.intro__para{
     position: absolute;
-    color: white;
+    color: var(--primary-color);
     top: 68%;
     right: 70%;
 
@@ -73,20 +85,49 @@ article{
     width: 300px;
     margin-right: 10%;
 }
-h2{
+.intro__head2{
     font-family: cursive;
     font-size: 200%;
     margin-bottom: 15%;
+    color: var(--third-color);
 }
-article p{
+.intro__para2{
     font-family: cursive;
     margin-bottom: 10%;
     margin-left: 5%;
+    color: var(--third-color);
 }
-button{
+.intro__button{
     width: 40%;
     height: 10%;
     margin-left: 35%;
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    border: var(--third-color) solid 1px;
+    cursor: pointer;
+}
+.intro__spinner{
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--primary-color);
+  border-top: 4px solid var(--third-color);
+  border-radius: 50%;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-delay: 0s;
+  /* animation: spin 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite; */
+  margin: 20px auto;
+  display: none;
+}
+.intro__button:active + .intro__spinner {
+  display: block;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 .food{
     display: grid;
@@ -97,43 +138,46 @@ button{
     justify-content: space-evenly;
 
 }
-.foods img {
+.food__img {
     height: 60%;
     width: 150%;
-    border: black solid 1px;
+    border: var(--third-color) 1px;
     margin-top: 5%;
     
 }
-.foods p {
-    width: 120%;
+.food__para {
+    font-size: 100%;
     display: inline-block;
+    color: var(--third-color);
     /* border: black solid 1px; */
 }
 .video{
     margin-left: 10%;
 }
-.video p{
+.video__para{
     font-size: 200%;
+    color: var(--third-color);
 }
-.video iframe{
+.video__iframe{
     width: 800px;
     height: 450px;
 }
 .divider{
-    height: 5px;
-    width: 100%;
-    border: black solid 1px;
+    height: 3px;
+    border: var(--third-color) solid 1px;
 }
 footer{
    
-    width: 500px;
-    margin-left: 600px;
+    width: 900px;
+    margin-left: 800px;
     font-size: 150%;
+    color: var(--third-color);
 }
 .end ul{
     display: flex;
     flex-direction: column;
    list-style-type: circle;
+   color: var(--third-color);
 }
 
 @media screen and (max-width:600px){
@@ -149,37 +193,37 @@ footer{
     }
     .navbar{
    width: 100%;
-margin-left: 0%; 
+    margin-left: 0%; 
 
 }
 .food{
     grid-template-columns: 200px ;
     justify-content: center;
 }
-.foods img {
+.food__img{
     
     width: 110%;
     margin-left: auto;
    
 }
-.foods p {
+.food__para{
     width: 100%;
 }
-.video iframe{
+.video__iframe{
     width: 100%;
     
 }
-footer{
+footer {
    
-    width: 10%;
-    margin-left: 0px;
-    font-size:20px
+    width: 250px;
+    margin-left: 200px;
+    font-size: 20px;
 }
-section p{
+.intro__para{
     position: static;
     top: 50%;
     right: 55%;
-    color: black;
+    color: var(--primary-color);
 
 }
 

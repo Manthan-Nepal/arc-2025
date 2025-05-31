@@ -1,9 +1,12 @@
-body{
-    background-color: brown;
-}
+/* body{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+} */
 .navbar{
     background-color: rgb(198, 194, 215);
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     justify-content: space-between;
     padding: 10px 40px;
     align-items: center;
@@ -16,14 +19,20 @@ body{
     
 }
 .nav-links{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-self: end;
     list-style: none;
-    gap: 0px;
 }
 .nav-links a{
+    transition: all 3s ease;
     font-size: 120%;
     color: black;
     margin-right: 50px;
+}
+.nav-links a:hover {
+  color: #09bd51;
+  text-decoration: underline;
 }
 .dropdown{
     position: relative;
@@ -46,18 +55,20 @@ body{
 .hero{
    align-items: center;
    display: flex;
-   gap: 150px;
+   gap: 15%;
+   
    
 }
 .hero-text {
   display: flex;
   flex-direction: column;
-  max-width: 50%;
+  width: 50%;
+  flex-wrap: wrap
 }
 .hero-text h1{
     font-size: 500%;
     margin-left: 50px;
-    ;
+    
 }
 .hero-text p{
     font-size: 150%;
@@ -71,6 +82,11 @@ body{
     padding: 10px;
     margin-left: 50px;
     margin-right: 300px;
+}
+.hero-text button:hover {
+  background-color: rgb(60, 51, 96);
+  transform: scale(1.2);
+  cursor: pointer;
 }
 .hero-text button a{
     background-color:  rgb(198, 194, 215);
