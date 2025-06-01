@@ -1,0 +1,82 @@
+{
+    "top_5_students": [
+        {
+            "name": "Bina",
+            "average": 93.25
+        },
+        {
+            "name": "Ganesh",
+            "average": 90.75
+        },
+        {
+            "name": "Rupa",
+            "average": 89.0
+        },
+        {
+            "name": "Mina",
+            "average": 87.25
+        },
+        {
+            "name": "Manish",
+            "average": 87.25
+        }
+    ],
+    "average_per_course": {
+        "Math": 80.4,
+        "Science": 79.4,
+        "Social": 83.66666666666667,
+        "Art": 78.93333333333334
+    },
+    "highest_scorers": {
+        "Math": {
+            "name": "Rita",
+            "mark": 98
+        },
+        "Science": {
+            "name": "Rupa",
+            "mark": 100
+        },
+        "Social": {
+            "name": "Bina",
+            "mark": 100
+        },
+        "Art": {
+            "name": "Raj",
+            "mark": 96
+        }
+    },
+    "lowest_scorers": {
+        "Math": {
+            "name": "Sunita",
+            "mark": 61
+        },
+        "Science": {
+            "name": "Mohan",
+            "mark": 60
+        },
+        "Social": {
+            "name": "Sunita",
+            "mark": 62
+        },
+        "Art": {
+            "name": "Mina",
+            "mark": 60
+        }
+    },
+    "student_count_per_address": {
+        "Lalitpur": 1,
+        "Butwal": 1,
+        "Kathmandu": 2,
+        "Itahari": 3,
+        "Dhangadhi": 2,
+        "Janakpur": 2,
+        "Nepalgunj": 4,
+        "Bharatpur": 1,
+        "Biratnagar": 3,
+        "Pokhara": 1,
+        "Birgunj": 1,
+        "Ghorahi": 5,
+        "Hetauda": 3,
+        "Dharan": 1
+    }
+}
