@@ -4,17 +4,17 @@
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --primary-color: #fd6f00;
-  --border-color:#2f2e2e;
-  --text-color:#ffffff;
+  --border-color: #2f2e2e;
+  --text-color: #ffffff;
   --hover-color: #ff8c00;
 }
 body {
   max-width: 1440px;
   background-color: #000000;
   font-family: "Poppins", sans-serif;
-  color:var(--text-color);
+  color: var(--text-color);
   border: 1px solid var(--border-color);
 }
 
@@ -26,20 +26,32 @@ body {
 }
 
 header {
-  padding: 20px 0px;
-  margin-left: 100px;
-  margin-right: 50px;
+  padding: 20px 0;
+  padding-left: 100px;
+  padding-right: 50px;
+  width: 100%;
   align-items: center;
   display: flex;
   justify-content: right;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #0f0f0f;
+}
 
-  @media screen and (min-width: 1024px) {
-    padding: 50px 0px 50px 62.5px;
-    margin: 0px 100px;
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 20px 100px 20px 162.5px;
+  
   }
+}
 
-  @media screen and (min-width: 1320px) {
-    margin: 0px 187.5px;
+@media screen and (min-width: 1320px) {
+  header {
+    padding-left:187.5px;
+    padding-right: 187.5px;
   }
 }
 
@@ -48,23 +60,19 @@ header {
   gap: 60px;
   align-items: center;
   padding: 8px 0px;
-  @media screen and (min-width: 1024px) {
-    display: flex;
-  }
+  
 }
+
 .menu-icon {
   display: flex;
   color: var(--hover-color);
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  @media screen and (min-width: 1024px) {
-    display: none;
-  }
 }
 .main-nav a {
   text-decoration: none;
-  color:var(--text-color);
+  color: var(--text-color);
   white-space: nowrap;
 }
 .main-nav li a:hover {
@@ -77,27 +85,20 @@ header {
   list-style: none;
   gap: 50px;
   font-size: 19px;
-
-  @media screen and (min-width: 1320px) {
-    font-size: 21px;
-  }
 }
 
 .download-btn {
   padding: 17px;
   background-color: var(--primary-color);
-  color:var(--text-color);
+  color: var(--text-color);
   border-radius: 4px;
   font-size: 19px;
 
-  @media screen and (min-width: 1320px) {
-    font-size: 21px;
-  }
   text-decoration: none;
 }
 
 .download-btn:hover {
-  color:var(--text-color);
+  color: var(--text-color);
   background-color: var(--hover-color);
   transition: all 0.3s ease;
   transform: translateY(-2px);
@@ -112,19 +113,7 @@ header {
   padding: 0px 10.5px;
   margin: 0px 8px;
   gap: 8px;
-  @media screen and (min-width: 500px) {
-    padding: 0px 17.5px;
-    margin: 0px 10px;
-    
-    
-  }
-  @media screen and (min-width: 1024px) {
-    margin: 0px 100px;
-    gap: 110px;
-  }
-  @media screen and (min-width: 1320px) {
-    margin: 0px 187.5px;
-  }
+  margin-top: 70px;
 }
 
 .hero-content {
@@ -133,22 +122,12 @@ header {
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 1024px) {
-    padding-top: 70px;
-    padding-bottom: 20px;
-  }
 }
 
 .intro-text p {
-
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 1px;
-  @media screen and (min-width: 500px) {
-     font-size: 25px;
-  margin-bottom: 10px;
-    
-  }
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 1px;
 }
 
 .intro-text h2 {
@@ -159,16 +138,6 @@ header {
   display: flex;
   flex-direction: column;
   line-height: 30px;
-  @media screen and (min-width: 500px) {
-    font-size: 37px;
-   line-height: 45px;
-    
-  }
-  @media screen and (min-width: 1024px) {
-    font-size: 70px;
-    line-height: 80px;
-    text-align: right;
-  }
 }
 .intro-text h2 span {
   font-size: 20px;
@@ -176,53 +145,26 @@ header {
   color: var(--primary-color);
   text-align: left;
   line-height: 24px;
-  @media screen and (min-width: 500px) {
-    font-size: 27px;
-    line-height: 40px;
-    
-  }
-  @media screen and (min-width: 1024px) {
-    font-size: 35px;
-    line-height: 30px;
-  }
 }
 
 #description {
-        font-size: 10px;
-    margin-top: 13px;
-    margin-bottom: 14px;
- @media screen and (min-width: 500px) {
-     font-size: 11px;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  }
-    
- 
- 
-  @media screen and (min-width: 1024px) {
-    font-size: 21px;
-    margin-top: 18px;
-    margin-bottom: 20px;
-  }
+  font-size: 10px;
+  margin-top: 13px;
+  margin-bottom: 14px;
 }
 
 .hero-content a {
   padding: 10px 17px;
   background-color: var(--primary-color);
-  color:var(--text-color);
+  color: var(--text-color);
   border-radius: 4px;
   font-size: 13px;
   text-decoration: none;
   width: fit-content;
-  @media screen and (min-width: 1024px) {
-    padding: 17px 40px;
-    border-radius: 5px;
-    font-size: 21px;
-  }
 }
 
 .hero-content a:hover {
-  color:var(--text-color);
+  color: var(--text-color);
   background-color: var(--hover-color);
   transition: all 0.3s ease;
   transform: translateY(-2px);
@@ -254,7 +196,7 @@ header {
   display: flex;
   align-items: center;
   animation: slideIn 5s ease-in-out 2s infinite forwards;
-  opacity: 0; 
+  opacity: 0;
 }
 
 @keyframes slideIn {
@@ -270,7 +212,7 @@ header {
 
 .social-icon {
   text-decoration: none;
-  color:var(--text-color);
+  color: var(--text-color);
 }
 
 .social-icon:hover {
@@ -285,12 +227,6 @@ header {
   align-items: center;
   justify-content: center;
   object-fit: cover;
-  @media screen and (min-width: 500px) {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    
-  }
 }
 /* styling about section */
 .about-section {
@@ -299,11 +235,8 @@ header {
   gap: 10px;
   padding: 40px;
   color: #000000;
-  background-color:var(--text-color);
+  background-color: var(--text-color);
   margin-top: 50px;
-  @media screen and (min-width: 1024px) {
-    padding: 40px 187.5px;
-  }
 }
 
 .primary-heading {
@@ -312,10 +245,6 @@ header {
   letter-spacing: 2px;
   text-align: center;
   white-space: nowrap;
-  @media screen and (min-width: 1024px) {
-    font-size: 40px;
-    text-align: left;
-  }
 }
 
 .about-section p {
@@ -323,11 +252,6 @@ header {
   font-weight: 400;
   line-height: 20px;
   text-align: center;
-  @media screen and (min-width: 1024px) {
-    font-size: 19px;
-    line-height: 25px;
-    text-align: justify;
-  }
 }
 .about-section ul {
   display: flex;
@@ -336,10 +260,6 @@ header {
   gap: 20px;
   list-style: none;
   margin-top: 20px;
-  @media screen and (min-width: 1024px) {
-    gap: 30px;
-    margin-top: 30px;
-  }
 }
 .about-section ul li {
   font-size: 16px;
@@ -352,11 +272,6 @@ header {
   justify-content: center;
   background-color: var(--primary-color);
   border-radius: 5px;
-  @media screen and (min-width: 1024px) {
-    font-size: 20px;
-    line-height: 25px;
-    padding: 15px;
-  }
 }
 
 .projects-section {
@@ -365,11 +280,7 @@ header {
   align-items: center;
   gap: 50px;
   padding: 50px 42.5px;
-   border-top: 1px solid var(--border-color);
-  @media screemn and (min-width:1024px){
-    padding: 50px 187.5px;
-  }
-  
+  border-top: 1px solid var(--border-color);
 }
 
 .projects-container {
@@ -387,9 +298,6 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  @media screen and (min-width:1024px){
-      padding: 20px;
-  }
 }
 .project-card img {
   width: 100%;
@@ -400,39 +308,28 @@ header {
 .project-card h3 {
   font-size: 20px;
   font-weight: 500;
-  color:var(--text-color);
+  color: var(--text-color);
   text-align: center;
   margin-top: 8px;
-  @media screen and (min-width: 1024px) {
-    font-size: 23px;
-    margin-top: 10px;
-  }
 }
 
 .project-card p {
   font-size: 14px;
-  color:var(--text-color);
+  color: var(--text-color);
   text-align: left;
   margin-top: 5px;
-  @media screen and (min-width: 1024px) {
-    font-size: 16px;
-  }
 }
 .project-card a {
   padding: 8px 12px;
   background-color: var(--primary-color);
-  color:var(--text-color);
+  color: var(--text-color);
   border-radius: 5px;
   font-size: 14px;
   text-decoration: none;
   margin-top: 15px;
-  @media screen and (min-width: 1024px) {
-    font-size: 18px;
-    padding: 10px 20px;
-  }
 }
 .project-card a:hover {
-  color:var(--text-color);
+  color: var(--text-color);
   transform: translateY(-2px);
   background-color: var(--hover-color);
   transition: all 0.3s ease;
@@ -440,13 +337,12 @@ header {
 
 /* styling experience card */
 .experience-container {
-     display: grid;
-   
-    grid-template-rows: repeat(2,1fr);
-    /* grid-template-columns: repeat(3,1fr); */
-     grid-template-columns: repeat(auto-fill,minmax(285px,1fr));
-    gap: 2rem;
- 
+  display: grid;
+
+  grid-template-rows: repeat(2, 1fr);
+  /* grid-template-columns: repeat(3,1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+  gap: 2rem;
 }
 .experience-card {
   /* width: 300px; */
@@ -457,9 +353,6 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  @media screen and (min-width:1024px){
-      padding: 20px;
-  }
 }
 
 .experience-card h3 {
@@ -467,23 +360,14 @@ header {
   font-weight: 500;
   color: var(--primary-color);
   text-align: center;
- 
-  @media screen and (min-width: 1024px) {
-    font-size: 23px;
-
-  }
 }
 
 .experience-card p {
   font-size: 14px;
-  color:var(--text-color);
+  color: var(--text-color);
   text-align: left;
   margin-top: 5px;
-  @media screen and (min-width: 1024px) {
-    font-size: 16px;
-  }
 }
-
 
 /* styling contact section */
 .contact-section {
@@ -493,9 +377,6 @@ header {
   gap: 50px;
   padding: 40px 50px;
   border-top: 1px solid var(--border-color);
-  @media screen and (min-width: 1024px) {
-    padding: 50px 187.5px;
-  }
 }
 
 .contact-title {
@@ -506,19 +387,13 @@ header {
 .contact-title h2 {
   font-size: 45px;
   font-weight: 600;
-  color:var(--text-color);
+  color: var(--text-color);
   text-align: center;
-  @media screen and (min-width: 1024px) {
-    font-size: 65px;
-  }
 }
 .contact-title p {
   font-size: 18px;
-  color:var(--text-color);
+  color: var(--text-color);
   text-align: center;
-  @media screen and (min-width: 1024px) {
-    font-size: 21px;
-  }
 }
 
 form {
@@ -534,13 +409,8 @@ form {
   border-radius: 5px;
   border: none;
   background-color: var(--border-color);
-  color:var(--text-color);
+  color: var(--text-color);
   font-size: 15px;
-  @media screen and (min-width: 1024px) {
-    font-size: 18px;
-    padding: 15px;
-  }
- 
 }
 .form-input:focus {
   outline: none;
@@ -549,22 +419,18 @@ form {
 .submit-btn {
   padding: 13px;
   background-color: var(--primary-color);
-  color:var(--text-color);
+  color: var(--text-color);
   border-radius: 5px;
   font-size: 19px;
   text-decoration: none;
   border: none;
   cursor: pointer;
-  @media screen and (min-width: 1024px) {
-    font-size: 21px;
-    padding: 15px;
-  }
-  :hover {
-    color:var(--text-color);
-    background-color: var(--hover-color);
-    transition: all 0.3s ease;
-    transform: translateY(-2px);
-  }
+}
+submit-btn:hover {
+  color: var(--text-color);
+  background-color: var(--hover-color);
+  transition: all 0.3s ease;
+  transform: translateY(-2px);
 }
 
 /* styling footer */
@@ -581,11 +447,8 @@ footer {
 footer p {
   font-size: 14px;
   font-weight: 400;
-  color:var(--text-color);
+  color: var(--text-color);
   text-align: center;
-  @media screen and (min-width: 1024px) {
-    font-size: 21px;
-  }
 }
 footer p:nth-of-type(2) {
   color: var(--primary-color);
@@ -594,17 +457,11 @@ footer p:nth-of-type(2) {
   display: flex;
   align-items: center;
   gap: 35px;
-  @media screen and (min-width: 768px) {
-    gap: 40px;
-  }
-  @media screen and (min-width: 1024px) {
-    gap: 50px;
-  }
 }
 
 .footer-social a {
   text-decoration: none;
-  color:var(--text-color);
+  color: var(--text-color);
 }
 
 footer a img:hover {
@@ -620,18 +477,172 @@ footer a img:hover {
   align-items: center;
   justify-content: center;
   object-fit: cover;
-  @media screen and (min-width:1024px){
-    width: 50px;
-    height: 50px;
-  }
 }
 
 #github {
   width: 40px;
   height: 40px;
   padding-bottom: 5px;
-  @media screen and (min-width:1024px){
+}
+@media screen and (min-width: 500px) {
+  .hero-section {
+    padding: 0px 17.5px;
+    margin: 0px 10px;
+    margin-top: 90px;
+  }
+
+  .intro-text p {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .intro-text h2 {
+    font-size: 37px;
+    line-height: 45px;
+  }
+  .intro-text h2 span {
+    font-size: 27px;
+    line-height: 40px;
+  }
+  #description {
+    font-size: 11px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .social-icon i {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-social {
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-nav {
+    display: flex;
+  }
+  .menu-icon {
+    display: none;
+  }
+  .hero-section {
+    margin: 0px 100px;
+    gap: 110px;
+    margin-top: 140px;
+  }
+  .hero-content {
+    padding-top: 70px;
+    padding-bottom: 20px;
+  }
+
+  .intro-text h2 {
+    font-size: 70px;
+    line-height: 80px;
+    text-align: right;
+  }
+  .intro-text h2 span {
+    font-size: 35px;
+    line-height: 30px;
+  }
+  #description {
+    font-size: 21px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+  }
+  .hero-content a {
+    padding: 17px 40px;
+    border-radius: 5px;
+    font-size: 21px;
+  }
+  .about-section {
+    padding: 40px 187.5px;
+  }
+  .primary-heading {
+    font-size: 40px;
+    text-align: left;
+  }
+  .about-section p {
+    font-size: 19px;
+    line-height: 25px;
+    text-align: justify;
+  }
+  .about-section ul {
+    gap: 30px;
+    margin-top: 30px;
+  }
+  .about-section ul li {
+    font-size: 20px;
+    line-height: 25px;
+    padding: 15px;
+  }
+  .projects-section {
+    padding: 50px 187.5px;
+  }
+  .project-card {
+    padding: 20px;
+  }
+  .project-card h3 {
+    font-size: 23px;
+    margin-top: 10px;
+  }
+  .project-card p {
+    font-size: 16px;
+  }
+  .project-card a {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  .experience-card {
+    padding: 20px;
+  }
+  .experience-card h3 {
+    font-size: 23px;
+  }
+  .experience-card p {
+    font-size: 16px;
+  }
+  .contact-section {
+    padding: 50px 187.5px;
+  }
+  .contact-title h2 {
+    font-size: 65px;
+  }
+  .contact-title p {
+    font-size: 21px;
+  }
+  .form-input {
+    font-size: 18px;
+    padding: 15px;
+  }
+  .submit-btn {
+    font-size: 21px;
+    padding: 15px;
+  }
+  footer p {
+    font-size: 21px;
+  }
+  .footer-social {
+    gap: 50px;
+  }
+  .footer-social img {
+    width: 50px;
+    height: 50px;
+  }
+  #github {
     width: 60px;
     height: 60px;
+  }
+}
+@media screen and (min-width: 1320px) {
+  .main-nav ul {
+    font-size: 21px;
+  }
+  .download-btn {
+    font-size: 21px;
+  }
+  .hero-section {
+    margin: 0px 187.5px;
+    margin-top: 140px;
   }
 }
