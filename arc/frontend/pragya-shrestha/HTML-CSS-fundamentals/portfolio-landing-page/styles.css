@@ -98,9 +98,9 @@ header {
 
 .download-btn:hover {
   color:var(--text-color);
-  text-decoration: underline;
   background-color: var(--hover-color);
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  transform: translateY(-2px);
 }
 
 /* styling hero section */
@@ -223,9 +223,9 @@ header {
 
 .hero-content a:hover {
   color:var(--text-color);
-  text-decoration: underline;
   background-color: var(--hover-color);
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  transform: translateY(-2px);
 }
 .hero-right {
   width: 35%;
@@ -253,7 +253,7 @@ header {
 .hero-social {
   display: flex;
   align-items: center;
-  animation: slideIn 5s ease-out 2s infinite forwards;
+  animation: slideIn 5s ease-in-out 2s infinite forwards;
   opacity: 0; 
 }
 
@@ -275,7 +275,8 @@ header {
 
 .social-icon:hover {
   color: var(--primary-color);
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  transform: scale(1.5);
 }
 .social-icon i {
   display: flex;
@@ -432,9 +433,9 @@ header {
 }
 .project-card a:hover {
   color:var(--text-color);
-  text-decoration: underline;
+  transform: translateY(-2px);
   background-color: var(--hover-color);
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 /* styling experience card */
@@ -539,6 +540,11 @@ form {
     font-size: 18px;
     padding: 15px;
   }
+ 
+}
+.form-input:focus {
+  outline: none;
+  border: 2px solid var(--primary-color);
 }
 .submit-btn {
   padding: 13px;
@@ -552,6 +558,12 @@ form {
   @media screen and (min-width: 1024px) {
     font-size: 21px;
     padding: 15px;
+  }
+  :hover {
+    color:var(--text-color);
+    background-color: var(--hover-color);
+    transition: all 0.3s ease;
+    transform: translateY(-2px);
   }
 }
 
@@ -597,8 +609,9 @@ footer p:nth-of-type(2) {
 
 footer a img:hover {
   transform: scale(1.1);
+  transform: translateY(-5px);
   filter: brightness(0.6);
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 .footer-social img {
   display: flex;
