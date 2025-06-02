@@ -4,12 +4,18 @@
   box-sizing: border-box;
 }
 
+:root{
+  --primary-color: #fd6f00;
+  --border-color:#2f2e2e;
+  --text-color:#ffffff;
+  --hover-color: #ff8c00;
+}
 body {
   max-width: 1440px;
   background-color: #000000;
   font-family: "Poppins", sans-serif;
-  color: #ffffff;
-  border: 1px solid #2f2e2e;
+  color:var(--text-color);
+  border: 1px solid var(--border-color);
 }
 
 @media screen and (min-width: 1441px) {
@@ -48,7 +54,7 @@ header {
 }
 .menu-icon {
   display: flex;
-  color: #ff8c00;
+  color: var(--hover-color);
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -58,11 +64,11 @@ header {
 }
 .main-nav a {
   text-decoration: none;
-  color: #ffffff;
+  color:var(--text-color);
   white-space: nowrap;
 }
 .main-nav li a:hover {
-  color: #fd6f00;
+  color: var(--primary-color);
   transition: color 0.3s ease;
   text-decoration: underline;
 }
@@ -79,8 +85,8 @@ header {
 
 .download-btn {
   padding: 17px;
-  background-color: #fd6f00;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  color:var(--text-color);
   border-radius: 4px;
   font-size: 19px;
 
@@ -91,9 +97,9 @@ header {
 }
 
 .download-btn:hover {
-  color: #ffffff;
+  color:var(--text-color);
   text-decoration: underline;
-  background-color: #ff8c00;
+  background-color: var(--hover-color);
   transition: background-color 0.3s ease;
 }
 
@@ -101,7 +107,7 @@ header {
 .hero-section {
   display: flex;
   align-items: center;
-  border: #2f2e2e solid 2px;
+  border: var(--border-color) solid 2px;
   border-radius: 5px;
   padding: 0px 10.5px;
   margin: 0px 8px;
@@ -167,7 +173,7 @@ header {
 .intro-text h2 span {
   font-size: 20px;
   font-weight: 600;
-  color: #fd6f00;
+  color: var(--primary-color);
   text-align: left;
   line-height: 24px;
   @media screen and (min-width: 500px) {
@@ -202,8 +208,8 @@ header {
 
 .hero-content a {
   padding: 10px 17px;
-  background-color: #fd6f00;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  color:var(--text-color);
   border-radius: 4px;
   font-size: 13px;
   text-decoration: none;
@@ -216,9 +222,9 @@ header {
 }
 
 .hero-content a:hover {
-  color: #ffffff;
+  color:var(--text-color);
   text-decoration: underline;
-  background-color: #ff8c00;
+  background-color: var(--hover-color);
   transition: background-color 0.3s ease;
 }
 .hero-right {
@@ -247,15 +253,28 @@ header {
 .hero-social {
   display: flex;
   align-items: center;
+  animation: slideIn 5s ease-out 2s infinite forwards;
+  opacity: 0; 
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .social-icon {
   text-decoration: none;
-  color: #ffffff;
+  color:var(--text-color);
 }
 
 .social-icon:hover {
-  color: #fd6f00;
+  color: var(--primary-color);
   transition: color 0.3s ease;
 }
 .social-icon i {
@@ -279,7 +298,7 @@ header {
   gap: 10px;
   padding: 40px;
   color: #000000;
-  background-color: #ffffff;
+  background-color:var(--text-color);
   margin-top: 50px;
   @media screen and (min-width: 1024px) {
     padding: 40px 187.5px;
@@ -330,7 +349,7 @@ header {
   align-items: center;
   text-align: center;
   justify-content: center;
-  background-color: #fd6f00;
+  background-color: var(--primary-color);
   border-radius: 5px;
   @media screen and (min-width: 1024px) {
     font-size: 20px;
@@ -345,7 +364,7 @@ header {
   align-items: center;
   gap: 50px;
   padding: 50px 42.5px;
-   border-top: 1px solid #2f2e2e;
+   border-top: 1px solid var(--border-color);
   @media screemn and (min-width:1024px){
     padding: 50px 187.5px;
   }
@@ -360,7 +379,7 @@ header {
 }
 .project-card {
   width: 300px;
-  background-color: #2f2e2e;
+  background-color: var(--border-color);
   border-radius: 5px;
   padding: 15px;
   display: flex;
@@ -380,7 +399,7 @@ header {
 .project-card h3 {
   font-size: 20px;
   font-weight: 500;
-  color: #ffffff;
+  color:var(--text-color);
   text-align: center;
   margin-top: 8px;
   @media screen and (min-width: 1024px) {
@@ -391,7 +410,7 @@ header {
 
 .project-card p {
   font-size: 14px;
-  color: #ffffff;
+  color:var(--text-color);
   text-align: left;
   margin-top: 5px;
   @media screen and (min-width: 1024px) {
@@ -400,8 +419,8 @@ header {
 }
 .project-card a {
   padding: 8px 12px;
-  background-color: #fd6f00;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  color:var(--text-color);
   border-radius: 5px;
   font-size: 14px;
   text-decoration: none;
@@ -412,9 +431,9 @@ header {
   }
 }
 .project-card a:hover {
-  color: #ffffff;
+  color:var(--text-color);
   text-decoration: underline;
-  background-color: #ff8c00;
+  background-color: var(--hover-color);
   transition: background-color 0.3s ease;
 }
 
@@ -430,7 +449,7 @@ header {
 }
 .experience-card {
   /* width: 300px; */
-  background-color: #2f2e2e;
+  background-color: var(--border-color);
   border-radius: 5px;
   padding: 15px;
   display: flex;
@@ -445,7 +464,7 @@ header {
 .experience-card h3 {
   font-size: 20px;
   font-weight: 500;
-  color: #fd6f00;
+  color: var(--primary-color);
   text-align: center;
  
   @media screen and (min-width: 1024px) {
@@ -456,7 +475,7 @@ header {
 
 .experience-card p {
   font-size: 14px;
-  color: #ffffff;
+  color:var(--text-color);
   text-align: left;
   margin-top: 5px;
   @media screen and (min-width: 1024px) {
@@ -472,7 +491,7 @@ header {
   align-items: center;
   gap: 50px;
   padding: 40px 50px;
-  border-top: 1px solid #2f2e2e;
+  border-top: 1px solid var(--border-color);
   @media screen and (min-width: 1024px) {
     padding: 50px 187.5px;
   }
@@ -486,7 +505,7 @@ header {
 .contact-title h2 {
   font-size: 45px;
   font-weight: 600;
-  color: #ffffff;
+  color:var(--text-color);
   text-align: center;
   @media screen and (min-width: 1024px) {
     font-size: 65px;
@@ -494,7 +513,7 @@ header {
 }
 .contact-title p {
   font-size: 18px;
-  color: #ffffff;
+  color:var(--text-color);
   text-align: center;
   @media screen and (min-width: 1024px) {
     font-size: 21px;
@@ -513,8 +532,8 @@ form {
   padding: 13px;
   border-radius: 5px;
   border: none;
-  background-color: #2f2e2e;
-  color: #ffffff;
+  background-color: var(--border-color);
+  color:var(--text-color);
   font-size: 15px;
   @media screen and (min-width: 1024px) {
     font-size: 18px;
@@ -523,8 +542,8 @@ form {
 }
 .submit-btn {
   padding: 13px;
-  background-color: #fd6f00;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  color:var(--text-color);
   border-radius: 5px;
   font-size: 19px;
   text-decoration: none;
@@ -543,21 +562,21 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  border-top: #2f2e2e solid 2px;
+  border-top: var(--border-color) solid 2px;
   padding: 30px 0px;
 }
 
 footer p {
   font-size: 14px;
   font-weight: 400;
-  color: #ffffff;
+  color:var(--text-color);
   text-align: center;
   @media screen and (min-width: 1024px) {
     font-size: 21px;
   }
 }
 footer p:nth-of-type(2) {
-  color: #fd6f00;
+  color: var(--primary-color);
 }
 .footer-social {
   display: flex;
@@ -573,7 +592,7 @@ footer p:nth-of-type(2) {
 
 .footer-social a {
   text-decoration: none;
-  color: #ffffff;
+  color:var(--text-color);
 }
 
 footer a img:hover {
