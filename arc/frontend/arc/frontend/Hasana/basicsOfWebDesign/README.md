@@ -21,3 +21,22 @@
   * A drop down menu for the navigation Bar links were also implemented, specifically, for an online store portal, "shop" and "Account" sections.
 
 * ### Resources visited: W3Schools.com
+## Day 3
+* ### CSS FlexBox and Grid
+  * Created dummy-spotify page using CSS flexbox and dummy-pinterest page using CSS grid and column property.
+  * #### Challenge faced:  
+    * Since the pinterest uses mansory effect to view its content, using grid to create the effect was not possible because of the row-gap that occured, except if you style it individual row and column. Using column property, mansory effect was applied filling the vertical space naturally.
+## Day 4
+* ### Making website responsive
+  * Created a gallery using grid, and used its autofill, repeat, minmax method to make it responsive. Also used the media queries to make all the projects done till now responsive on different screen sizes.
+
+## Day 5
+* ### CSS custom variables, SASS and BEM
+  * Used the custom variable method to reuse the css components. 
+  * Learned about the BEM (Block__Element--Modifier) method to make the files organized.
+  * Explored SASS preprocessor, mixins and its structure to write css.
+  * Created a toggle button using some js script and custom css variables to toggle between dark mode and light mode.
+
+## Day 6
+* Explored the animation and transitions using keyframe animations and transform properties.
+* Experimented with css only flip card and loading spin button using some js.

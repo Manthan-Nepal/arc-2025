@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background: #fdfdfd;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header  header"
+      "cover   cover"
+      "feature1 feature2"
+      "feature3 sidebar"
+      "footer  footer";
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .header {
+    grid-area: header;
+    font-size: 3rem;
+    text-align: center;
+    background: #111;
+    color: #fff;
+    padding: 20px;
+    letter-spacing: 2px;
+  }
+  
+  .cover-story {
+    grid-area: cover;
+    background: url('https://source.unsplash.com/1600x500/?art,technology') no-repeat center/cover;
+    color: white;
+    padding: 60px 30px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-shadow: 2px 2px 6px #000;
+  }
+  
+  .feature {
+    background: #fff;
+    padding: 20px;
+    border-left: 5px solid #111;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  
+  .feature-1 { grid-area: feature1; }
+  .feature-2 { grid-area: feature2; }
+  .feature-3 { grid-area: feature3; }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background: #f4f4f4;
+    padding: 20px;
+    border-left: 4px solid #999;
+  }
+  
+  .sidebar ul {
+    list-style: square;
+    margin-left: 20px;
+  }
+  
+  .footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 15px;
+    background: #111;
+    color: #fff;
+  }
+  

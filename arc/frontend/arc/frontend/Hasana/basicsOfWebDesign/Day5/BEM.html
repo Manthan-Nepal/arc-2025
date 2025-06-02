@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BEM Practice</title>
+        <link rel="stylesheet" href="./BEM.css" />
+        <link rel="stylesheet" href="./sass/bem.css">
+    </head>
+    <body>
+        <button class="button button--primary button--large">
+            Hello This is a button
+        </button>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#" class="nav__link nav__link--active">Home</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#" class="nav__link">About</a>
+                </li>
+
+                <li class="nav__item nav__item--featured">
+                    <a href="#" class="nav__link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <article class="card">
+            <header class="card__header">
+                <h2 class="card__title">Card Title</h2>
+            </header>
+
+            <div class="card__body">
+                <p class="card__text">Card content goes here.</p>
+            </div>
+
+            <footer class="card__footer">
+                <button class="card__button">Read More</button>
+            </footer>
+        </article>
+    </body>
+</html>
