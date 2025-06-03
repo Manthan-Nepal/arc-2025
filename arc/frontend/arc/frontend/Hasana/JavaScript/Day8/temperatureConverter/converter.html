@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/converter.css" />
+        <title>Temperature Converter</title>
+    </head>
+    <body>
+        <div class="converter">
+            <div class="converter__text">Convert Your Temperatures!</div>
+            <hr />
+            <div class="converter__container">
+                <div class="converter__io">
+                    <div class="converter__io__input">
+                        <input type="text" placeholder="Enter temperature" />
+                    </div>
+                    =
+                    <div class="converter__io__result">Result</div>
+                </div>
+                <div class="converter__options">
+                    <div class="converter__dropdown">
+                        <select name="Temperature1">
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="celsius">Celsius</option>
+                            <option value="kelvin">Kelvin</option>
+                        </select>
+                    </div>
+                    <div class="converter__dropdown">
+                        <select name="Temperature2">
+                            <option>Fahrenheit</option>
+                            <option>Celsius</option>
+                            <option>Kelvin</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="converter__convert-button">
+                <div class="convert-button__reset"><button>Reset</button></div>
+                <div class="convert-button__convert">
+                    <button>Convert</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./js/conveter.js"></script>
+</html>
