@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Theme Toggle</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --accent-color: #0ea5e9;
+    }
+
+    body.dark {
+      --bg-color: #000000;
+      --text-color: #ffffff;
+      --accent-color:green;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 1s ease, color 1s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    input[type="checkbox"] {
+      width: 50px;
+      height: 25px;
+      appearance: none;
+      background: var(--accent-color);
+      border-radius: 50px;
+      position: relative;
+      cursor: pointer;
+      outline: none;
+      
+    }
+
+    input[type="checkbox"]::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: white;
+      top: 2.5px;
+      left: 2.5px;
+      transition: transform 0.3s;
+    }
+
+    input[type="checkbox"]:checked::before {
+      transform: translateX(25px);
+    }
+
+   
+  </style>
+</head>
+<body>
+  <h1>Toggle to change Theme</h1>
+  <div class="toggle-container">
+    <label for="themeToggle">Dark Mode</label>
+    <input type="checkbox" id="themeToggle" onchange="document.body.classList.toggle('dark')" />
+  </div>
+</body>
+</html>
