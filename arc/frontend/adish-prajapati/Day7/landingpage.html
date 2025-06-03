@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyTech Solutions</title>
+    <style>
+      :root {
+        --primary: #1f2937;
+        --accent: #00bcd4;
+        --light: #f5f5f5;
+        --dark: #111827;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: var(--light);
+        color: var(--dark);
+        line-height: 1.6;
+      }
+
+      header {
+        background: var(--primary);
+        padding: 1.5rem 2rem;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        color: var(--accent);
+      }
+
+      nav a {
+        color: white;
+        margin-left: 2rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: var(--accent);
+      }
+
+      .hero {
+        background: linear-gradient(to right, #1f2937, #0f172a);
+        color: white;
+        text-align: center;
+        padding: 5rem 2rem;
+      }
+
+      .hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      .btn {
+        background: var(--accent);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+
+      .btn:hover {
+        background: #019bab;
+        transform: scale(1.05);
+      }
+
+      .section {
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .section h3 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary);
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .about {
+        background: var(--primary);
+        color: var(--light);
+        font-size:1.2rem;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      footer {
+        background: var(--primary);
+        color: white;
+        text-align: center;
+        padding: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .socials {
+        margin-top: 0.5rem;
+      }
+
+      .socials a {
+        margin: 0 0.5rem;
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column;
+          text-align: center;
+        }
+        nav {
+          margin-top: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Ekamind Solutions</h1>
+      <nav>
+        <a href="#Home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Web , App and AI Solutions for the Future</h2>
+      <p>Empowering businesses with intelligent technologies.</p>
+      <button class="btn">Get Started</button>
+    </section>
+
+    <section class="section" id="services">
+      <h3>Our Services</h3>
+      <div class="cards">
+        <div class="card">
+          <h4>Web Development</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Voluptatem, iusto!
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>App Developement</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, in
+            perspiciatis sit repellat commodi asperiores?
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Chatbots</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Consequuntur perferendis ipsum cumque?
+          </p>
+        </div>
+        <div class="card">
+          <h4>AI Integration</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, eius!
+          </p>
+        </div>
+        <div class="card">
+          <h4>Security</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, ipsum.</p>
+        </div>
+
+         <div class="card">
+          <h4>SEO</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, doloribus.</p>
+        </div>
+
+         <div class="card">
+          <h4>Digital Marketing</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque dolores vel at ex consequuntur ipsum?</p>
+        </div>
+
+         <div class="card">
+          <h4>Software Testing</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia doloribus commodi cum animi eos magnam pariatur harum obcaecati nesciunt quas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <h3>About Ekamind</h3>
+      <p>
+        We're a passionate team of engineers and innovators building and Providing
+        cutting-edge Technologies , Services and AI platforms <br> to help businesses thrive 
+        in the digital age.
+      </p>
+    </section>
+
+    <section class="section" id="contact">
+      <h3>Contact Us</h3>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      &copy; 2025 Ekamind Solutions. All rights reserved.
+    </footer>
+  </body>
+</html>
