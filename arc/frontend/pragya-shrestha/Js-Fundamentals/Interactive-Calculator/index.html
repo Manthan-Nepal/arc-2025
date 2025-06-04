@@ -38,17 +38,17 @@
           <option value="/">Divide</option>
         </select>
       </div> -->
-      <div class="operatio">
-        <input type="text" placeholder="Operation" />
-        <div class="caret-down" onclick="show_dropdown()">
+      <div class="operatio" onclick="show_dropdown()">
+        <input type="text" placeholder="Operation" id="actionInput" readonly />
+        <div id="caret-down" class="caret-down">
           <i class="fa-solid fa-caret-down"></i>
         </div>
         <div class="dropdown" id="dropdown">
           <ul>
-            <li>Add</li>
-            <li>Subtract</li>
-            <li>Multiply</li>
-            <li>Divide</li>
+            <li onclick="selectOperation('Add',event)">Add</li>
+            <li onclick="selectOperation('Subtract',event)">Subtract</li>
+            <li onclick="selectOperation('Multiply',event)">Multiply</li>
+            <li onclick="selectOperation('Divide',event)">Divide</li>
           </ul>
         </div>
       </div>

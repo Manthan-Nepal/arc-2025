@@ -72,6 +72,10 @@ h2 {
   border: none;
   font-size: 16px;
 }
+
+.caret-down.rotate{
+  transform: rotate(180deg);
+}
 .dropdown{
   
     background-color: #ffffff;

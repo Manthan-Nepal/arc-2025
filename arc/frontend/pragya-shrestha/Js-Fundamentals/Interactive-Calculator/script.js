@@ -1,23 +1,23 @@
 function calculate() {
   const num1 = parseFloat(document.getElementById("num1").value);
   const num2 = parseFloat(document.getElementById("num2").value);
-  const operation = document.getElementById("operation").value;
+  const operation = document.getElementById("actionInput").value;
 
   let result;
   if (isNaN(num1) || isNaN(num2)) {
     result = "Error: Enter valid number";
   } else {
     switch (operation) {
-      case "+":
+      case "Add":
         result = num1 + num2;
         break;
-      case "-":
+      case "Subtract":
         result = num1 - num2;
         break;
-      case "*":
+      case "Multiply":
         result = num1 * num2;
         break;
-      case "/":
+      case "Divide":
         result = num1 / num2;
         break;
       default:
@@ -37,4 +37,11 @@ function calculate() {
 
 function show_dropdown() {
   document.getElementById("dropdown").classList.toggle("visible");
+  document.getElementById("caret-down").classList.toggle("rotate");
+}
+
+function selectOperation(action, e) {
+  document.getElementById("actionInput").value = action;
+  show_dropdown();
+  e.stopPropagation();
 }
