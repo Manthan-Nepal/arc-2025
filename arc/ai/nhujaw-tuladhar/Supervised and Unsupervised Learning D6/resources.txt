@@ -1,0 +1,26 @@
+Supervised and Unsupervised Learning Materials
+Course
+https://github.com/prof-sushil/Data-Science-World/blob/main/tutorials/knn.ipynb
+
+https://github.com/prof-sushil/Data-Science-World/blob/main/tutorials/svm.ipynb
+https://github.com/prof-sushil/Data-Science-World/blob/main/tutorials/ensemble_learning.ipynb
+https://github.com/prof-sushil/Data-Science-World/blob/main/tutorials/clustering.ipynb
+https://freedium.cfd/https://medium.com/@faizanmukardam/singular-value-decomposition-svd-a-simple-comprehensive-and-practical-introduction-6add3dc6793d
+SVD
+https://medium.com/intuition/singular-value-decomposition-svd-working-example-c2b6135673b5
+https://medium.com/@nikolay.a.khramov/visual-intuition-behind-svd-593bfbbb5eec
+Curse Dimensionality
+https://towardsdatascience.com/curse-of-dimensionality-an-intuitive-exploration-1fbf155e1411/
+PCA
+https://medium.com/@dhanyahari07/principal-component-analysis-a-numerical-approach-88a8296dc2dc
+https://github.com/prof-sushil/Data-Science-World/blob/main/tutorials/pca.ipynb
+https://github.com/prof-sushil/Data-Science-World/blob/main/tutorials/naive_bayes.ipynb
+
+Tutorials
+https://www.youtube.com/watch?v=fSytzGwwBVw
+SVM
+https://www.youtube.com/watch?v=efR1C6CvhmE
+https://www.youtube.com/watch?v=Toet3EiSFcM
+https://www.youtube.com/watch?v=Qc5IyLW_hns
+PCA
+https://www.youtube.com/watch?v=FgakZw6K1QQ

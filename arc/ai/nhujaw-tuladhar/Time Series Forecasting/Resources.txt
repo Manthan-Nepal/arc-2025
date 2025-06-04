@@ -1,0 +1,21 @@
+Time Series Resources
+
+https://medium.com/@wainaina.pierre/the-complete-guide-to-time-series-forecasting-models-ef9c8cd40037
+
+https://it.mathworks.com/discovery/time-series-analysis.html
+
+https://github.com/ajitsingh98/Time-Series-Analysis-and-Forecasting-with-Python/blob/master/Time_Series_Data_EDA.ipynb
+
+https://github.com/ajitsingh98/Time-Series-Analysis-and-Forecasting-with-Python/blob/master/Time_Series_Data_Analysis.ipynb
+
+https://github.com/ajitsingh98/Time-Series-Analysis-and-Forecasting-with-Python/blob/master/Time_Series_Forecasting_Traditional_Methods.ipynb
+
+TUTORIALS
+
+https://www.youtube.com/watch?v=0ar9extHObg
+
+https://www.youtube.com/watch?v=aIdTGKjQWjA
+
+https://www.youtube.com/watch?v=Mc6sBAUdDP4
+
+https://www.youtube.com/watch?v=DeORzP0go5I
