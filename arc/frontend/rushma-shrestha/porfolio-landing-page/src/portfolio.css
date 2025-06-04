@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: rgb(2, 3, 2);
     color: rgb(237, 242, 246);
@@ -44,12 +48,17 @@ nav a:hover {
 
 #hero {
     display: flex;
+    height: 90vh;
 }
 
 /* hero left style */
 .hero-left {
-    width: 60%;
-    padding: 100px;
+    width: calc(50% - 60px);
+    padding: 80px 50px;
+}
+
+.hero-left h3 {
+    font-size: 50px;
 }
 
 .hero-left h1 {
@@ -61,6 +70,10 @@ nav a:hover {
     margin-bottom: 50px;
 }
 
+.hero-left p {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
 
 .hero-btn1,
 .hero-btn2 {
@@ -101,12 +114,14 @@ nav a:hover {
 
 /* hero right style */
 .hero-right {
-    width: 40%;
+    width: calc(50% - 60px);
 }
 
 .hero-right img {
-    margin-top: 15px;
-    height: 600px;
+    display: block;
+    margin: 60px auto;
+    max-width: 90%;
+    height: 80%;
     border-radius: 20% 0 20% 0;
     background: rgba(194, 184, 184, 0.19);
 }
@@ -249,10 +264,6 @@ th {
     border-radius: 10px;
     padding: 30px;
     width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* centers horizontally */
     align-items: center;
 }
 
@@ -274,6 +285,7 @@ th {
     border: none;
     border-radius: 10px;
     background-color: #a0a8b5;
+    display: block;
 }
 
 .project button:hover {
@@ -284,7 +296,6 @@ th {
 /* footer */
 #contact {
     padding: 40px;
-    height: 400px;
     display: flex;
 }
 
@@ -314,9 +325,14 @@ th {
     border-radius: 10px;
     display: block;
     /* Required to let margin auto work */
-    margin: 20px auto;
+    margin: 0px auto;
 }
-
+.form__input--disabled {
+  /* styles for disabled modifier */
+  background-color: #eee;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
 .contact-right textarea {
     width: 50%;
     height: 80px;
@@ -330,7 +346,7 @@ th {
     height: 40px;
     width: 80px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 10px;
     display: block;
     /* Required to let margin auto work */
     margin: 20px auto;
@@ -344,9 +360,341 @@ th {
     padding-left: 20px;
 }
 
+.contact-right button:hover {
+    background-color: #96abcb;
+    box-shadow: 2px 1px 5px beige;
+}
+
 .credit {
     font-size: 20px;
     margin-left: 30px;
     margin-bottom: 40px;
     text-align: left;
+}
+
+/*small mobile responsiveness */
+@media (max-width:385px) {
+    header {
+        height: 20px;
+        padding: 10px 20px;
+    }
+
+    #hero {
+        flex-wrap: wrap;
+        height: 90vh;
+
+    }
+
+    .hero-left {
+        text-align: center;
+        width: 100%;
+        padding: 10px 80px;
+    }
+
+    .hero-left h2 {
+        font-size: 19px;
+    }
+
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-right img {
+        height: 60%;
+        max-width: 100%;
+        margin: 20px auto;
+    }
+
+    .hero-left h3 {
+        font-size: 15px;
+    }
+
+    .hero-left h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+        font-family: "Dancing Script", cursive;
+    }
+
+    .hero-left p {
+        font-size: 15px;
+    }
+
+    header nav a {
+        display: none;
+    }
+
+    .hero-left aside {
+        display: none;
+    }
+
+    .hero-btn1,
+    .hero-btn2 {
+        font-size: 10px;
+        height: 20px;
+        width: 50px;
+    }
+
+    /* about me */
+    .me-container {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .me {
+        width: 100px;
+        font-size: 15px;
+        gap: 20px;
+    }
+
+    #about h2 {
+        font-size: 25px;
+    }
+
+    .edu h3 {
+        margin: 10px 0;
+        font-size: 20px;
+        font-weight: 100;
+    }
+
+    .edu table {
+        font-size: 17px;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .edu table td,
+    th {
+        padding: 5px 10px;
+    }
+
+    .program {
+        font-size: 17px;
+    }
+
+    /* myskills */
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        width: 90%;
+    }
+
+
+    #skills h2 {
+        font-size: 25px;
+    }
+
+    /* my projects */
+    #myprojects h2 {
+        font-size: 20px;
+    }
+
+    .project-container {
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .project {
+        padding: 15px;
+        width: 70%;
+        margin: 10px auto;
+    }
+
+    .project h3 {
+        font-size: 20px;
+    }
+
+    .project p {
+        font-size: 17px;
+    }
+
+    .project button {
+        height: 30px;
+        width: 80px;
+    }
+
+    #contact {
+        flex-direction: column;
+    }
+
+    .contact-left {
+        width: max-content;
+        margin-bottom: 40px;
+        font-size: 15px;
+    }
+
+    .contact-right {
+        width: 100%;
+
+    }
+
+    .contact-right input,
+    .contact-right textarea {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .contact-right input {
+        height: 20px;
+    }
+
+    .contact-right textarea {
+        height: 50px;
+    }
+
+    .contact-right input::placeholder,
+    .contact-right textarea::placeholder {
+        font-size: 12px;
+    }
+
+    .contact-right button {
+        font-size: small;
+        height: 30px;
+    }
+
+    .credit {
+        font-size: 15px;
+    }
+}
+
+/* tablet responsiveness */
+@media  (min-width: 386px) and (max-width: 768px)  {
+    .hero-left {
+        width: 50%;
+        padding: 80px 0 0px 50px;
+    }
+
+    .hero-left h1 {
+        margin-bottom: 10px;
+    }
+
+    .hero-left h3 {
+        font-size: 30px;
+    }
+
+    .hero-left p {
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+
+    .hero-left aside {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .hero-right {
+        width: 50%;
+    }
+
+    .hero-right img {
+        padding: 40px auto;
+    }
+
+    .hero-btn1,
+    .hero-btn2 {
+        margin-top: 20px;
+    }
+
+    /* about */
+    #about h2 {
+        font-size: 25px;
+    }
+
+    .me-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 2px;
+        margin: 5px auto;
+    }
+
+    .me {
+        margin: 10px auto;
+        font-size: 16px;
+        width: 120px;
+    }
+
+    .edu h3 {
+        font-size: 22px;
+    }
+
+    .edu table {
+        font-size: 15px;
+        width: 90%;
+    }
+
+    .edu table td {
+        padding: 10px;
+    }
+
+    #skills h2 {
+        font-size: 25px;
+    }
+
+    .skills-container {
+        width: 90%;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    }
+
+    .program {
+        font-size: 18px;
+    }
+
+    .progress-bar::after {
+        font-size: 15px;
+    }
+
+    #myprojects h2 {
+        font-size: 25px;
+    }
+
+    .project-container {
+        margin: 0px 10px;
+        gap: 0;
+    }
+
+    .project {
+        padding: 10px;
+    }
+
+    .project h3 {
+        font-size: 22px;
+    }
+
+    .project p {
+        font-size: 15px;
+    }
+
+    .project button {
+        height: 30px;
+        width: 80px;
+        font-size: 13px;
+    }
+
+    .contact-left {
+        font-size: 16px;
+    }
+
+    .contact-right input {
+        height: 25px;
+    }
+
+    .contact-right input,
+    .contact-right textarea {
+        margin: 0px auto;
+        width: 70%;
+        padding-left: 10px;
+    }
+
+    .contact-right input::placeholder,
+    .contact-right textarea::placeholder {
+        font-size: 12px;
+    }
+
+    .contact-right button {
+        font-size: 12px;
+        height: 25px;
+    }
+
+    .credit {
+        font-size: 15px;
+    }
 }

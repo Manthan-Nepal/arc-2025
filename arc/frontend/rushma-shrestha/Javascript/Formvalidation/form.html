@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<script>
+    function handleSubmit() {
+        const fname = document.getElementById("fname").value.trim();
+        const lname = document.getElementById("lname").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+
+
+
+        if (fname === "") {
+            alert("First Name is required.");
+            return false;
+        }
+        if (lname === '') {
+            alert("Last Name is required.")
+            return false;
+        }
+        if (!emailPattern.test(email)) {
+            alert("Enter a valid email address.")
+            return false;
+        }
+        if (!passwordPattern.test(password)) {
+            alert("Enter a password 8 character long, with  atleast one capital letter,a small letter, a digit and a special character");
+            return fasle;
+        }
+        alert("Submitted Successfully");
+        return true;
+    }
+</script>
+
+<body>
+    <form action="" onsubmit="return handleSubmit()">
+        <fieldset>
+            <legend>Sing Up</legend>
+            <div class="fn">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname">
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname">
+            </div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email"> <br>
+            <label for="dob"> Date of Birth</label>
+            <input type="date" name="dob" id="dob">
+            <div class="passw">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" aria-labelledby="password">
+            </div>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
