@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+.container {
+  width: 90%;
+  margin: 20vh auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  color: #4caf50;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline-color: #4caf50;
+}
+
+.operation {
+  width: 100%;
+  border-radius: 4px;
+  font-size: 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.operation select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  outline-color: #4caf50;
+}
+
+.operatio {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  position: relative;
+}
+.operatio:has(input:focus) {
+  border: 2px solid #4caf50;
+}
+.operatio input {
+  outline: none;
+  border: none;
+  font-size: 16px;
+}
+.dropdown{
+  
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    width:50%;
+    position: absolute;
+    top: 113%;
+    left: 50%;
+    border-radius: 5px; 
+    display:none; 
+  
+}
+.dropdown.visible{
+display: block;
+}
+.dropdown ul{
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      
+}
+
+.dropdown ul li{
+       border-bottom: 1px solid #ccc;
+      text-align: center;
+      padding-bottom: 5px;
+       font-size: 16px;
+      
+}
+ul li:last-child {
+  border-bottom: none;
+  
+}
+ul li:first-child {
+ padding-top:5px;
+  
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #0eaa13;
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.1);
+}
+.result {
+  font-size: 16px;
+  color: #4caf50;
+  font-weight: 600;
+  text-align: left;
+}
+.error {
+  color: rgb(245, 106, 106);
+}
+
+@media screen and (min-width: 768px) {
+ 
+  .container
+   {
+    width: 60%;
+    padding: 55px;
+  }
+}
+@media screen and (min-width: 1024px) {
+ 
+  .container {
+    width: 40%;
+    
+  }
+}

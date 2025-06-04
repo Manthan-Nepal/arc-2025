@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Simple Calculator</h2>
+    <input type="number" id="num1" placeholder="Enter first number" />
+    <input type="number" id="num2" placeholder="Enter second number" />
+
+    <select id="operation">
+      <option value="+">Add</option>
+      <option value="-">Subtract</option>
+      <option value="*">Multiply</option>
+      <option value="/">Divide</option>
+    </select>
+
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+      function calculate() {
+        const n1 = parseFloat(document.getElementById("num1").value);
+        const n2 = parseFloat(document.getElementById("num2").value);
+        const op = document.getElementById("operation").value;
+
+        let result;
+        if (isNaN(n1) || isNaN(n2)) {
+          result = "Please enter valid numbers.";
+        } else {
+          switch (op) {
+            case "+":
+              result = n1 + n2;
+              break;
+            case "-":
+              result = n1 - n2;
+              break;
+            case "*":
+              result = n1 * n2;
+              break;
+            case "/":
+              result = n2 !== 0 ? n1 / n2 : "Can't divide by 0";
+              break;
+            default:
+              result = "Invalid operation";
+          }
+        }
+        document.getElementById("result").textContent = `Result: ${result}`;
+      }
+    </script>
+  </body>
+</html>

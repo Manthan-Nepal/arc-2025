@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <form onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Name" /><br /><br />
+      <input id="email" placeholder="Email" /><br /><br />
+      <input type="password" id="password" placeholder="Password" /><br /><br />
+      <button type="submit">Register</button>
+    </form>
+    <p id="formError" style="color: red"></p>
+
+    <script>
+      function validateForm() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+
+        let error = "";
+        if (name.length < 2) {
+          error = "Name must be at least 2 characters.";
+        } else if (!email.includes("@") || !email.includes(".")) {
+          error = "Invalid email address.";
+        } else if (password.length < 6) {
+          error = "Password must be at least 6 characters.";
+        }
+
+        document.getElementById("formError").textContent = error;
+        return error === ""; // Only submit if no error
+      }
+    </script>
+  </body>
+</html>
