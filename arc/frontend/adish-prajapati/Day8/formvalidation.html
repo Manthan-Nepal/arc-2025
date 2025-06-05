@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      input {
+        height: 25px;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Name" />
+      <br />
+      <br />
+      <input type="email" id="email" placeholder="Email" />
+      <br />
+      <br />
+      <input type="password" id="password" placeholder="Password" />
+      <br />
+      <br />
+
+      <button type ="submit">Submit</button>
+
+      <p id="error" style="color: red"></p>
+    </form>
+
+    <script>
+      function validateForm() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const error = document.getElementById("error");
+
+        if (name === "") {
+          error.innerText = "Name is required.";
+          return false;
+        }
+
+        if (password.length < 8) {
+          error.innerText = "Password must be at least 8 characters at least";
+          return false;
+        }
+
+        error.innerText = "";
+        alert("Form submitted successfully!");
+        return true;
+      }
+    </script>
+  </body>
+</html>

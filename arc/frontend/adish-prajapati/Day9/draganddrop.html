@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      :root {
+        --primary: #1f2937;
+        --accent: #00bcd4;
+        --light: #f5f5f5;
+        --dark: #111827;
+        --border: #00f;
+        --green: #096b68;
+        --gray: #393e46;
+      }
+
+      body {
+        background-color: var(--light);
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        height: 300px;
+        width: 200px;
+        object-fit: cover;
+        background-color: var(--primary);
+        border-radius: 5px;
+        color: var(--light);
+      }
+
+      .card:hover {
+        box-shadow: 0 0 10px var(--border), 0 0 20px var(--border);
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+      }
+
+      .card img {
+        height: 100%;
+        width: 200px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="cardContainer"
+      style="display: flex; gap: 2rem; justify-content: center"
+    >
+      <div class="card" draggable="true" id="item1">
+        <h2>Lake</h2>
+
+        <img
+          src="https://c4.wallpaperflare.com/wallpaper/352/191/690/beautiful-nature-scenery-green-trees-lake-river-mountains-clouds-wallpaper-thumb.jpg"
+          alt=""
+        />
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+          exercitationem.
+        </p>
+      </div>
+
+      <div class="card" draggable="true" id="item2">
+        <h2>Mountains</h2>
+
+        <img
+          src="https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?cs=srgb&dl=pexels-pixabay-147411.jpg&fm=jpg"
+          alt="mountains"
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+          exercitationem.
+        </p>
+      </div>
+
+      <div class="card" draggable="true" id="item3">
+        <h2>Sunset</h2>
+        <img
+          src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-260nw-2479236003.jpg"
+          alt=""
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+          exercitationem.
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="dropzone"
+      style="
+        margin-top: 2rem;
+        padding: 1rem;
+        border: 2px dashed var(--accent);
+        min-height: 150px;
+        width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+      "
+    >
+      <p>Drop cards here</p>
+    </div>
+
+    <script>
+      const cardContainers = document.querySelector("#cardContainer");
+      const dropzone = document.querySelector("#dropzone");
+
+      let draggedCard = null;
+
+      
+      cardContainer.querySelectorAll(".card").forEach((card) => {
+        card.addEventListener("dragstart", (e) => {
+          draggedCard = card;
+          setTimeout(() => (card.style.display = "none"), 0);
+        });
+
+        card.addEventListener("dragend", (e) => {
+          draggedCard = null;
+          card.style.display = "flex";
+        });
+      });
+
+      
+      dropzone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropzone.style.backgroundColor = "var(--accent)"; 
+      });
+
+     
+      dropzone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        if (draggedCard) {
+          dropzone.appendChild(draggedCard);
+          draggedCard.style.display = "flex";
+          dropzone.style.backgroundColor = "";
+        }
+      });
+
+    </script>
+  </body>
+</html>
