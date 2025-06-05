@@ -3,36 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <h2>Registration Form</h2>
-    <form onsubmit="return validateForm()">
-      <input type="text" id="name" placeholder="Name" /><br /><br />
-      <input id="email" placeholder="Email" /><br /><br />
-      <input type="password" id="password" placeholder="Password" /><br /><br />
-      <button type="submit">Register</button>
-    </form>
-    <p id="formError" style="color: red"></p>
+    <div class="container">
+      <h2>Registration</h2>
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input id="name" placeholder="Enter name" />
+      </div>
+      <div class="form-field">
+        <label for="contact">Contact</label>
+        <input id="contact" placeholder="Enter contact no." />
+      </div>
+      <fieldset class="gender-field">
+        <p>Gender</p>
+        <div class="options">
+          <div class="option">
+            <input
+              type="radio"
+              id="male"
+              name="gender"
+              value="male"
+              title="male"
+            />
+            <label for="male">Male</label>
+          </div>
+          <div class="option">
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              title="female"
+            />
+            <label for="female">Female</label>
+          </div>
 
-    <script>
-      function validateForm() {
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value;
+          <div class="option">
+            <input
+              type="radio"
+              id="others"
+              name="gender"
+              value="others"
+              title="others"
+            />
+            <label for="others">Others</label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input id="email" placeholder="Enter email" />
+      </div>
 
-        let error = "";
-        if (name.length < 2) {
-          error = "Name must be at least 2 characters.";
-        } else if (!email.includes("@") || !email.includes(".")) {
-          error = "Invalid email address.";
-        } else if (password.length < 6) {
-          error = "Password must be at least 6 characters.";
-        }
+      <div class="form-field">
+        <label for="address">Address</label>
+        <input id="name" placeholder="Enter address" />
+      </div>
 
-        document.getElementById("formError").textContent = error;
-        return error === ""; // Only submit if no error
-      }
-    </script>
+      <button type="submit" onclick="submit()">Submit</button>
+      <p id="result"></p>
+    </div>
   </body>
+  <script src="scripts.js"></script>
 </html>
