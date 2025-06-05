@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temp Convertor</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>Temperature Converter</h2>
+        <div id="dark-icon" class="toggle-icon mode">
+          <i class="fa-solid fa-moon fa-2x"></i>
+        </div>
+        <div id="light-icon" class="mode">
+          <i class="fa-regular fa-lightbulb fa-2x"></i>
+        </div>
+      </header>
+
+      <div class="operatio" id="from-unit-container">
+        <input
+          value="Kelvin"
+          type="text"
+          placeholder="From"
+          id="from-unit"
+          readonly
+        />
+        <div id="caret-down-1" class="caret-down">
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="dropdown" id="dropdown-from">
+          <ul>
+            <li>Kelvin</li>
+            <li>Fahrenheit</li>
+            <li>Celsius</li>
+          </ul>
+        </div>
+      </div>
+      <div class="operatio" id="to-unit-container">
+        <input value="Fahrenheit" placeholder="To" id="to-unit" readonly />
+        <div id="caret-down-2" class="caret-down">
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="dropdown" id="dropdown-to">
+          <ul>
+            <li>Kelvin</li>
+            <li>Fahrenheit</li>
+            <li>Celsius</li>
+          </ul>
+        </div>
+      </div>
+      <div class="value">
+        <input
+          class="input"
+          type="text"
+          id="temp"
+          placeholder="Enter degrees"
+        />
+        <button id="button" type="button">Convert</button>
+      </div>
+      <input
+        class="input"
+        type="text"
+        placeholder="Result"
+        id="result"
+        readonly
+      />
+    </div>
+  </body>
+  <script src="scripts.js"></script>
+</html>
