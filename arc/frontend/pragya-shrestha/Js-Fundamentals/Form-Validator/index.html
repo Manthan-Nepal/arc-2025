@@ -15,8 +15,9 @@
     />
   </head>
   <body>
-    <div class="container">
-      <h2>Registration</h2>
+    <form class="container" id="form">
+      <h2>Registration Form</h2>
+
       <div class="form-field">
         <label for="name">Name</label>
         <input id="name" placeholder="Enter name" />
@@ -68,12 +69,12 @@
 
       <div class="form-field">
         <label for="address">Address</label>
-        <input id="name" placeholder="Enter address" />
+        <input id="address" placeholder="Enter address" />
       </div>
 
-      <button type="submit" onclick="submit()">Submit</button>
-      <p id="result"></p>
-    </div>
+      <button type="submit">Submit</button>
+      <div id="result" class="result"></div>
+    </form>
   </body>
   <script src="scripts.js"></script>
 </html>

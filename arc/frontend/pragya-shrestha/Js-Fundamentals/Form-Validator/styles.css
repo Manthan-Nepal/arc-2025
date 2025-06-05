@@ -137,8 +137,14 @@ button:hover {
   color: #4caf50;
   font-weight: 600;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  width: 100%;
 }
-.error {
+
+.err-txt {
   color: rgb(245, 106, 106);
 }
 @media  screen and (min-width:425px) {
