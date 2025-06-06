@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/dragAndDrop.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+            rel="stylesheet"
+        />
+        <title>Drag and Drop</title>
+    </head>
+    <body>
+        <div class="drag-drop">
+            <div class="drag-drop__title">
+                Drag & Drop The image
+            </div>
+            <div class="drag-drop__container">
+                <div class="drop-box drop-box--has-content" data-box="1">
+                    <div class="drop-box__content">
+                        <div class="draggable-item" draggable="true" data-item="image">
+                            <img src="../public/bear.png" alt="" class="draggable-item__image">
+                        </div>
+                    </div>
+                </div>   
+                <div class="drop-box" data-box="2">
+                    <div class="drop-box__placeholder">
+                        Drop items here
+                    </div>
+                </div>
+                <div class="drop-box" data-box="3">
+                    <div class="drop-box__placeholder">
+                        Drop items here
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/dragAndDrop.js"></script>
+    </body>
+</html>

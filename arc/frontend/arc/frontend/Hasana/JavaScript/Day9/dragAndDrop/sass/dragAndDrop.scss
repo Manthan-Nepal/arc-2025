@@ -1,0 +1,114 @@
+* {
+    font-family: "Silkscreen", monospace;
+}
+
+.drag-drop {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    &__title {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
+
+    &__container {
+        display: flex;
+        // flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .drop-box {
+            // border: 2px red solid;
+            width: 200px;
+            height: 200px;
+            border: 3px dashed rgb(0, 153, 255);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                border-color: rgb(131, 192, 17);
+                background-color: #f0f8ff;
+                transform: translateY(-2px);
+            }
+
+            &__placeholder {
+                color: #666;
+                text-align: center;
+                font-size: 14px;
+                line-height: 1.4;
+            }
+            &__content {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                .draggable-item {
+                    cursor: grab;
+                    transition: transform 0.2s ease;
+                    user-select: none;
+                    &:active {
+                        cursor: grabbing;
+                    }
+                    &--dragging {
+                        opacity: 0.5;
+                        transform: rotate(5deg);
+                    }
+                    &__image {
+                        width: 150px;
+                        height: 150px;
+                        object-fit: cover;
+                        box-shadow: 0 4px 8px rgba($color: #000000, $alpha: 0.1);
+                    }
+                    &__text {
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #333;
+                        padding: 10px;
+                        background-color: #666;
+                        border-radius: 6px;
+                        border: 2px solid red;
+                    }
+                }
+            }
+        }
+
+        .drop-box--drag-over {
+            border-color: #333;
+            background-color: #e8f5e8;
+            transform: scale(1.05);
+        }
+        .drop-box--has-content {
+            border-style: dashed;
+            border-color: #ff5e00;
+            background-color: #d8d5d5;
+        }
+    }
+}
+
+/* Animation for successful drop */
+@keyframes dropSuccess {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.drop-box--success {
+    animation: dropSuccess 0.4s ease;
+}
