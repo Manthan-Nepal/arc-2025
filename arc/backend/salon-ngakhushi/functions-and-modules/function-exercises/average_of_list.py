@@ -10,6 +10,6 @@ def sum(numbers):
 
 def average(x):
     avg= sum(x)/len(x)
-    print(f"Average: {avg}")
+    print(f"Average: {avg:.2f}")
 
 average(numbers)

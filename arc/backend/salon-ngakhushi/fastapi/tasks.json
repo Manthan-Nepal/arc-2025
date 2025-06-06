@@ -1,0 +1,42 @@
+{
+    "day 1": {
+        "title": "Python Basics",
+        "status": "Completed"
+    },
+    "day 2": {
+        "title": "Python Data Structure",
+        "status": "Completed"
+    },
+    "day 3": {
+        "title": "Python Functions and Modules",
+        "status": "Completed"
+    },
+    "day 4": {
+        "title": "Python Object Oriented Programming",
+        "status": "Completed"
+    },
+    "day 5": {
+        "title": "Python File Handling and File I/O",
+        "status": "Completed"
+    },
+    "day 6": {
+        "title": "Http Protocols and Web Fundamentals",
+        "status": "Completed"
+    },
+    "day 7": {
+        "title": "REST API Design Principles",
+        "status": "Completed"
+    },
+    "day 8": {
+        "title": "FastAPI Foundations",
+        "status": "Completed"
+    },
+    "day 9": {
+        "title": "Path and Query Parameters",
+        "status": "Completed"
+    },
+    "day 10": {
+        "title": "Request Body and Validation with Pydantic",
+        "status": "Completed"
+    }
+}
