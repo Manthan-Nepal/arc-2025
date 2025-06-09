@@ -20,6 +20,22 @@ function addItem() {
   inputField.value = "";
 }
 
+const saveList = () => {
+  localStorage.setItem(
+    "item-list",
+    document.getElementById("item-list").innerHTML
+  );
+};
+
+const renderList = (html) => {
+  document.getElementById("item-list").innerHTML = html;
+};
+
+const loadList = () => {
+  const saved = localStorage.getItem("item-list");
+  if (saved) renderList(saved);
+};
+
 document.getElementById("add-button").addEventListener("click", (e) => {
   e.preventDefault();
   addItem();
@@ -45,16 +61,10 @@ document.getElementById("item-list").addEventListener("click", (e) => {
       li.classList.toggle("checked");
     }
   }
-  localStorage.setItem(
-    "item-list",
-    document.getElementById("item-list").innerHTML
-  );
+  saveList();
 });
 
 // Load saved list from localStorage on page load
 window.addEventListener("DOMContentLoaded", () => {
-  const savedList = localStorage.getItem("item-list");
-  if (savedList) {
-    document.getElementById("item-list").innerHTML = savedList;
-  }
+  loadList();
 });
