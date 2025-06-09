@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 4
+names: ['book', 'guitar', 'laptop', 'table']
+
+roboflow:
+  workspace: buzzingga
+  project: my-first-project-lbgja
+  version: 4
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/buzzingga/my-first-project-lbgja/dataset/4
