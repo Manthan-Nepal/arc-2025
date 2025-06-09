@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Manager</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contact Manager</h1>
+
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="tel" id="phone" placeholder="Phone" required />
+        <select title="group" id="group" required>
+          <option value="">Group</option>
+          <option value="Family">Family</option>
+          <option value="Friends">Friends</option>
+          <option value="Work">Work</option>
+        </select>
+        <button type="submit">Add Contact</button>
+      </form>
+
+      <div class="controls">
+        <input type="text" id="search" placeholder="Search by name" />
+        <select title="category" id="filter-group">
+          <option value="">All Groups</option>
+          <option value="Family">Family</option>
+          <option value="Friends">Friends</option>
+          <option value="Work">Work</option>
+        </select>
+        <select title="sort" id="sort">
+          <option value="az">Sort A-Z</option>
+          <option value="za">Sort Z-A</option>
+        </select>
+      </div>
+
+      <ul id="contact-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

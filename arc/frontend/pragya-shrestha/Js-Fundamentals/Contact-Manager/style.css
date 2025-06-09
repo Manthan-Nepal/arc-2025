@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.container {
+ display:flex;
+    flex-direction: column; 
+    width: 50%;
+    margin: 20vh auto;
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    gap: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+form,
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input, select, button {
+  flex: 1 1 48%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+#contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+#contact-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#contact-list li:last-child {
+  border-bottom: none;
+}
