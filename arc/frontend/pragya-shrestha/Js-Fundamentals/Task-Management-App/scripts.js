@@ -230,6 +230,10 @@ function saveTasksToStorage() {
 }
 
 function loadTasksFromStorage() {
+  const columns = document.querySelectorAll(".project-column");
+  columns.forEach((column) => {
+    column.querySelectorAll(".task").forEach((task) => task.remove());
+  });
   const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
   savedTasks.forEach(
     ({ title, description, priority, rawDate, formattedDate, columnId }) => {
@@ -251,3 +255,9 @@ function loadTasksFromStorage() {
 }
 
 loadTasksFromStorage();
+
+window.addEventListener("storage", (event) => {
+  if (event.key === "tasks") {
+    loadTasksFromStorage();
+  }
+});
