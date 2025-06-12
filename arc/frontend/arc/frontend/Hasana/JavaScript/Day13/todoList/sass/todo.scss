@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Silkscreen", monospace;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, rgb(14, 12, 10), rgb(128, 111, 97), rgb(151, 130, 130));
+}
+
+.container{
+    background-color: white;
+    min-height: 100vh;
+    min-width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 30px;
+    // border: 2px red solid;
+    border-radius: 12px;
+    align-items: center;
+    .container__heading{
+        height: 120px;
+        // border: 2px red solid;
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: #fcbc40;
+        text-align: center;
+        padding: 5px;
+        h1{
+            font-size: 50px;  
+            color: rgb(104, 32, 32);
+        }
+        p{
+            color: rgba(165, 4, 4, 0.575);
+            font-size: 30px;
+            font-weight: bold;
+
+        }
+    }
+    .todo__container{
+        display: flex;
+        // border: 2px green solid;
+        flex-direction: column;
+        justify-content: start;
+        height: 80vh;
+        width: 85%;
+        background-color: white;
+        &__input{
+            display: flex;
+            flex-direction: row;
+            // border: 2px red solid;
+            // padding: 10px;
+            gap: 5px;
+            justify-content: space-around;
+            input{
+                padding: 10px;
+                width: 80%;
+            }
+            .todo__container__addBtn{
+                width:20%;
+                // border: 2px black solid;
+                display: flex;
+                align-items: center;
+                background-color: #fcbc40;
+                box-shadow: inset  -1px -2px 10px rgb(255, 81, 0);
+                cursor: pointer;
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+                border-radius: 5px;
+                justify-content: center;
+                &:hover{
+                    box-shadow: 2px 2px 10px rgb(255, 81, 0) ;
+                    transform: scale(1.03);
+                }
+            }
+        }
+        &__task{
+            display: flex;
+            margin-top: 5%;
+            flex-direction: row;
+            height: 100px;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: rgb(252, 200, 12);
+            // border: 2px rgb(255, 230, 4) solid;
+            align-items: center;
+            justify-content: space-around;
+            .todo__container__taskName{
+                // border: 2px red solid;
+                background-color: rgb(248, 216, 112);
+                width: 60%;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 10px;
+                font-size: 20px;
+                height: 100%;
+                border-radius: 5px;
+
+            }
+            &__status{
+                width: 20%;
+                select{
+                    cursor: pointer;
+                    font-size: 15px;
+                    height: 82px;
+                    padding: 10px;
+                    // border: 1px rgb(224, 188, 25) solid;
+                    border:none;
+                    width: 100%; 
+                    border-radius: 5px;
+                    background-color: #fcf4e485;
+                }
+
+            }
+            &__edit{
+                display: flex;
+                justify-content: center;
+                // width: 6.5%;
+                padding: 8px;
+                width: fit-content;
+                border-radius: 100%;
+                // background-color: rgb(255, 255, 255);
+                img{
+                    height: 40px;
+                    width: 40px;
+                }
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.05);
+                    background-color: rgba(255, 134, 6, 0.555);
+                }
+            }
+            &__delete{
+                // width: 6.5%;
+                width: fit-content;
+                display: flex;
+                justify-content: center;
+                border-radius: 100%;
+                padding: 5px;
+                // background-color: rgb(255, 206, 151);
+                img{
+                    height: 40px;
+                    width: 40px;
+                }
+                &:hover{
+                    transform: scale(1.05);
+                    background-color: rgb(252, 117, 64);
+                }
+                cursor: pointer;
+            }
+        }
+    }
+}
+
