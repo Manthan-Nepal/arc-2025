@@ -1,0 +1,356 @@
+:root {
+  --bg: #ebf0f7;
+  --header: #fbf4f6;
+  --text: #2e2e2f;
+  --white: #ffffff;
+  --light-grey: #c4cad3;
+  --tag-1: #ceecfd;
+  --tag-1-text: #2e87ba;
+  --tag-2: #d6ede2;
+  --tag-2-text: #13854e;
+  --tag-3: #ceecfd;
+  --tag-3-text: #2d86ba;
+  --tag-4: #f2dcf5;
+  --tag-4-text: #a734ba;
+  --purple: #7784ee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--bg);
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: cursive;
+  color: var(--purple);
+}
+
+.app,
+.project {
+  width: 100%;
+}
+
+.project {
+  padding: 2rem 5rem;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.project-info {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-task {
+  display: flex;
+  align-items: center;
+}
+
+.add-task span {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100rem;
+  margin: 0 0.2rem;
+  color: var(--white);
+  font-family: cursive;
+}
+
+.high-priority { background-color: var(--tag-4-text); }
+.medium-priority { background-color: var(--tag-2-text); }
+.low-priority { background-color: var(--tag-3-text); }
+
+.add-task__new {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px dashed rgb(150, 150, 150);
+  font-size: 0;
+  cursor: pointer;
+  position: relative;
+  justify-content: center;
+
+}
+
+.add-task__new:after {
+  content: '+';
+  font-size: 30px;
+  color: rgb(150, 150, 150);
+}
+
+.add-modal {
+  z-index: 100;
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.add-modal.open {
+  display: flex;
+}
+
+.add-modal__content {
+  max-width: 500px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.add-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.add-modal__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+.add-modal__close {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #444;
+  transition: color 0.3s ease;
+}
+.add-modal__close:hover {
+  color: #e74c3c;
+}
+
+.add-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+label{
+  font-size: 1rem;
+  color: var(--purple);
+  font-weight: 600;
+}
+.add-modal__form input,
+.add-modal__form textarea,
+.add-modal__form select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  resize: vertical;
+}
+
+.add-modal__submit {
+  background-color: var(--purple);
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-modal__submit:hover {
+  background-color: #5a67d8;
+}
+
+.project-tasks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 4.5rem;
+  width: 100%;
+}
+
+.project-column-heading {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-column-heading__title {
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.project-column-heading__options {
+  background: transparent;
+  color: var(--light-grey);
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.task {
+  cursor: move;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px;
+  border: 3px dashed transparent;
+}
+
+.task:hover {
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px;
+  border-color: rgba(162, 179, 207, 0.2) !important;
+}
+
+.task.dragging {
+  opacity: 0.5;
+}
+
+.task p {
+  font-size: 15px;
+  margin: 1.2rem 0;
+}
+
+.task__tag {
+  border-radius: 100px;
+  padding: 2px 13px;
+  font-size: 12px;
+}
+
+.task__tag--copyright {
+  color: var(--tag-4-text);
+  background-color: var(--tag-4);
+}
+
+.task__tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task__options {
+  background: transparent;
+  border: none;
+  color: var(--light-grey);
+  font-size: 17px;
+}
+
+.task__stats {
+  position: relative;
+  color: var(--light-grey);
+  font-size: 12px;
+}
+
+.task__stats span:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+.task__priority {
+  width: 25px;
+  height: 25px;
+  border-radius: 100rem;
+  border: 1px solid var(--light-grey);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-family: cursive;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--light-grey);
+}
+.icon i:hover {
+  color: var(--purple);
+  cursor: pointer;
+}
+
+.task-hover {
+  border: 3px dashed var(--light-grey) !important;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1300px) {
+  .project {
+    max-width: 100%;
+    padding: 2rem;
+  }
+
+  .task-details {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 1rem;
+  }
+
+  .tag-progress,
+  .task-activity {
+    flex-basis: 50%;
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .project-column:nth-child(2),
+  .project-column:nth-child(3) {
+    display: none;
+  }
+
+  .project-tasks {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .project-column:nth-child(4) {
+    display: none;
+  }
+
+  .project-tasks {
+    grid-template-columns: 1fr;
+  }
+
+  .tag-progress,
+  .task-activity {
+    flex-basis: 100%;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}
