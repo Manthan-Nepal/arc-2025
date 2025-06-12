@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f3f5f9;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 80px;
+  background: #ffffff;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #e0e0e0;
+}
+
+.sidebar h2 {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.add-btn {
+  width: 40px;
+  height: 40px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.color-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.color {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.c1 { background: #f4b400; }
+.c2 { background: #ea4335; }
+.c3 { background: #34a853; }
+.c4 { background: #a142f4; }
+.c5 { background: #00cfd3; }
+
+/* Main Content */
+.main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.search {
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 0 1px #ddd inset;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.note {
+  padding: 20px;
+  border-radius: 16px;
+  position: relative;
+  min-height: 150px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.note h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.note small {
+  color: #444;
+  font-size: 13px;
+}
+
+.note .icon-btn {
+  position: absolute;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.note .top-right {
+  top: 10px;
+  right: 10px;
+}
+
+.note .bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
