@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/calculator.css" />
+    <title>Basic Calculator</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="calculator__display">
+        <div class="calculator__question">
+          <span class="calculator__input"></span>
+          <span class="calculator__cursor calculator__cursor--active">|</span>
+        </div>
+        <div class="calculator__answer"></div>
+      </div>
+
+      <div class="calculator__keys">
+        <div class="calculator__row">
+          <div class="calculator__key calculator__key--number calculator__key--1">1</div>
+          <div class="calculator__key calculator__key--number calculator__key--2">2</div>
+          <div class="calculator__key calculator__key--number calculator__key--3">3</div>
+          <div class="calculator__key calculator__key--non-number calculator__key--del">DEL</div>
+          <div class="calculator__key calculator__key--non-number calculator__key--ac">AC</div>
+        </div>
+
+        <div class="calculator__row">
+          <div class="calculator__key calculator__key--number calculator__key--4">4</div>
+          <div class="calculator__key calculator__key--number calculator__key--5">5</div>
+          <div class="calculator__key calculator__key--number calculator__key--6">6</div>
+          <div class="calculator__key calculator__key--operator calculator__key--add">+</div>
+          <div class="calculator__key calculator__key--operator calculator__key--sub">-</div>
+        </div>
+
+        <div class="calculator__row">
+          <div class="calculator__key calculator__key--number calculator__key--7">7</div>
+          <div class="calculator__key calculator__key--number calculator__key--8">8</div>
+          <div class="calculator__key calculator__key--number calculator__key--9">9</div>
+          <div class="calculator__key calculator__key--operator calculator__key--mul">×</div>
+          <div class="calculator__key calculator__key--operator calculator__key--div">/</div>
+        </div>
+
+        <div class="calculator__row">
+          <div class="calculator__key calculator__key--number calculator__key--0">0</div>
+          <div class="calculator__key calculator__key--non-number calculator__key--decimal">.</div>
+          <div class="calculator__key calculator__key--number calculator__key--00">00</div>
+          <div class="calculator__key calculator__key--operator calculator__key--power">^</div>
+          <div class="calculator__key calculator__key--operator calculator__key--eq">=</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/calculator.js"></script>
+</html>

@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(255, 188, 210);
+}
+
+.converter {
+    hr {
+        border: 1px solid rgba(128, 128, 128, 0.24);
+        width: 90%;
+    }
+    // border: 2px red solid;
+    padding: 20px;
+    height: 600px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-evenly;
+    background: rgb(51, 50, 50);
+    border-radius: 15px;
+    box-shadow: 2px 10px 10px rgba(223, 65, 65, 0.384);
+    .converter__text {
+        color: white;
+        font-size: 40px;
+        font-weight: 900;
+    }
+    .converter__container {
+        // border: 2px red solid;
+        width: 90%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .converter__io,
+        .converter__options {
+            display: flex;
+            flex-direction: row;
+            // border: 2px white solid;
+            padding: 10px;
+            justify-content: space-between;
+        }
+        .converter__options {
+            width: 90%;
+            .converter__dropdown{
+                width: 45%;
+                select{
+                    padding: 10px;
+                    width: 100%;
+                    font-size: 20px;
+                    border-radius: 5px;
+                    // background-color: rgba(209, 228, 247, 0.945);
+    
+                }
+            }
+
+        }
+    }
+    .converter__convert-button {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        .convert-button__reset {
+            button {
+                background-color: rgb(190, 42, 42);
+                &:hover {
+                    background-color: rgb(199, 54, 49);
+                    transform: scale(1.05);
+                }
+            }
+        }
+        .convert-button__reset,
+        .convert-button__convert {
+            width: 30%;
+        }
+        .convert-button__convert {
+            button {
+                background-color: rgb(84, 136, 84);
+                &:hover {
+                    background-color: rgb(55, 156, 51);
+                    transform: scale(1.05);
+                }
+            }
+        }
+        button {
+            padding: 10px;
+            width: 100%;
+            height: 60px;
+            font-size: 25px;
+            color: rgb(237, 245, 193);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.converter__io {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(255, 172, 172);
+    // border: 2px red solid;
+    height: 40%;
+    width: 90%;
+    .converter__io__input {
+        height: 90%;
+        width: 45%;
+        display: flex;
+        input {
+            height: 100%;
+            width: 100%;
+            letter-spacing: 2px;
+            border: none;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+    }
+    .converter__io__result {
+        height: 90%;
+        width: 45%;
+        border-radius: 5px;
+        color: black;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        font-weight: 100;
+        font-size: 25px;
+        // border: 2px red solid;
+    }
+}

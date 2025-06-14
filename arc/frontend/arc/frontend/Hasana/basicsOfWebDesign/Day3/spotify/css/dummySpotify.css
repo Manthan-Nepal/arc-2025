@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scrollbar-width: none;
+}
+body {
+    padding: 0;
+    background: black;
+    max-width: 100vw;
+    scrollbar-width: none;
+    border: 2px red solid;
+    /* overflow: hidden; */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+header {
+    display: flex;
+    background-color: black;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2000;
+    height: 9%;
+    width: 100%;
+}
+#hleft {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#hright {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+    color: #a8a8a8;
+}
+
+header a:hover {
+    color: rgb(255, 255, 252);
+    font-size: 1.1em;
+}
+
+#logo {
+    margin-left: 30px;
+}
+
+#logo img {
+    width: 70px;
+    height: auto;
+}
+
+.homeIcon img {
+    width: 35px;
+    background-color: #1f1f1f;
+    padding: 13px;
+    border-radius: 100%;
+}
+
+.homeIcon img:hover {
+    background-color: #ece4e492;
+    cursor: pointer;
+}
+
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 80%;
+    padding: 13px;
+    border-radius: 100px;
+    background-color: #1f1f1f;
+    gap: 15px;
+}
+
+.searchBar .searchIcon img {
+    width: 40px;
+}
+
+.searchBar input {
+    box-shadow: none;
+    border: none;
+    width: 90%;
+    font-size: 1.2em;
+    background-color: #1f1f1f;
+    border-right: 2px rgb(94, 87, 87) solid;
+}
+
+.searchBar input:focus {
+    outline: none;
+    color: rgb(251, 244, 231);
+}
+
+.searchBar img {
+    background-color: #1f1f1f;
+    width: 35px;
+}
+
+.appOptions li {
+    list-style: none;
+    color: #a8a8a8;
+    font-weight: bolder;
+    font-size: 1em;
+}
+
+.appOptions ul {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.appOptions {
+    border-right: 3px #a8a8a8 solid;
+    width: 45%;
+    padding-right: 5px;
+}
+
+.installApp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-weight: bolder;
+    font-size: 1em;
+}
+
+.installApp img {
+    width: 30px;
+}
+
+.signUp {
+    font-weight: bolder;
+}
+.login {
+    /* border: 2px red solid; */
+    padding: 20px;
+    width: 80px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #ece4e4;
+}
+
+.login a {
+    background-color: #ece4e4;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+.login a:hover {
+    color: #121212;
+    font-size: 1.2em;
+}
+.login:hover {
+    transform: scale(1.1);
+}
+
+#content {
+    position: fixed;
+    top: 10%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: space-between;
+    color: white;
+    /* border: 2px yellow solid; */
+    width: 100%;
+    /* overflow: scroll; */
+}
+
+aside {
+    width: 22vw;
+}
+
+.libraryBox {
+    width: 100%;
+    height: 100%;
+    /* border: 2px green solid; */
+    background-color: #121212;
+    border-radius: 7px;
+    padding: 20px;
+    position: relative;
+    /* overflow: hidden; */
+}
+.libraryBox h3 {
+    text-align: left;
+    font-size: 1.2em;
+    /* padding-bottom: 30px; */
+}
+
+.cards button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    /* background-color: white; */
+    color: black;
+}
+
+.cards {
+    margin-top: 10%;
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    justify-content: left;
+    top: 60px;
+}
+.playlistCard,
+.podcastBox {
+    height: fit-content;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.playlistCard button,
+.podcastBox button {
+    width: fit-content;
+    padding: 9px;
+}
+.playlistCard strong,
+.podcastBox strong {
+    font-size: 16px;
+}
+
+.playlistCard p,
+.podcastBox p {
+    font-size: 10px;
+}
+
+.footerLinks {
+    position: absolute;
+    bottom: 50px;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.footerLinks ul {
+    list-style: none;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 20px;
+    font-size: 0.8em;
+    text-align: left;
+    flex-wrap: wrap;
+    padding-left: 2px;
+}
+
+.footerLinks a {
+    color: #a8a8a8;
+    text-decoration: none;
+}
+
+.langBtn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.langBtn button {
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 20px;
+    color: #ece4e4;
+    width: 100px;
+    /* border: 2px red solid; */
+}
+
+.mainContent {
+    box-sizing: border-box;
+    background-color: #121212;
+    padding: 2%;
+    width: 75vw;
+    /* height: 70%; */
+    border-radius: 7px;
+    overflow-y: scroll;
+
+    /* border: 2px red solid; */
+}
+
+.trending,
+.popularArtists,
+.popularAlbums {
+    margin-bottom: 80px;
+}
+
+.songList,
+.artistList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    /* border: 2px red solid; */
+}
+
+.songCard,
+.artistCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 150px;
+}
+
+.songCard img,
+.artistList img {
+    width: 160px;
+    border-radius: 8px;
+}
+
+.artistList img {
+    border-radius: 100%;
+}
+
+.songCard:hover,
+.artistCard:hover {
+    background-color: #333;
+}
+
+.custom-line {
+    border: none;
+    height: 1px;
+    background-color: #7c7979;
+    width: 100%; /* Optional: control length */
+    margin: 20px 0; /* Optional: spacing */
+}
+
+.signupBanner {
+    background: linear-gradient(to right, #ae2997, #519af4);
+    /* padding: 20px; */
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 10%;
+}
+
+.bannerText p {
+    margin-top: 5px;
+}
+
+.signupBtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: white;
+    color: rgb(75, 71, 71);
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.signupBtn:hover {
+    /* padding: 30; */
+    transform: scale(1.2);
+}
+
+@media (max-width: 720px) {
+    .signupBanner {
+        align-items: center;
+    }
+    .signupBtn {
+        padding: 18px 10px;
+        font-size: 0.8em;
+    }
+    .bannerText p {
+        font-size: 12px;
+    }
+    .appOptions {
+        display: none;
+    }
+    .installApp {
+        display: none;
+    }
+    #hleft {
+        width: 70%;
+        gap: 0;
+    }
+    .homeIcon {
+        display: none;
+    }
+    .searchBar input {
+        font-size: 14px;
+    }
+    .libraryBox {
+        z-index: 1000;
+        width: 30vw;
+        background-color: rgba(55, 58, 60, 0.612);
+    }
+    .playlistCard,
+    .podcastBox {
+        width: 85%;
+        gap: 10px;
+        background-color: #1212127d;
+    }
+    .playlistCard strong,
+    .podcastBox strong {
+        font-size: 12px;
+    }
+
+    .playlistCard p,
+    .podcastBox p {
+        font-size: 10px;
+    }
+    .playlistCard button,
+    .podcastBox button {
+        font-size: 10px;
+    }
+
+    .mainContent {
+        margin-left: 80px;
+    }
+}

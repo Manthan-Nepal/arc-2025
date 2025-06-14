@@ -1,0 +1,23 @@
+.card {
+    border: 1px solid #ddd;
+
+    &__header {
+        background-color: #f8f9fa;
+    }
+
+    &__title {
+        font-size: 18px;
+    }
+
+    &__body {
+        padding: 15px;
+    }
+
+    &__button {
+        background-color: #3094ff;
+
+        &--secondary {
+            background-color: #6c757d;
+        }
+    }
+}

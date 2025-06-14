@@ -1,0 +1,20 @@
+.card {
+  border: 1px solid #ddd;
+}
+.card__header {
+  background-color: #f8f9fa;
+}
+.card__title {
+  font-size: 18px;
+}
+.card__body {
+  padding: 15px;
+}
+.card__button {
+  background-color: #3094ff;
+}
+.card__button--secondary {
+  background-color: #6c757d;
+}
+
+/*# sourceMappingURL=bem.css.map */

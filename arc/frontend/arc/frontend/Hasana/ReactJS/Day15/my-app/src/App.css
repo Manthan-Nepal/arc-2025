@@ -1,0 +1,86 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+
+html
+{
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+  display: none;
+}
+body
+{
+  background:linear-gradient(to bottom,rgb(102, 54, 109),rgb(57, 2, 102),rgb(92, 4, 84),rgb(42, 4, 92));
+  color: #FFFF;
+  font-family: 'Cormorant Garamond', serif;
+  min-height: 100vh;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.container
+{
+  max-width: 1536px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+section{
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+
+@media (min-width :640px)
+{
+  .container {
+      max-width: 640px;
+  }
+}
+
+@media (min-width :768px)
+{
+  .container {
+      max-width: 768px;
+  }
+}
+
+@media (min-width :1024px)
+{
+  .container {
+      max-width: 1024px;
+  }
+}
+
+@media (min-width :1280px)
+{
+  .container {
+      max-width: 1280px;
+  }
+}
+
+
+@media (min-width :1500px)
+{
+  .container {
+      max-width: 1500px;
+  }
+}
+@media (min-width :1800px)
+{
+  .container {
+      max-width: 1800px;
+  }
+}

@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Silkscreen", monospace;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, rgb(14, 12, 10), rgb(128, 111, 97), rgb(151, 130, 130));
+}
+
+.container {
+  background-color: white;
+  min-height: 100vh;
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 30px;
+  border-radius: 12px;
+  align-items: center;
+}
+.container .container__heading {
+  height: 120px;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #fcbc40;
+  text-align: center;
+  padding: 5px;
+}
+.container .container__heading h1 {
+  font-size: 50px;
+  color: rgb(104, 32, 32);
+}
+.container .container__heading p {
+  color: rgba(165, 4, 4, 0.575);
+  font-size: 30px;
+  font-weight: bold;
+}
+.container .todo__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 80vh;
+  width: 85%;
+  background-color: white;
+}
+.container .todo__container__input {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-around;
+}
+.container .todo__container__input input {
+  padding: 10px;
+  width: 80%;
+}
+.container .todo__container__input .todo__container__addBtn {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  background-color: #fcbc40;
+  box-shadow: inset -1px -2px 10px rgb(255, 81, 0);
+  cursor: pointer;
+  border-radius: 5px;
+  justify-content: center;
+}
+.container .todo__container__input .todo__container__addBtn img {
+  width: 50px;
+  height: 50px;
+}
+.container .todo__container__input .todo__container__addBtn:hover {
+  box-shadow: 2px 2px 10px rgb(255, 81, 0);
+  transform: scale(1.03);
+}
+.container .todo__container__task {
+  display: flex;
+  margin-top: 5%;
+  flex-direction: row;
+  height: 100px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(252, 200, 12);
+  align-items: center;
+  justify-content: space-around;
+}
+.container .todo__container__task .todo__container__taskName {
+  background-color: rgb(248, 216, 112);
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  font-size: 20px;
+  height: 100%;
+  border-radius: 5px;
+}
+.container .todo__container__task__status {
+  width: 20%;
+}
+.container .todo__container__task__status select {
+  cursor: pointer;
+  font-size: 15px;
+  height: 82px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgba(252, 244, 228, 0.5215686275);
+}
+.container .todo__container__task__edit {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  width: fit-content;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.container .todo__container__task__edit img {
+  height: 40px;
+  width: 40px;
+}
+.container .todo__container__task__edit:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 134, 6, 0.555);
+}
+.container .todo__container__task__delete {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 5px;
+  cursor: pointer;
+}
+.container .todo__container__task__delete img {
+  height: 40px;
+  width: 40px;
+}
+.container .todo__container__task__delete:hover {
+  transform: scale(1.05);
+  background-color: rgb(252, 117, 64);
+}
+
+/*# sourceMappingURL=todo.css.map */
