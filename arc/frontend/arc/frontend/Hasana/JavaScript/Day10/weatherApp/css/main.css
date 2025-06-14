@@ -9,20 +9,35 @@ body {
   align-items: center;
   justify-content: center;
 }
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 .wholecontainer {
-  margin-top: 2%;
-  border-radius: 8px;
+  margin-top: 1%;
   display: flex;
   flex-direction: column;
-  height: 80vh;
-  background-color: beige;
-  width: 70vw;
+  height: 95vh;
+  overflow: hidden;
+  background-color: rgb(45, 34, 63);
+  width: 100vw;
   padding: 20px;
   align-items: center;
 }
 .wholecontainer .navBar {
   width: 50%;
+  position: relative;
   height: 10%;
   display: flex;
   align-items: center;
@@ -35,18 +50,20 @@ body {
   list-style: none;
 }
 .wholecontainer .navBar ul a {
-  background-color: black;
+  background-color: rgb(97, 54, 113);
   border-radius: 10px;
   color: white;
   padding: 10px;
   text-decoration: none;
 }
 .wholecontainer .navBar ul a:hover {
-  background-color: rgba(30, 0, 255, 0.312);
+  background-color: rgba(179, 171, 238, 0.943);
   color: rgb(109, 106, 106);
 }
 .wholecontainer .container {
-  width: 80%;
+  overflow-y: scroll;
+  width: 90%;
+  margin-top: 30px;
   height: 80%;
   display: flex;
   flex-direction: column;
@@ -54,32 +71,54 @@ body {
   align-items: center;
 }
 .wholecontainer .container__search {
+  position: sticky;
+  top: 0;
   display: flex;
-  gap: 10px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   align-items: center;
   width: 90%;
   justify-content: space-between;
 }
-.wholecontainer .container__search img {
-  width: 50px;
-  height: auto;
-  padding: 10px;
-  border-radius: 50%;
-}
-.wholecontainer .container__search img:hover {
-  background-color: rgb(223, 251, 120);
-}
 .wholecontainer .container__search__input {
   width: 100%;
   height: 100%;
+  display: flex;
+  border-radius: 30px;
+  align-items: center;
+  padding: 5px;
+  justify-content: space-between;
+  background-color: rgba(112, 114, 119, 0.411);
+}
+.wholecontainer .container__search__input .container__search__image {
+  width: 4.3%;
+  cursor: pointer;
+}
+.wholecontainer .container__search__input .container__search__image img {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border-top-right-radius: 30px;
+  display: flex;
+  border-bottom-right-radius: 30px;
+}
+.wholecontainer .container__search__input .container__search__image img:hover {
+  background-color: rgb(120, 199, 251);
+  transform: scale(1.05);
+  border: 2px rgb(156, 156, 230) solid;
 }
 .wholecontainer .container__search__input input {
   font-size: 20px;
-  border-radius: 30px;
-  border: 1px solid grey;
-  width: 100%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border: none;
+  width: 95%;
   height: 100%;
-  padding: 10px;
+  padding: 20px;
+}
+.wholecontainer .container__search__input input:focus {
+  outline: none;
+  border: none;
 }
 .wholecontainer .container__weatherInfo {
   display: flex;
@@ -90,6 +129,7 @@ body {
 }
 .wholecontainer .container__weatherInfo__placeName {
   font-size: 40px;
+  color: rgb(255, 244, 40);
 }
 .wholecontainer .container__weatherInfo__icon {
   height: 60%;
@@ -99,7 +139,74 @@ body {
 }
 .wholecontainer .container__weatherInfo__temperature {
   font-size: 50px;
-  color: rgb(45, 84, 6);
+  color: rgb(230, 165, 12);
+}
+
+.newsContainer h1 {
+  text-align: center;
+  font-size: 50px;
+  color: rgb(249, 194, 176);
+}
+.newsContainer .newsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.newsContainer .newsList .newsItem {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.newsContainer .newsList .newsItem:hover {
+  transform: scale(1.02);
+}
+.newsContainer .newsList .newsItem a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  padding: 1rem;
+}
+.newsContainer .newsList .newsItem a img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.newsContainer .newsList .newsItem a h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  color: #333;
+}
+.newsContainer .newsList .newsItem a .source {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ccc;
+  border-top-color: #1d72f3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

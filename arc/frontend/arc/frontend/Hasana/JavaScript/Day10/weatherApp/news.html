@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
-    <title>News Aggregator</title>
-</head>
-<body>
-    
-</body>
-<script src="./js/main.js"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <title>News Aggregator</title>
+    </head>
+    <body>
+        <div class="wholecontainer">
+            <div class="navBar">
+                <ul>
+                    <li>
+                        <a href="index.html"> Weather </a>
+                    </li>
+                    <li><a href="news.html"> News </a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <div class="container__search">
+                    <div class="container__search__input">
+                        <input
+                            type="text"
+                            required="true"
+                            placeholder="Search Places"
+                        />
+                        <div class="container__search__image">
+                            <img src="../public/search.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="newsContainer">
+                    <h1>Top News</h1>
+                    <div id="newsList" class="newsList"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./js/news.js"></script>
+    <!-- <script src="js/main.js"></script> -->
 </html>

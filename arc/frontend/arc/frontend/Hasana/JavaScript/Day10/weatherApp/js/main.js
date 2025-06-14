@@ -5,9 +5,10 @@ const temp = document.querySelector(".container__weatherInfo__temperature");
 const weatherIcon = document.querySelector(".container__weatherInfo__icon img");
 const body = document.querySelector("body");
 
-// const API_KEY =
-
 async function fetchWeather(city) {
+    const loaderContainer = document.getElementById("weatherLoader");
+    loaderContainer.innerHTML = `<div class="loader"><div class="spinner"></div></div>`;
+
     try {
         const res = await fetch(`https://wttr.in/${city}?format=j1`);
         if (!res.ok) throw new Error("City not found");
@@ -19,7 +20,7 @@ async function fetchWeather(city) {
             data.current_condition[0].weatherDesc[0].value.toLowerCase();
 
         if (description.includes("sun")) {
-            weatherIcon.src = "../public/sunny.png"; // use a default weather icon or update based on condition
+            weatherIcon.src = "../public/sunny.png";
         } else if (description.includes("cloud")) {
             weatherIcon.src = "../public/cloudy.png";
         } else if (description.includes("rain")) {
@@ -32,16 +33,12 @@ async function fetchWeather(city) {
 
         // Animate icon (bounce)
         weatherIcon.classList.remove("bounce");
-        void weatherIcon.offsetWidth; // restart animation trick
+        void weatherIcon.offsetWidth;
         weatherIcon.classList.add("bounce");
 
-        // Change background based on time
+        // Background update
         const hour = new Date().getHours();
-        console.log({hour})
-        // hour = hour + 12;
-        console.log("here");
-
-        let bgColor = "#2C3E50"; // default night
+        let bgColor = "#2C3E50";
         if (hour >= 6 && hour < 12) {
             bgColor = "#FFFACD"; // Morning
         } else if (hour >= 12 && hour < 18) {
@@ -49,15 +46,16 @@ async function fetchWeather(city) {
         } else if (hour >= 18 && hour < 20) {
             bgColor = "#FFD700"; // Evening
         }
-        console.log("Background color set to:", bgColor);
-        // Animate background color (fade)
         body.style.transition = "background-color 1s ease-in-out";
         body.style.backgroundColor = bgColor;
-        // input.value="";
+
+        loaderContainer.innerHTML = "";
+
     } catch (error) {
         placeName.textContent = "Not Found";
         temp.textContent = "--";
         weatherIcon.src = "../public/blocked.png";
+        loaderContainer.innerHTML = "";
     }
 }
 
