@@ -2,3 +2,5 @@
 *.ipynb filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 arc/ai/Uddav-Rajbhandari/Neural[[:space:]]Network[[:space:]]intro[[:space:]]to[[:space:]]dl/source[[:space:]]code/data/FashionMNIST/raw/* filter=lfs diff=lfs merge=lfs -text
+*.ipynb !text !filter !merge !diff
+arc/ai/UddavRajbhandari/object[[:space:]]tracking/source[[:space:]]codes/*.mp4 !text !filter !merge !diff
