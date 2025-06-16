@@ -1,10 +1,18 @@
-[
-    {
-        "task_name": "ABC",
-        "status": "completed"
-    },
-    {
-        "task_name": "CDEF",
-        "status": "pending"
-    }
-]
+{
+    "person1": [
+        {
+            "task_name": "Buy milk",
+            "status": "pending"
+        },
+        {
+            "task_name": "Buy soda",
+            "status": "pending"
+        }
+    ],
+    "person2": [
+        {
+            "task_name": "Buy bread",
+            "status": "completed"
+        }
+    ]
+}
