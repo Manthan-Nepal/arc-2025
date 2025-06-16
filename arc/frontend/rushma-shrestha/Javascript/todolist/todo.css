@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.todo-container {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input#input-box {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button#btn {
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#btn:hover {
+    background-color: #218838;
+}
+
+ul#task-container {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul#task-container li {
+    text-align: left;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    position: relative;
+}
+
+ul#task-container li span {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+ul#task-container li span:hover {
+    color: darkred;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
+
+/* toast */
+
+#toastBox {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.toast {
+    width: 350px;
+    height: 60px;
+    margin: 10px 20px;
+    font-size: 18px;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.236);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.toast .error {
+    font-size: 27px;
+    color: rgb(253, 36, 36);
+    padding: 7px;
+}
+
+.toast .info {
+    font-size: 27px;
+    color: rgb(0 179 195);
+    padding: 7px;
+}
+
+.toast p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    gap: 10px;
+}
+
+.toast span {
+    display: flex;
+    align-items: center;
+}
+
+
+.toast .delete {
+    font-size: 27px;
+    color: rgb(173 43 65);
+    padding: 7px;
+}
+
+.toast .success {
+    font-size: 27px;
+    color: rgb(45, 214, 15);
+    padding: 7px;
+}
+
+.toast .cross {
+    font-size: 24px;
+    color: rgb(110, 96, 3);
+    padding: 7px;
+    cursor: pointer;
+}
+
+.toast .error::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: red;
+    height: 4px;
+    animation: anim 5s linear forwards;
+}
+
+.toast .success::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgb(45, 214, 15);
+    height: 4px;
+    animation: anim 5s linear forwards;
+}
+
+.toast .info::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgb(0 179 195);
+    height: 4px;
+    animation: anim 5s linear forwards;
+}
+
+.toast .delete::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgb(173 43 65);
+    height: 4px;
+    animation: anim 5s linear forwards;
+}
+
+
+@keyframes anim {
+    100% {
+        width: 0%;
+    }
+}

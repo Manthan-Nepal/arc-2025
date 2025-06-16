@@ -6,7 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
 </head>
-<script>
+
+
+<body>
+    <form action="" onsubmit="return handleSubmit()">
+        <fieldset>
+            <legend>Sing Up</legend>
+            <div class="fn">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname">
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname">
+            </div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email"> <br>
+            <label for="dob"> Date of Birth</label>
+            <input type="date" name="dob" id="dob">
+            <div class="passw">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" aria-labelledby="password">
+            </div>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+    <script>
     function handleSubmit() {
         const fname = document.getElementById("fname").value.trim();
         const lname = document.getElementById("lname").value.trim();
@@ -38,28 +61,6 @@
         return true;
     }
 </script>
-
-<body>
-    <form action="" onsubmit="return handleSubmit()">
-        <fieldset>
-            <legend>Sing Up</legend>
-            <div class="fn">
-                <label for="fname">First Name:</label>
-                <input type="text" name="fname" id="fname">
-                <label for="lname">Last Name:</label>
-                <input type="text" name="lname" id="lname">
-            </div>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email"> <br>
-            <label for="dob"> Date of Birth</label>
-            <input type="date" name="dob" id="dob">
-            <div class="passw">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" aria-labelledby="password">
-            </div>
-            <button type="submit">Submit</button>
-        </fieldset>
-    </form>
 </body>
 
 </html>

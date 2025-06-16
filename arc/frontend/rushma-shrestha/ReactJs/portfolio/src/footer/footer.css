@@ -1,0 +1,79 @@
+#contact {
+    padding: 40px;
+    display: flex;
+}
+
+.contact-left {
+    font-size: 20px;
+    width: 30%;
+}
+
+.contact-left p {
+    margin-top: 10px;
+}
+
+.contact-left a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-right {
+    width: 70%;
+    font-size: larger;
+}
+
+.contact-right input {
+    width: 50%;
+    height: 40px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    display: block;
+    /* Required to let margin auto work */
+    margin: 0px auto;
+}
+
+.form__input--disabled {
+    /* styles for disabled modifier */
+    background-color: #eee;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.contact-right textarea {
+    width: 50%;
+    height: 80px;
+    border-radius: 10px;
+    display: block;
+    /* Required to let margin auto work */
+    margin: 20px auto;
+}
+
+.contact-right button {
+    height: 40px;
+    width: 80px;
+    font-size: 16px;
+    border-radius: 10px;
+    display: block;
+    /* Required to let margin auto work */
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.contact-right input::placeholder,
+.contact-right textarea::placeholder {
+    font-size: 18px;
+    font-weight: 300;
+    padding-left: 20px;
+}
+
+.contact-right button:hover {
+    background-color: #96abcb;
+    box-shadow: 2px 1px 5px beige;
+}
+
+.credit {
+    font-size: 20px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    text-align: left;
+}

@@ -1,0 +1,62 @@
+#about h2 {
+    margin-top: 40px;
+    font-size: 40px;
+    font-family: monospace;
+    text-align: center;
+    font-weight: 100;
+
+}
+
+.me-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.me {
+    margin: 10px auto;
+    width: 250px;
+    background-color: #1e293b;
+    /* deep navy */
+    color: #f8fafc;
+    font-size: 22px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.me p {
+    margin: 10px 0px;
+}
+
+.me-container .me:last-child:hover {
+    cursor: pointer;
+}
+
+.me i {
+    font-size: 24px;
+    color: #f8fafc;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.me-container .me:last-child:hover i {
+    color: #f6ca1c;
+}
+
+.edu h3 {
+    margin: 30px 0;
+    font-family: monospace;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.edu table {
+    font-size: 21px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.edu table td,
+th {
+    padding: 10px 30px;
+}

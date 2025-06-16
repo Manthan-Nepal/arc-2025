@@ -1,0 +1,49 @@
+#myprojects h2 {
+    margin-top: 40px;
+    font-size: 40px;
+    font-family: monospace;
+    text-align: center;
+    font-weight: 100;
+}
+
+.project-container {
+    margin: 0 40px;
+    display: flex;
+
+    gap: 20px;
+}
+
+.project {
+    margin: 30px 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 30%;
+    align-items: center;
+}
+
+.project h3 {
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project p {
+    font-size: 22px;
+    text-align: justify;
+}
+
+.project button {
+    height: 40px;
+    width: 90px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 10px;
+    background-color: #a0a8b5;
+    display: block;
+}
+
+.project button:hover {
+    cursor: pointer;
+    transform: scale(1.052);
+}

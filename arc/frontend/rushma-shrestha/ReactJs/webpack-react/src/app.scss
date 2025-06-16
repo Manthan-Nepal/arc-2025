@@ -1,0 +1,33 @@
+@mixin body{
+     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin h1{
+    padding: 40px;
+    width: 70%;
+    border: 2px solid black;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+@mixin p{
+    font-size: 26px;
+    font-weight: 900;
+    text-align: center;
+}
+
+body{
+    @include body();
+}
+
+p{
+    @include p();
+}
+
+h1{
+    @include h1();
+}

@@ -29,3 +29,7 @@ add .
 git commit -m "[message]"
 9)Push to Branch
 git push origin frontend/name/internship-progess
+or 
+git push origin $(git branch --show-current)   
+
+git branch --show-current //shows current branch

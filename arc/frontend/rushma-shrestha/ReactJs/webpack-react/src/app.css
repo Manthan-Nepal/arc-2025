@@ -1,0 +1,23 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-size: 26px;
+  font-weight: 900;
+  text-align: center;
+}
+
+h1 {
+  padding: 40px;
+  width: 70%;
+  border: 2px solid black;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+/*# sourceMappingURL=app.css.map */

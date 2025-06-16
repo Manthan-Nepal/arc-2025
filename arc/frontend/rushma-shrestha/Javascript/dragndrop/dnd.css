@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.widget-container {
+    background-color: rgb(63, 41, 41);
+    display: grid;
+    height: 60vh;
+    width: 30%;
+    align-items: center;
+    padding: 37px;
+    margin: 30px auto;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+}
+
+.widget {
+    height: 80px;
+    width: 100px;
+    border: 2px solid rgb(38, 16, 16);
+    border-radius: 10%;
+    color: white;
+    background: linear-gradient(rgb(193, 134, 134), rgb(54, 38, 38));
+    cursor: move;
+    font-size: 50px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.dragging {
+    opacity: 0.3;
+}

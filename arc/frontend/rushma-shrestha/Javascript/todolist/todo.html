@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="icon" href="./img/todo.png">
+    <link rel="stylesheet" href="todo.css">
+    <script src="https://kit.fontawesome.com/92e02f2314.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <main>
+
+        <header>
+            <h1>To-do List</h1>
+        </header>
+        <section class="todo-container">
+            <input id="input-box" type="text">
+            <button id="btn" >+</button>
+            <ul id="task-container"></ul>
+        </section>
+        <div id="toastBox"></div>
+    </main>
+
+    <script>
+        const toastBox = document.getElementById('toastBox');
+
+        const errorMsg = `<p><i class="error fa-solid fa-circle-exclamation"></i> Empty tasks cannot be added</p><span><i class="cross fa-solid fa-xmark"></i></span>`;
+        const successMsg = `<p><i class="success fa-solid fa-circle-check"></i> Task Added Successfully</p><span><i class="cross fa-solid fa-xmark"></i></span>`;
+        const taskComplete = `<p><i class="info fa-solid fa-circle-info"></i> Task completed</p><span><i class="cross fa-solid fa-xmark"></i></span>`;
+        const taskUncomplete = `<p><i class="info fa-solid fa-circle-info"></i> Task incomplete</p><span><i class="cross fa-solid fa-xmark"></i></span>`;
+        const taskDeleted = `<p><i class="delete fa-solid fa-trash"></i> Task Deleted</p><span><i class="cross fa-solid fa-xmark"></i></span>`;
+
+        function showToast(msg) {
+            const toast = document.createElement('div');
+            toast.classList.add('toast');
+            toast.innerHTML = msg;
+
+            const closeBtn = toast.querySelector('.cross');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => toast.remove());
+            }
+
+            toastBox.appendChild(toast);
+            setTimeout(() => toast.remove(), 5000);
+        }
+
+        const inputBox = document.getElementById('input-box');
+        const listContainer = document.getElementById("task-container");
+
+        document.getElementById("btn").addEventListener("click", addTask);
+
+        inputBox.addEventListener("keydown", function (e) {
+            if (e.key === "Enter") {
+                addTask();
+            }
+        });
+
+        function addTask() {
+            const taskText = inputBox.value.trim();
+            if (taskText === "") {
+                showToast(errorMsg);
+                return;
+            }
+
+            const li = document.createElement('li');
+            li.textContent = taskText;
+
+            const span = document.createElement('span');
+            span.innerHTML = "\u00D7"; // × character
+            li.appendChild(span);
+
+            listContainer.appendChild(li);
+            showToast(successMsg);
+            saveData();
+            inputBox.value = '';
+        }
+
+        listContainer.addEventListener("click", function (e) {
+            if (e.target.tagName === "SPAN") {
+                e.target.parentElement.remove();
+                showToast(taskDeleted);
+                saveData();
+            } else if (e.target.tagName === "LI") {
+                e.target.classList.toggle("checked");
+                showToast(e.target.classList.contains("checked") ? taskComplete : taskUncomplete);
+                saveData();
+            }
+        });
+
+        function saveData() {
+            localStorage.setItem("data", listContainer.innerHTML);
+
+        }
+
+        function showTask() {
+            listContainer.innerHTML = localStorage.getItem("data") || '';
+            console.log("data", listContainer.innerHTML);
+        }
+
+        showTask();
+    </script>
+</body>
+
+</html>
