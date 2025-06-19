@@ -1,18 +1,31 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-export const EditTodoForm = ({editTodo, task}) => {
-    const [value, setValue] = useState(task.task);
-
-    const handleSubmit = (e) => {
-      // prevent default action
-        e.preventDefault();
-        // edit todo
-        editTodo(value, task.id);
-      };
+export default function EditTodoForm({ todo, editTask }) {
+  const [value, setValue] = useState(todo.task);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (value.trim()) {
+      editTask(todo.id, value);
+      setValue("");
+    }
+  };
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
   return (
-    <form onSubmit={handleSubmit} className="TodoForm">
-    <input type="text" value={value} onChange={(e) => setValue(e.target.value)} className="todo-input" placeholder='Update task' />
-    <button type="submit" className='todo-btn'>Update</button>
-  </form>
-  )
+    <>
+      <form onSubmit={handleSubmit} className="TodoForm">
+        <input
+          type="text"
+          placeholder="Update task"
+          value={value}
+          onChange={handleChange}
+          className="todo-input"
+        />
+        <button type="submit" className="todo-btn">
+          Update Task
+        </button>
+      </form>
+    </>
+  );
 }
