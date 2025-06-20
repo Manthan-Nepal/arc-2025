@@ -7,11 +7,13 @@ function App() {
   const [filterState, setFilterState] = useState(() => ({
     searchTerm: getLocal("searchTerm", ""),
     sortOrder: getLocal("sortOrder", "asc"),
+    category: getLocal("category", ""),
   }));
 
   useEffect(() => {
     setLocal("searchTerm", filterState.searchTerm);
     setLocal("sortOrder", filterState.sortOrder);
+    setLocal("category", filterState.category);
   }, [filterState]);
 
   return (
@@ -20,6 +22,7 @@ function App() {
       <ProductList
         searchTerm={filterState.searchTerm}
         sortOrder={filterState.sortOrder}
+        category={filterState.category}
       />
     </>
   );

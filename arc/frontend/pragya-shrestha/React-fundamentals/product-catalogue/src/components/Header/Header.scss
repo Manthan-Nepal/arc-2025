@@ -23,6 +23,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+    cursor: pointer;
     &--title {
       font-size: px-to-rem(20);
       font-weight: 400;
@@ -61,4 +62,13 @@
     font-size: px-to-rem(13);
     font-weight: 700;
   }
+}
+
+.category-menu {
+  position: relative;
+}
+
+.rotated {
+  transform: rotate(180deg);
+  transition: all 0.3 ease-in-out;
 }

@@ -1,28 +1,22 @@
-import { useEffect, useState } from "react";
-import { getLocal, setLocal } from "../../utils/LocalStorageHelper";
+import useProducts from "../../hooks/products";
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.scss";
 
-export default function ProductList({ searchTerm, sortOrder }) {
-  const [products, setProducts] = useState(() => getLocal("products", []));
+export default function ProductList({ searchTerm, sortOrder, category }) {
+  const [products, setProducts] = useProducts();
 
-  useEffect(() => {
-    if (products.length === 0) {
-      fetch("https://fakestoreapi.com/products")
-        .then((res) => res.json())
-        .then((data) => {
-          setProducts(data);
-          setLocal("products", data);
-        })
-        .catch((err) => console.error("Error fetching products:", err));
-    }
-  }, [products.length]);
+  let filtered = products;
+  if (searchTerm) {
+    filtered = filtered.filter((product) =>
+      product.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }
 
-  const filteredProducts = products.filter((product) =>
-    product.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  if (category) {
+    filtered = filtered.filter((product) => product.category === category);
+  }
 
-  const sortedProducts = [...filteredProducts].sort((a, b) =>
+  const sortedProducts = [...filtered].sort((a, b) =>
     sortOrder === "asc"
       ? a.title.localeCompare(b.title)
       : b.title.localeCompare(a.title)
