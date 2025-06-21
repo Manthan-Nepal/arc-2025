@@ -4,7 +4,6 @@ from ..schemas import Task, Updatetask
 
 router= APIRouter(
     tags= ["tasks"],
-    # dependencies= [Depends(Task), Depends(Updatetask)],
     responses= {404: {"description": "Not found"}}
     )
 
@@ -15,7 +14,7 @@ async def task_details():
         return tasks
 
 @router.get("/tasks/{dayx}")
-async def task_details(dayx: str= Path(description= "Day of Task")): #gt=>, lt<, le<=, ge>=
+async def task_details(dayx: int= Path(description= "Day of Task")): #gt=>, lt<, le<=, ge>=
     with open("../files/tasks.json", "r") as tasks_content:
         tasks= json.load(tasks_content)
         return tasks[dayx]

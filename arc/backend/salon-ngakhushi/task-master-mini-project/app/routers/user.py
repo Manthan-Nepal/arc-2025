@@ -11,6 +11,6 @@ router= APIRouter(
 async def read_users():
     return [{"username": User.name}]
 
-@router.get("/user-tasks/")
-async def read_user_tasks():
-    return [{"User Tasks": User.tasks}]
+@router.get("/user-task/")
+async def read_user_task():
+    return [{"User Tasks": User.latest_task}]
