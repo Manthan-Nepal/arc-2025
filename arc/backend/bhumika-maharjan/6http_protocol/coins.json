@@ -1,0 +1,31 @@
+{
+    "id": "bitcoin",
+    "icon": "https://static.coinstats.app/coins/1650455588819.png",
+    "name": "Bitcoin",
+    "symbol": "BTC",
+    "rank": 1,
+    "price": 105893.4235554782,
+    "priceBtc": 1,
+    "volume": 23668076131.98527,
+    "marketCap": 2104446056100.2131,
+    "availableSupply": 19873246,
+    "totalSupply": 19873306,
+    "fullyDilutedValuation": 2104452409705.6265,
+    "priceChange1h": 0.17,
+    "priceChange1d": 1.17,
+    "priceChange1w": -3.68,
+    "redditUrl": "https://www.reddit.com/r/Bitcoin/",
+    "websiteUrl": "https://bitcoin.org",
+    "twitterUrl": "https://twitter.com/bitcoin",
+    "explorers": [
+        "https://mempool.space/",
+        "https://platform.arkhamintelligence.com/explorer/token/bitcoin",
+        "https://blockchair.com/bitcoin/",
+        "https://btc.com/",
+        "https://btc.tokenview.io/",
+        "https://www.oklink.com/btc",
+        "https://3xpl.com/bitcoin",
+        "https://blockchain.coinmarketcap.com/chain/bitcoin",
+        "https://blockexplorer.one/btc/mainnet"
+    ]
+}
