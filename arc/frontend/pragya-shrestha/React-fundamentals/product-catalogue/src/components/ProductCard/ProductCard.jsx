@@ -1,7 +1,11 @@
 import { FaRegStar, FaShoppingCart, FaStar, FaStarHalf } from "react-icons/fa";
+import { useCart } from "../../context/CartContext.jsx";
 import "./ProductCard.scss";
 
 export default function ProductCard({ product }) {
+  const { cartItems, toggleCartItem } = useCart();
+  const isInCart = cartItems.some((item) => item.id === product.id);
+
   const rating = product.rating?.rate || 0;
 
   const decimal = rating - Math.floor(rating);
@@ -44,7 +48,12 @@ export default function ProductCard({ product }) {
           </span>
         </div>
 
-        <button className="productCard__tags--cartButton">
+        <button
+          className={`productCard__tags--cartButton ${
+            isInCart ? "in-cart" : ""
+          }`}
+          onClick={() => toggleCartItem(product)}
+        >
           <FaShoppingCart className="cart__icon" />
         </button>
       </div>

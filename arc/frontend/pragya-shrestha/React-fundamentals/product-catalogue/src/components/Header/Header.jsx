@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { RiArrowDropDownLine } from "react-icons/ri";
+
+import { useCart } from "../../context/CartContext.jsx";
 import CategoryDropDown from "../FilterBar/CategoryDropDown/CategoryDropDown";
 import SearchBar from "../SearchBar/SearchBar";
 import "./Header.scss";
 
 export default function Header({ filterState, setFilterState }) {
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
+  const { cartItems } = useCart();
 
   const toggleDropdown = () => {
     setShowCategoryDropdown((prev) => !prev);
@@ -40,7 +43,7 @@ export default function Header({ filterState, setFilterState }) {
 
       <div className="cart">
         <FaShoppingCart className="cart__icon" />
-        <span className="cart__count">0</span>
+        <span className="cart__count">{cartItems.length}</span>
       </div>
     </header>
   );
