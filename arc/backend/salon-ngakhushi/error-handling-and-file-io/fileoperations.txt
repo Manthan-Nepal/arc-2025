@@ -1,0 +1,6 @@
+This is a writing file operation test.
+This content has been writen in the file through write operation.
+This line was appended using the append operation.
+This line was appended using the append operation.
+This line was appended using the append operation.
+This line was appended using the append operation.
