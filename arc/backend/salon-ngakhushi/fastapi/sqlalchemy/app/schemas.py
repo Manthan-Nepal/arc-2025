@@ -29,11 +29,12 @@ class Updatetaskstatus(BaseModel):
     status: Optional[Literal["todo", "inprogress", "completed"]]= None
     day: Optional[int]= None
     
-class User(BaseModel):
-    user_id: int
+class Users(BaseModel):
+    user_id: Optional[int]= None
     name: str
+    hashed_password: str
     team: Literal["AI", "Frontend", "Backend", "UI/UX"]
-    latest_task: int
+    latest_task: Optional[int]= None
     
 class Updateuser(BaseModel):
     user_id: Optional[int]= None

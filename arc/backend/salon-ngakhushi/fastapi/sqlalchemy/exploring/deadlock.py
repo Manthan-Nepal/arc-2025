@@ -1,19 +1,20 @@
 import time
-from sqlalchemy import create_engine, text
-from sqlalchemy.exc import OperationalError
-from sqlalchemy.orm import Session, sessionmaker
-from psycopg2.errors import DeadlockDetected
+from sqlalchemy import text, create_engine
+from sqlalchemy.exc import OperationalError #type: ignore
+from sqlalchemy.orm import Session, sessionmaker  #type: ignore
+from psycopg2.errors import DeadlockDetected  #type: ignore
 
-DATABASE_URL = "sqlite:///:memory:"
+URL_DATABASE= 'postgresql://postgres:hirage@localhost:5432/task_master'
 
-engine = create_engine(DATABASE_URL, echo=True)
-SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
+engine= create_engine(URL_DATABASE, pool_size=20, max_overflow=0)
+
+SessionLocal= sessionmaker(autocommit= False, autoflush= False, bind= engine)
 
 MAX_RETRIES = 3
 RETRY_DELAY = 0.5
 
 def run_with_retry(session_factory, operation):
-    attempt = 0
+    attempt = 20
     while attempt < MAX_RETRIES:
         session: Session = session_factory()
         try:
