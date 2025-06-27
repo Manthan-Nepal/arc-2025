@@ -1,13 +1,14 @@
 import { FaRegStar, FaShoppingCart, FaStar, FaStarHalf } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "../../context/CartContext.jsx";
 import "./ProductCard.scss";
 
 export default function ProductCard({ product }) {
   const { cartItems, toggleCartItem } = useCart();
   const isInCart = cartItems.some((item) => item.id === product.id);
+  const navigate = useNavigate();
 
   const rating = product.rating?.rate || 0;
-
   const decimal = rating - Math.floor(rating);
   let fullStars;
   let hasHalfStar = false;
@@ -22,7 +23,6 @@ export default function ProductCard({ product }) {
   }
 
   const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
-
   const stars = [
     ...Array(fullStars).fill(<FaStar />),
     ...(hasHalfStar ? [<FaStarHalf key="half" />] : []),
@@ -30,7 +30,10 @@ export default function ProductCard({ product }) {
   ];
 
   return (
-    <div className="productCard">
+    <div
+      className="productCard"
+      onClick={() => navigate(`/product/${product.id}`)}
+    >
       <div className="productCard__image">
         <img src={product.image} alt={product.title} />
       </div>
@@ -52,7 +55,10 @@ export default function ProductCard({ product }) {
           className={`productCard__tags--cartButton ${
             isInCart ? "in-cart" : ""
           }`}
-          onClick={() => toggleCartItem(product)}
+          onClick={(e) => {
+            e.stopPropagation();
+            toggleCartItem(product);
+          }}
         >
           <FaShoppingCart className="cart__icon" />
         </button>

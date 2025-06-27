@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaHome, FaShoppingCart } from "react-icons/fa";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
+import { useNavigate } from "react-router-dom";
 import { useCart } from "../../context/CartContext.jsx";
 import CategoryDropDown from "../FilterBar/CategoryDropDown/CategoryDropDown";
 import SearchBar from "../SearchBar/SearchBar";
@@ -10,6 +11,7 @@ import "./Header.scss";
 export default function Header({ filterState, setFilterState }) {
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
   const { cartItems } = useCart();
+  const navigate = useNavigate();
 
   const toggleDropdown = () => {
     setShowCategoryDropdown((prev) => !prev);
@@ -18,9 +20,8 @@ export default function Header({ filterState, setFilterState }) {
   return (
     <header className="header">
       <nav className="header__nav">
-        <div className="header__menu">
-          <h1 className="header__menu--title">Brands</h1>
-          <RiArrowDropDownLine className="header__menu--icon" />
+        <div className="header__menu" onClick={() => navigate(`/`)}>
+          <FaHome className="header__menu--icon" />
         </div>
 
         <div className="header__menu category_menu" onClick={toggleDropdown}>
