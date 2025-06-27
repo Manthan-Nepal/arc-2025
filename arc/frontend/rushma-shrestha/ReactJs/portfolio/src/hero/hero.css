@@ -1,0 +1,178 @@
+#hero {
+    display: flex;
+    height: 90vh;
+}
+
+/* hero left style */
+.hero-left {
+    width: calc(50% - 60px);
+    padding: 80px 50px;
+}
+
+.hero-left h3 {
+    font-size: 50px;
+}
+
+.hero-left h1 {
+    font-size: 60px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 100px;
+    font-style: normal;
+    margin-bottom: 50px;
+}
+
+.hero-left p {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.hero-btn1,
+.hero-btn2 {
+    font-size: 17px;
+    height: 40px;
+    width: 90px;
+    border: none;
+    margin: 20px 20px 20px 0px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgb(202, 180, 180);
+    transition: .3s all ease;
+}
+
+.hero-btn2 {
+    background: rgba(45, 51, 72, 0.963);
+    box-shadow: 4px 4px 8px rgb(137, 101, 101);
+    color: white;
+}
+
+.hero-btn1:hover {
+    cursor: pointer;
+    background-color: rgba(204, 22, 162, 0.763);
+    color: white;
+    box-shadow: 3px 3px 8px rgb(225, 11, 172);
+    transform: translateY(-5px);
+
+}
+
+.hero-btn2:hover {
+    cursor: pointer;
+    background-color: rgba(41, 235, 200, 0.974);
+    color: rgb(0, 0, 0);
+    box-shadow: 3px 3px 8px rgba(12, 228, 247, 0.955);
+    transform: translateY(-5px);
+}
+
+/* hero left style */
+
+/* hero right style */
+.hero-right {
+    width: calc(50% - 60px);
+}
+
+.hero-right img {
+    display: block;
+    margin: 60px auto;
+    max-width: 90%;
+    height: 80%;
+    border-radius: 20% 0 20% 0;
+    background: rgba(194, 184, 184, 0.19);
+}
+
+@media (max-width:385px) {
+    header {
+        height: 20px;
+        padding: 10px 20px;
+    }
+
+    #hero {
+        flex-wrap: wrap;
+        height: 90vh;
+
+    }
+
+    .hero-left {
+        text-align: center;
+        width: 100%;
+        padding: 10px 80px;
+    }
+
+    .hero-left h2 {
+        font-size: 19px;
+    }
+
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-right img {
+        height: 60%;
+        max-width: 100%;
+        margin: 20px auto;
+    }
+
+    .hero-left h3 {
+        font-size: 15px;
+    }
+
+    .hero-left h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+        font-family: "Dancing Script", cursive;
+    }
+
+    .hero-left p {
+        font-size: 15px;
+    }
+
+    header nav a {
+        display: none;
+    }
+
+    .hero-left aside {
+        display: none;
+    }
+
+    .hero-btn1,
+    .hero-btn2 {
+        font-size: 10px;
+        height: 20px;
+        width: 50px;
+    }
+}
+@media  (min-width: 386px) and (max-width: 768px)  {
+    .hero-left {
+        width: 50%;
+        padding: 50px 0 0px 50px;
+    }
+
+    .hero-left h1 {
+        margin-bottom: 10px;
+    }
+
+    .hero-left h3 {
+        font-size: 30px;
+    }
+
+    .hero-left p {
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+
+    .hero-left aside {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .hero-right {
+        width: 50%;
+    }
+
+    .hero-right img {
+        padding: 40px auto;
+    }
+
+    .hero-btn1,
+    .hero-btn2 {
+        margin-top: 20px;
+    }
+}

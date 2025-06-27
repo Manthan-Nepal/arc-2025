@@ -1,0 +1,52 @@
+#skills{
+    height: 100vh;
+}
+
+#skills h2 {
+    margin-top: 40px;
+    font-size: 40px;
+    font-family: monospace;
+    text-align: center;
+    font-weight: 100;
+}
+
+.skills-container {
+    margin: 90px auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.program {
+    font-size: 25px;
+    font-weight: 100;
+}
+
+/* progress bar */
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(78, 61, 61);
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.progress-bar::after {
+    position: absolute;
+    content: attr(value);
+    top: -500%;
+    right: 0;
+    color: white;
+    font-size: 18px;
+}
+
+.progress-line {
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background-color: rgb(185, 154, 236);
+    border-radius: 20px;
+    top: -30%;
+}

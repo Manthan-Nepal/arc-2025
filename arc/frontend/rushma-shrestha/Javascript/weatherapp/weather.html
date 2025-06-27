@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: linear-gradient(to right, #74ebd5, #9face6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .input-search{
+        display: flex;
+    }
+
+    input {
+        padding: 10px;
+        width: 250px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-right: 10px;
+        outline: none;
+    }
+
+    button {
+        padding: 10px 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #result {
+        margin-top: 30px;
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #result h3 {
+        margin-bottom: 10px;
+    }
+
+    #result p {
+        margin: 5px 0;
+    }
+</style>
+
+<body>
+    <h1>Weather App</h1>
+   <div class="input-search">
+     <input type="text" id="cityInput" placeholder="Enter city name">
+    <button onclick="getWeather()">Search</button>
+   </div>
+    <div id="result"></div>
+
+    <script src="weather.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast</title>
+    <script src="https://kit.fontawesome.com/92e02f2314.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    #toastBox {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+    .toast {
+        width: 320px;
+        height: 60px;
+        margin: 10px 20px;
+        font-size: 20px;
+        box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.236);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .toast .error {
+        font-size: 27px;
+        color: rgb(253, 36, 36);
+        padding: 7px;
+    }
+    .toast .info{
+        font-size: 27px;
+        color: rgb(0 179 195);
+        padding: 7px;
+    }
+
+    .toast p {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        gap: 10px;
+    }
+
+    .toast span {
+        display: flex;
+        align-items: center;
+    }
+    .toast .delete {
+        font-size: 27px;
+        color:rgb(173 43 65);
+        padding: 7px;
+;
+    }
+
+    .toast .success {
+        font-size: 27px;
+        color: rgb(45, 214, 15);
+        padding: 7px;
+    }
+
+    .toast .cross {
+        font-size: 24px;
+        color: rgb(110, 96, 3);
+        padding: 7px;
+    }
+    .toast::after{
+        content: '';
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: rgb(78, 226, 78);
+        height: 4px;
+        animation: anim 3s linear forwards;
+    }
+    @keyframes anim {
+        100%{
+            width: 0%;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="buttons">
+        <button class="btn" onclick="
+            showToast(errorMsg)">
+            Empty task
+        </button><button class="btn" onclick="
+            showToast(successMsg)">
+            Task Added
+        </button>
+        <button class="btn" onclick="showToast(taskComplete)"> Task completed</button>
+        <button class="btn" onclick="showToast(taskUncomplete)"> Task Uncomplete</button>
+        <button class="btn" onclick="
+            showToast(taskDeleted)">
+            Task Deleted
+        </button>
+    </div>
+    <div id="toastBox" ></div>
+    <script>
+        let toastBox = document.getElementById('toastBox');
+        let errorMsg = `<p><i class="error fa-solid fa-circle-exclamation"></i> Empty tasks cannot be added</p><span><i class="cross fa-solid fa-xmark"></i></span>`;
+        let successMsg = ` <p><i class="success fa-solid fa-circle-check"></i>Task Added Successfully</p><span><i class="cross fa-solid fa-xmark"></i></span>`;
+        let taskComplete = `<p><i class="info fa-solid fa-circle-info"></i>Task completed</p><span><i class="cross fa-solid fa-xmark"></i></span>`;
+        let taskUncomplete = `<p><i class="info fa-solid fa-circle-info"></i> Task incomplete</p><span><i class="cross fa-solid fa-xmark"></i></span>`;
+        let taskDeleted = `<p><i class="delete fa-solid fa-trash"></i>Task Deleted</p><span><i class="cross fa-solid fa-xmark"></i></span>`;
+
+        function showToast(msg) {
+            let toast = document.createElement('div');
+            toast.classList.add('toast');
+            toast.innerHTML = msg;
+            
+
+            let closeBtn = toast.querySelector('.cross');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    toast.remove();
+                });
+            }
+            toastBox.appendChild(toast);
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+    </script>
+</body>
+
+</html>

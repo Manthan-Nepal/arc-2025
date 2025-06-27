@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager</title>
+    <script src="https://kit.fontawesome.com/92e02f2314.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        margin: 0 auto;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    form input {
+        height: 30px;
+    }
+
+    #searchIn {
+        width: 60%;
+        height: 30px;
+    }
+
+    .gender-options {
+        display: flex;
+    }
+
+    .search {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        gap: 20px
+    }
+
+    .gender-options label {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .btnSubmit {
+        width: 30%;
+        margin: 0 auto;
+    }
+
+    table {
+        border-collapse:collapse ;
+        margin: 0 auto;
+        background-color: white;
+    }
+
+    th {
+        background-color: #f0f0f0;
+    }
+
+    td,
+    th {
+        text-align: left;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Contact Manager</h1>
+    </header>
+    <form action="">
+        <input type="text" name="fname" id="fname" placeholder=" Full Name" value="">
+        <div class="gender-options">
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+        </div>
+
+        <input type="email" id="email" name="email" placeholder="E-mail">
+        <input type="number" id="contact" name="contanct" placeholder="Mobile number">
+        <input type="text" id="address" name="address" placeholder="Address">
+        <input type="submit" name="" id="" value="Submit">
+    </form>
+    <section class="displayContact">
+        <div class="search"> <input type="text" id="searchIn" name="searchIn" placeholder="Enter name"><button><i
+                    class="fa-solid fa-magnifying-glass"></i></button></div>
+    </section>
+</body>
+<script src="contact.js"></script>
+
+</html>

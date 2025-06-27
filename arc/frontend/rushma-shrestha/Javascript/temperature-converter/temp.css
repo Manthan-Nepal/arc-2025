@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: block;
+    background-color: rgb(154, 181, 181);
+    margin: 10% auto;
+    border-radius: 20px;
+    padding: 30px;
+    width: 550px;
+    height: 400px;
+
+}
+
+header h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.inputs label {
+    font-size: 25px;
+}
+
+.inputs input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    font-size: 25px;
+}
+
+.button {
+    font-size: 22px;
+    height: 40px;
+    width: 90px;
+    display: block;
+    margin: 50px auto;
+}
