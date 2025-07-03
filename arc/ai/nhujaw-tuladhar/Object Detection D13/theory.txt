@@ -1,0 +1,25 @@
+1. What is Non-Max Suppression (NMS) and how does it work?
+What it is:
+Non-Max Suppression (NMS) is a clean-up algorithm used after an object detector makes its predictions. Its purpose is to eliminate multiple, overlapping bounding boxes for the same object, keeping only the single best box.
+How it works (in simple steps):
+Start with all predicted boxes. Each box has a confidence score.
+Select the box with the highest confidence score and add it to your final list of predictions.
+Compare this "best" box with all other boxes. Calculate their Intersection over Union (IoU), which measures how much they overlap.
+Suppress (discard) any box that has a high IoU (e.g., > 0.5) with the "best" box, because it's likely detecting the same object.
+Repeat this process with the remaining boxes until none are left.
+The result is a filtered list of boxes, with only one confident prediction per object.
+
+
+2. What are the evaluation metrics and their relationship with IoU?
+The primary evaluation metric for object detection is Mean Average Precision (mAP). It is built upon two simpler metrics:
+Precision: Out of all the boxes your model predicted, how many were correct? (Measures false positives).
+Recall: Out of all the actual objects present in the images, how many did your model find? (Measures false negatives).
+Relationship with Intersection over Union (IoU):
+The IoU is the crucial link that defines whether a prediction is "correct." It connects the ground-truth data to the model's predictions.
+Here's how: A predicted box is considered a True Positive (a correct detection) only if:
+It predicts the correct class.
+Its IoU with the corresponding ground-truth box is greater than a set threshold.
+This threshold is fundamental to the mAP calculation. For example:
+mAP@0.5 (or mAP₅₀): This is the mAP calculated using an IoU threshold of 0.5. It's a common standard.
+COCO mAP: This is a more rigorous metric that averages the mAP across ten different IoU thresholds, from 0.5 to 0.95.
+In short: IoU decides what counts as a correct prediction, and mAP summarizes the model's overall performance based on those correct predictions.

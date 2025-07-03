@@ -1,0 +1,675 @@
+Channels:
+ - conda-forge
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / done
+Solving environment: \ | / done
+
+## Package Plan ##
+
+  environment location: /home/nhujaw/miniconda3
+
+  added / updated specs:
+    - langchain-core
+    - langgraph
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    anyio-4.9.0                |     pyh29332c3_0         123 KB  conda-forge
+    h11-0.16.0                 |     pyhd8ed1ab_0          37 KB  conda-forge
+    h2-4.2.0                   |     pyhd8ed1ab_0          53 KB  conda-forge
+    hpack-4.1.0                |     pyhd8ed1ab_0          30 KB  conda-forge
+    httpcore-1.0.9             |     pyh29332c3_0          48 KB  conda-forge
+    httpx-0.28.1               |     pyhd8ed1ab_0          62 KB  conda-forge
+    hyperframe-6.1.0           |     pyhd8ed1ab_0          17 KB  conda-forge
+    langchain-core-0.3.66      |     pyhd8ed1ab_0         279 KB  conda-forge
+    langgraph-0.2.28           |     pyhd8ed1ab_0          79 KB  conda-forge
+    langgraph-checkpoint-1.0.9 |     pyhd8ed1ab_0          19 KB  conda-forge
+    langsmith-0.3.45           |     pyhd8ed1ab_0         294 KB  conda-forge
+    orjson-3.10.14             |  py313h4aa5aa6_0         312 KB
+    requests-toolbelt-1.0.0    |     pyhd8ed1ab_1          43 KB  conda-forge
+    sniffio-1.3.1              |     pyhd8ed1ab_1          15 KB  conda-forge
+    tenacity-9.1.2             |     pyhd8ed1ab_0          25 KB  conda-forge
+    typing_extensions-4.14.0   |     pyhe01879c_0          50 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:         1.4 MB
+
+The following NEW packages will be INSTALLED:
+
+  anyio              conda-forge/noarch::anyio-4.9.0-pyh29332c3_0 
+  h11                conda-forge/noarch::h11-0.16.0-pyhd8ed1ab_0 
+  h2                 conda-forge/noarch::h2-4.2.0-pyhd8ed1ab_0 
+  hpack              conda-forge/noarch::hpack-4.1.0-pyhd8ed1ab_0 
+  httpcore           conda-forge/noarch::httpcore-1.0.9-pyh29332c3_0 
+  httpx              conda-forge/noarch::httpx-0.28.1-pyhd8ed1ab_0 
+  hyperframe         conda-forge/noarch::hyperframe-6.1.0-pyhd8ed1ab_0 
+  langchain-core     conda-forge/noarch::langchain-core-0.3.66-pyhd8ed1ab_0 
+  langgraph          conda-forge/noarch::langgraph-0.2.28-pyhd8ed1ab_0 
+  langgraph-checkpo~ conda-forge/noarch::langgraph-checkpoint-1.0.9-pyhd8ed1ab_0 
+  langsmith          conda-forge/noarch::langsmith-0.3.45-pyhd8ed1ab_0 
+  orjson             pkgs/main/linux-64::orjson-3.10.14-py313h4aa5aa6_0 
+  requests-toolbelt  conda-forge/noarch::requests-toolbelt-1.0.0-pyhd8ed1ab_1 
+  sniffio            conda-forge/noarch::sniffio-1.3.1-pyhd8ed1ab_1 
+  tenacity           conda-forge/noarch::tenacity-9.1.2-pyhd8ed1ab_0 
+  typing_extensions  conda-forge/noarch::typing_extensions-4.14.0-pyhe01879c_0 
+
+
+
+Downloading and Extracting Packages: ...working...orjson-3.10.14       | 312 KB    |                                      |   0% 
+langsmith-0.3.45     | 294 KB    |                                      |   0% [A
+
+langchain-core-0.3.6 | 279 KB    |                                      |   0% [A[A
+
+
+anyio-4.9.0          | 123 KB    |                                      |   0% [A[A[A
+
+
+
+langgraph-0.2.28     | 79 KB     |                                      |   0% [A[A[A[A
+
+
+
+
+httpx-0.28.1         | 62 KB     |                                      |   0% [A[A[A[A[A
+
+
+
+
+
+h2-4.2.0             | 53 KB     |                                      |   0% [A[A[A[A[A[A
+
+
+
+
+
+
+typing_extensions-4. | 50 KB     |                                      |   0% [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+httpcore-1.0.9       | 48 KB     |                                      |   0% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+requests-toolbelt-1. | 43 KB     |                                      |   0% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+h11-0.16.0           | 37 KB     |                                      |   0% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+hpack-4.1.0          | 30 KB     |                                      |   0% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+tenacity-9.1.2       | 25 KB     |                                      |   0% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+langgraph-checkpoint | 19 KB     |                                      |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+hyperframe-6.1.0     | 17 KB     |                                      |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sniffio-1.3.1        | 15 KB     |                                      |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[Aorjson-3.10.14       | 312 KB    | #8                                   |   5% 
+
+
+anyio-4.9.0          | 123 KB    | ####6                                |  13% [A[A[A
+
+
+
+langgraph-0.2.28     | 79 KB     | #######2                             |  20% [A[A[A[A
+
+langchain-core-0.3.6 | 279 KB    | ##                                   |   6% [A[A
+
+
+anyio-4.9.0          | 123 KB    | #################################### | 100% [A[A[A
+langsmith-0.3.45     | 294 KB    | #9                                   |   5% [A
+
+
+anyio-4.9.0          | 123 KB    | #################################### | 100% [A[A[A
+
+
+anyio-4.9.0          | 123 KB    | #################################### | 100% [A[A[A
+
+
+
+langgraph-0.2.28     | 79 KB     | #################################### | 100% [A[A[A[A
+
+
+
+langgraph-0.2.28     | 79 KB     | #################################### | 100% [A[A[A[Aorjson-3.10.14       | 312 KB    | ##############7                      |  41% 
+
+langchain-core-0.3.6 | 279 KB    | ############3                        |  34% [A[Aorjson-3.10.14       | 312 KB    | #################################### | 100% orjson-3.10.14       | 312 KB    | #################################### | 100% 
+langsmith-0.3.45     | 294 KB    | #############7                       |  38% [A
+
+
+
+
+httpx-0.28.1         | 62 KB     | #########3                           |  26% [A[A[A[A[A
+
+
+
+
+httpx-0.28.1         | 62 KB     | #################################### | 100% [A[A[A[A[A
+
+
+
+
+httpx-0.28.1         | 62 KB     | #################################### | 100% [A[A[A[A[A
+
+
+
+
+
+h2-4.2.0             | 53 KB     | ##########9                          |  30% [A[A[A[A[A[A
+
+
+
+
+
+h2-4.2.0             | 53 KB     | #################################### | 100% [A[A[A[A[A[A
+
+
+
+
+
+h2-4.2.0             | 53 KB     | #################################### | 100% [A[A[A[A[A[A
+
+langchain-core-0.3.6 | 279 KB    | ######################7              |  63% [A[A
+langsmith-0.3.45     | 294 KB    | #############################4       |  82% [A
+langsmith-0.3.45     | 294 KB    | #################################### | 100% [A
+langsmith-0.3.45     | 294 KB    | #################################### | 100% [A
+
+
+
+
+
+
+
+httpcore-1.0.9       | 48 KB     | ###########9                         |  33% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+httpcore-1.0.9       | 48 KB     | #################################### | 100% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+httpcore-1.0.9       | 48 KB     | #################################### | 100% [A[A[A[A[A[A[A[A
+
+langchain-core-0.3.6 | 279 KB    | ###################################1 |  98% [A[A
+
+langchain-core-0.3.6 | 279 KB    | #################################### | 100% [A[A
+
+
+
+
+
+
+
+
+requests-toolbelt-1. | 43 KB     | #############3                       |  37% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+requests-toolbelt-1. | 43 KB     | #################################### | 100% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+requests-toolbelt-1. | 43 KB     | #################################### | 100% [A[A[A[A[A[A[A[A[A
+
+langchain-core-0.3.6 | 279 KB    | #################################### | 100% [A[A
+
+
+
+
+
+
+
+
+
+h11-0.16.0           | 37 KB     | ###############6                     |  43% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+h11-0.16.0           | 37 KB     | #################################### | 100% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+h11-0.16.0           | 37 KB     | #################################### | 100% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+typing_extensions-4. | 50 KB     | ###########5                         |  32% [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+hpack-4.1.0          | 30 KB     | ###################1                 |  53% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+hpack-4.1.0          | 30 KB     | #################################### | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+typing_extensions-4. | 50 KB     | #################################### | 100% [A[A[A[A[A[A[A
+
+
+
+
+
+
+typing_extensions-4. | 50 KB     | #################################### | 100% [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+hpack-4.1.0          | 30 KB     | #################################### | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+langgraph-checkpoint | 19 KB     | ##############################5      |  85% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+langgraph-checkpoint | 19 KB     | #################################### | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+langgraph-checkpoint | 19 KB     | #################################### | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sniffio-1.3.1        | 15 KB     | #################################### | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sniffio-1.3.1        | 15 KB     | #################################### | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sniffio-1.3.1        | 15 KB     | #################################### | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+hyperframe-6.1.0     | 17 KB     | #################################9   |  94% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+hyperframe-6.1.0     | 17 KB     | #################################### | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+hyperframe-6.1.0     | 17 KB     | #################################### | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+tenacity-9.1.2       | 25 KB     | #######################2             |  65% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+tenacity-9.1.2       | 25 KB     | #################################### | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+tenacity-9.1.2       | 25 KB     | #################################### | 100% [A[A[A[A[A[A[A[A[A[A[A[A                                                                               
+                                                                               [A
+
+                                                                               [A[A
+
+
+                                                                               [A[A[A
+
+
+
+                                                                               [A[A[A[A
+
+
+
+
+                                                                               [A[A[A[A[A
+
+
+
+
+
+                                                                               [A[A[A[A[A[A
+
+
+
+
+
+
+                                                                               [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+                                                                               [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+                                                                               [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+                                                                               [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+                                                                               [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+                                                                               [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                               [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                               [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                               [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A done
+Preparing transaction: \ done
+Verifying transaction: / - \ done
+Executing transaction: / - \ | / - \ | / - \ | / - \ | / - \ done
