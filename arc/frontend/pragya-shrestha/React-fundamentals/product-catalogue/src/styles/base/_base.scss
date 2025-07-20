@@ -1,0 +1,13 @@
+body {
+  background-color: $secondary-color;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}

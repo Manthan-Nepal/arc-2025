@@ -1,0 +1,37 @@
+.category-dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 167px;
+  background-color: #f5f5f5;
+  border: 1px solid #e2dfd8;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+  position: absolute;
+  top: 74px;
+  left: 98px;
+  text-align: center;
+  text-transform: capitalize;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    padding: 12px 16px;
+    color: #3a2802;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #e6e2d8;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #e2dfd8;
+    }
+  }
+}

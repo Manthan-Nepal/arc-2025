@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+.container {
+  width: 90%;
+  margin: 20vh auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  color: #4caf50;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+
+
+.form-field {
+  width: 100%;
+  border-radius: 4px;
+  font-size: 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.form-field label, .gender-field p{
+    width: 100px;
+    text-align: left;
+     color: #4caf50;
+     font-weight: 600;
+}
+
+.form-field input {
+
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline-color: #4caf50;
+
+}
+.gender-field{
+    border: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+
+  .options{
+display: flex;
+width: 100%;
+justify-content: space-between;
+  }
+  .option{
+    display: flex;
+    gap: 10px;
+  }
+
+/* Hide native radio */
+input[type="radio"] {
+ 
+  -webkit-appearance: none; 
+   appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #888;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: 5px;
+  background-color: white;
+  transition: border 0.2s ease;
+}
+
+/* Custom checked style */
+input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  background-color:#4caf50; 
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="radio"]:checked {
+  border-color: #4caf50; 
+}
+
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #0eaa13;
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.1);
+}
+.result {
+  font-size: 16px;
+  color: #4caf50;
+  font-weight: 600;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.err-txt {
+  color: rgb(245, 106, 106);
+}
+@media  screen and (min-width:425px) {
+    .gender-field{
+            flex-direction: row;
+
+    }
+}
+@media screen and (min-width: 768px) {
+ 
+  .container
+   {
+    width: 60%;
+    padding: 55px;
+  }
+}
+@media screen and (min-width: 1024px) {
+ 
+  .container {
+    width: 40%;
+    
+  }
+}

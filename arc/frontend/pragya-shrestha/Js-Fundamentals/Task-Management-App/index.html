@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-Management</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <main class="project">
+        <div class="project-info">
+          <h1>PathPlan</h1>
+          <div class="add-task">
+            <!-- <span class="high-priority">H</span>
+            <span class="medium-priority">M</span>
+            <span class="low-priority">L</span> -->
+            <button
+              title="add task"
+              class="add-task__new add-task"
+              type="button"
+            ></button>
+          </div>
+        </div>
+
+        <div class="add-modal">
+          <div class="add-modal__content">
+            <div class="add-modal__header">
+              <h2 id="modal-title" class="add-modal__title">Add New Task</h2>
+              <button
+                id="add-modal__closel"
+                class="add-modal__close"
+                type="button"
+                title="Close modal"
+              >
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <form class="add-modal__form">
+              <div class="field">
+                <label for="task-title">Task Title</label>
+                <input
+                  type="text"
+                  id="task-title"
+                  placeholder="Enter task title"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="task-description">Description</label>
+                <textarea
+                  id="task-description"
+                  placeholder="Enter task description"
+                  required
+                ></textarea>
+              </div>
+              <div class="field">
+                <label for="task-date">Due Date</label>
+                <input type="date" id="task-date" required />
+              </div>
+              <div class="field">
+                <label for="task-priority">Priority</label>
+                <select id="task-priority" required>
+                  <option value="L" selected>Low</option>
+                  <option value="M">Medium</option>
+                  <option value="H">High</option>
+                </select>
+              </div>
+              <button
+                type="submit"
+                id="modal-submit-btn"
+                class="add-modal__submit"
+              >
+                Add Task
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="project-tasks">
+          <div id="to-do" class="project-column column-todo">
+            <div class="project-column-heading">
+              <h2 class="project-column-heading__title">Task Ready</h2>
+              <button
+                class="project-column-heading__options"
+                type="button"
+                title="More options"
+              >
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+          </div>
+          <div id="in-progress" class="project-column">
+            <div class="project-column-heading">
+              <h2 class="project-column-heading__title">In Progress</h2>
+              <button
+                class="project-column-heading__options"
+                type="button"
+                title="More options"
+              >
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+          </div>
+          <div id="review" class="project-column">
+            <div class="project-column-heading">
+              <h2 class="project-column-heading__title">Needs Review</h2>
+              <button
+                class="project-column-heading__options"
+                type="button"
+                title="More options"
+              >
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+          </div>
+          <div id="done" class="project-column">
+            <div class="project-column-heading">
+              <h2 class="project-column-heading__title">Done</h2>
+              <button
+                class="project-column-heading__options"
+                type="button"
+                title="More options"
+              >
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>

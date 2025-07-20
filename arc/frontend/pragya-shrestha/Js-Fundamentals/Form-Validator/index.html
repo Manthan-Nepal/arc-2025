@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <form class="container" id="form">
+      <h2>Registration Form</h2>
+
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input id="name" placeholder="Enter name" />
+      </div>
+      <div class="form-field">
+        <label for="contact">Contact</label>
+        <input id="contact" placeholder="Enter contact no." />
+      </div>
+      <fieldset class="gender-field">
+        <p>Gender</p>
+        <div class="options">
+          <div class="option">
+            <input
+              type="radio"
+              id="male"
+              name="gender"
+              value="male"
+              title="male"
+            />
+            <label for="male">Male</label>
+          </div>
+          <div class="option">
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              title="female"
+            />
+            <label for="female">Female</label>
+          </div>
+
+          <div class="option">
+            <input
+              type="radio"
+              id="others"
+              name="gender"
+              value="others"
+              title="others"
+            />
+            <label for="others">Others</label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input id="email" placeholder="Enter email" />
+      </div>
+
+      <div class="form-field">
+        <label for="address">Address</label>
+        <input id="address" placeholder="Enter address" />
+      </div>
+
+      <button type="submit">Submit</button>
+      <div id="result" class="result"></div>
+    </form>
+  </body>
+  <script src="scripts.js"></script>
+</html>

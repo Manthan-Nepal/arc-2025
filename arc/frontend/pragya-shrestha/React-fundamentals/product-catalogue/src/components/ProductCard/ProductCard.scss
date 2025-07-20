@@ -1,0 +1,114 @@
+@import "../../styles/abstracts/variables";
+.productCard {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  height: 380px;
+  text-align: center;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+    transition: all 1s ease-in-out;
+  }
+  &__image {
+    display: flex;
+    width: 100%;
+    padding: $spacing-md;
+    height: 200px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  h2 {
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    padding: 0 $spacing-md;
+    margin-bottom: $spacing-sm;
+    color: #3a2802;
+  }
+  &__description {
+    font-size: 0.9rem;
+    color: hsla(41, 100%, 6%, 0.863);
+
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-top: 0.5px solid #dfceaa;
+    padding: $spacing-sm;
+    padding-bottom: 0;
+
+    margin-bottom: $spacing-sm;
+  }
+  &__tags {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #888;
+    width: 100%;
+    background-color: #f1c45b;
+    align-items: center;
+    padding: $spacing-sm;
+
+    &--price {
+      font-weight: bold;
+      color: #3a2802;
+      background-color: #f8f7f3;
+      padding: 6px;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    &--cartButton {
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      background-color: #face67d5;
+      border: 1px solid #f5c45b;
+
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .cart__icon {
+        margin-right: 5px;
+        font-size: 2rem;
+        color: #3a2802;
+      }
+    }
+    &--rate {
+      display: flex;
+      font-size: 1rem;
+      color: #3a2802;
+      gap: $spacing-sm;
+      font-weight: bold;
+      align-items: center;
+      span {
+        color: #3a2802;
+      }
+    }
+  }
+}
+.productCard__tags--cartButton.in-cart {
+  background-color: #c0840b;
+  color: white;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Simple Calculator</h2>
+      <input
+        class="input"
+        type="text"
+        id="num1"
+        placeholder="Enter first number"
+      />
+      <input
+        class="input"
+        type="text"
+        id="num2"
+        placeholder="Enter second number"
+      />
+      <!-- <div class="operation">
+        <label for="operation">Operation:</label>
+        <select name="operation" id="operation" title="Select operation">
+          <option value="+">Add</option>
+          <option value="-">Subtract</option>
+          <option value="*">Multiply</option>
+          <option value="/">Divide</option>
+        </select>
+      </div> -->
+      <div class="operatio" onclick="show_dropdown()">
+        <input type="text" placeholder="Operation" id="actionInput" readonly />
+        <div id="caret-down" class="caret-down">
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <ul>
+            <li onclick="selectOperation('Add',event)">Add</li>
+            <li onclick="selectOperation('Subtract',event)">Subtract</li>
+            <li onclick="selectOperation('Multiply',event)">Multiply</li>
+            <li onclick="selectOperation('Divide',event)">Divide</li>
+          </ul>
+        </div>
+      </div>
+
+      <button type="submit" onclick="calculate()">Calculate</button>
+      <p id="result"></p>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
