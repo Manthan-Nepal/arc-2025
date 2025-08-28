@@ -1,0 +1,12 @@
+On day 1 of the internship, I went through basics of Python, Numpy and Pandas.
+
+Some concepts which felt good to revise are following:
+1. Functional Programming
+2. Using args and kwargs to accept a variable number of arguments
+ Note: args allows a function to accept any number of positional arguments and
+ kwargs allows a function to accept any number of keyword arguments
+
+3. Lamda Function (annonynomus function)
+4. Pylint
+5. To reverse a list in Numpy, we use .flip()
+6. In Pandas we use .loc to select particular rows or columns
